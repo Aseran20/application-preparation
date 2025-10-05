@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip:*)",
+      "Bash(\"/c/Users/Adrian/AppData/Local/Programs/Python/Python313/python.exe\" update_resume.py)",
+      "Bash(\"/c/Users/Adrian/AppData/Local/Programs/Python/Python313/python.exe\" replace_work_bullets.py)",
+      "Bash(\"/c/Users/Adrian/AppData/Local/Programs/Python/Python313/python.exe\" reorder_sections.py)",
+      "Bash(\"/c/Users/Adrian/AppData/Local/Programs/Python/Python313/python.exe\" generate_resume.py)",
+      "Bash(\"/c/Users/Adrian/AppData/Local/Programs/Python/Python313/python.exe\" scripts/validate_resume.py \"jobs/Glencore_Commercial_Graduate_05-10-2025/Resume_Adrian_Turion.docx\")",
+      "Bash(\"/c/Users/Adrian/AppData/Local/Programs/Python/Python313/python.exe\" scripts/generate_resume.py)",
+      "Bash(\"/c/Users/Adrian/AppData/Local/Programs/Python/Python313/python.exe\" temp_generate.py)",
+      "Bash(del temp_generate.py)",
+      "Bash(\"/c/Users/Adrian/AppData/Local/Programs/Python/Python313/python.exe\" analyze_cover_letter.py)",
+      "Bash(\"/c/Users/Adrian/AppData/Local/Programs/Python/Python313/python.exe\" create_template_v2.py)",
+      "Bash(\"/c/Users/Adrian/AppData/Local/Programs/Python/Python313/python.exe\" test_cover_letter_glencore.py)",
+      "Bash(\"/c/Users/Adrian/AppData/Local/Programs/Python/Python313/python.exe\" analyze_template_v2.py)",
+      "Bash(del analyze_template_v2.py)",
+      "Bash(tree:*)",
+      "Bash(\"/c/Users/Adrian/AppData/Local/Programs/Python/Python313/python.exe\" analyze_generated_cl.py)",
+      "Bash(\"/c/Users/Adrian/AppData/Local/Programs/Python/Python313/python.exe\" test_cl_formatting.py)",
+      "Bash(cat:*)",
+      "Bash(\"/c/Users/Adrian/AppData/Local/Programs/Python/Python313/python.exe\" -c \"\nfrom scripts.validate_cover_letter import validate_cover_letter\nis_valid, errors, word_count = validate_cover_letter(''jobs/Glencore_Commercial_Graduate_05-10-2025/Cover_Letter_Adrian_Turion.docx'')\nprint(f''Validation: {\"\"PASSED\"\" if is_valid else \"\"FAILED\"\"}'')\nprint(f''Word count: {word_count} words'')\nif errors:\n    for e in errors: print(f''  - {e}'')\n\")",
+      "Bash(pip install:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "leadership_experiences": [
+    {
+      "id": "mckinsey_case_finalist",
+      "titre": "Finalist - 2024 McKinsey & Company Sponsored Business Case",
+      "organisation": "McKinsey & Company x Keyrock",
+      "description": "Presented a strategic project to Keyrock’s management and McKinsey consultants in Rabat, developing a data-driven model to forecast black swan events using order book data and statistical arbitrage. The proposal showcased a potential CHF 200K annual revenue gain through predictive insights.",
+      "skills": "data analysis, predictive modeling, statistical arbitrage, financial forecasting, business strategy, strategic presentation, problem-solving under pressure, team collaboration",
+      "outcomes": "Top 5 finalist; potential CHF 200K annual revenue; strengthened analytical and presentation skills"
+    },
+    {
+      "id": "aiesec_associate",
+      "titre": "Associate - AIESEC Student Club",
+      "organisation": "AIESEC",
+      "description": "Led post-COVID financial recovery by sourcing corporate leads, creating tailored pitchbooks, and negotiating partnerships. Closed 3 key deals, generating CHF 60K annual revenue and increasing volunteer placements by 40%.",
+      "skills": "business development, lead generation, sales negotiation, pitchbook creation, resilience, persuasive communication, stakeholder management",
+      "outcomes": "3 partnerships closed; CHF 60K annual revenue; +40% volunteer placements"
+    },
+    {
+      "id": "secondhand_luxury_business",
+      "titre": "Founder - Second-Hand Luxury Business (Custom Sneaker Startup)",
+      "organisation": "Independent Venture",
+      "description": "Founded and managed a second-hand luxury and custom sneaker business using upcycled materials. Led a 2-person team managing product development, supplier relations in China Shenzhen, and influencer marketing. Achieved profitability within 6 months and built a 500+ follower base.",
+      "skills": "digital marketing, product-market fit, supplier management, social media marketing, leadership, creativity, adaptability, sustainability mindset",
+      "outcomes": "2-person team; +150% sales growth in first year; 500+ followers; 100+ pairs sold; 5% conversion rate"
+    },
+    {
+      "id": "screeny_ai",
+      "titre": "Founder & Developer - Screeny.ai",
+      "organisation": "Screeny.ai",
+      "description": "Founded and developed Screeny.ai, an AI-driven software for investment banks to identify strategic and financial acquirers. Built full stack (frontend & backend) and led sales outreach to M&A boutiques and private equity firms. Tool adopted by 3 advisory firms, reducing buyer search time from 10h+ to 20min.",
+      "skills": "software development, AI integration, sales strategy, B2B prospecting, product management, entrepreneurship, initiative, strategic communication",
+      "outcomes": "3 clients signed; ~90% time reduction; +200% user growth in 3 months"
+    },
+    {
+      "id": "personal_investment_portfolio",
+      "titre": "Manager - Personal Investment Portfolio",
+      "organisation": "Self-managed",
+      "description": "Manages a diversified investment portfolio using Cash Secured Puts and Covered Calls. Executes disciplined options strategies with 45-day expiries to generate consistent income through theta decay while managing portfolio risk via ETFs.",
+      "skills": "options trading, risk management, financial modeling, portfolio optimization, analytical thinking, discipline, strategic decision-making",
+      "outcomes": "+8% annualized returns; 15-20 active positions; CHF 5K+ annual premiums"
+    }
+  ]
+}

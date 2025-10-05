@@ -1,0 +1,38 @@
+{
+  "courses_bachelor": [
+    "Financial Accounting I",
+    "Financial Accounting II",
+    "Economics I & II",
+    "Mathematics I & II",
+    "Statistics I & II",
+    "Computer Models",
+    "Programming Elements",
+    "Decision Analysis",
+    "Consolidated Financial Statements and External Control",
+    "Principles of Marketing",
+    "Leadership and Communication",
+    "Principles of Finance",
+    "Risk Management",
+    "Applied Econometrics and Statistics",
+    "Investment and Portfolio Management",
+    "International Finance and Financial Markets",
+    "Entrepreneurial Finance"
+  ],
+  "courses_master": [
+    "Corporate Finance",
+    "Data Science for Finance",
+    "Financial Accounting",
+    "Investments",
+    "Mathematics for Economics and Finance",
+    "Derivatives",
+    "Fixed Income and Credit Risk",
+    "Valuation",
+    "Empirical Methods in Finance",
+    "Quantitative Asset and Risk Management",
+    "Corporate Governance and M&A",
+    "FinTech - Financial Innovation and the Internet",
+    "Money and Banking",
+    "Decision Making Theory",
+    "Cross-Cultural Management"
+  ]
+}
