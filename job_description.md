@@ -1,48 +1,60 @@
-Commercial Graduate Programme - Switzerland
-Job highlights
+About the job
+Citi is actively seeking highly motivated Placement Analysts to join its Investment Banking team in Zurich, commencing in January 2026 for 6 months. The Investment Banking group plays a pivotal role in advising corporate clients seeking to raise capital in the financial markets and those requiring strategic support for complex financial transactions. As a Placement Analyst, you will gain hands-on experience by contributing to initiatives such as mergers, acquisitions, divestitures, financial restructurings, as well as the underwriting and distribution of equity, debt, and derivative securities.
+
+We are deeply committed to providing comprehensive training and practical exposure to the intricacies of investment banking. The duration of this placement is set for 6 months, offering a significant opportunity for professional growth and learning.
+
+Responsibilities
+
+Diligently collect and meticulously analyse company-specific information to facilitate successful transactions, including conducting in-depth industry research and systematically organizing extensive financial data.
+Perform rigorous analysis of financial data and develop sophisticated financial models, encompassing accurate company valuations, discounted cash flow (DCF) analysis, financing structures, and comprehensive comparative analyses.
+Create and finalize compelling new business development presentations that effectively communicate strategic insights and proposals to clients.
+Efficiently coordinate tasks and workflow with both internal teams and external working groups, ensuring seamless project execution and timely delivery.
+Prepare all necessary internal documentation, including adherence to control and compliance regulations, to ensure operational integrity and regulatory alignment.
+
+Qualifications
+
+Currently in your final year of university studies or a recent graduate.
+Expected to achieve, or have already achieved, a UK 2:1 (or equivalent academic standing) at the undergraduate level, or a Grade 5 or above from a Swiss university, in any degree discipline.
+A strong, demonstrable interest in business and the broader financial industry.
+Possess a record of strong academic achievement, indicating intellectual capability and dedication.
+Fluency in both English and German is essential, encompassing strong verbal and written communication skills in both languages.
+
+A desire to cultivate a deep and comprehensive understanding of the financial industry and its complex dynamics.
+
+------------------------------------------------------
+
+Job Family Group: 
+
+Institutional Banking
+
+------------------------------------------------------
+
+Job Family:
+
+Investment Banking
+
+------------------------------------------------------
+
+Time Type:
+
 Full time
-Baar, Zug, Switzerland
-Job ID
-R200001201
-Closing date
-10/10/2025
-Last Updated
-30/06/2025
-Apply
-Based within our dynamic trading environment, our programmes are structured to bring out the very best in you and give you the opportunity to excel in a commercial role, working alongside the very best people in the business.
 
-Whether your ambitions are to become a Commodities Trader or to build a career developing your data analysis skills within a trading environment, you will have direct exposure to the commercial teams and will be trusted with individual responsibility from day one.
+------------------------------------------------------
 
-The commercial programme is designed to prove your commercial aptitude and test your resilience as the front-line support to traders and operators primarily within Traffic, Risk, middle office, LME Desk Support, Business Development, with opportunities to rotate between. Exploring other commercial areas of the business can include Operations, who are responsible for the logistical and financial execution of each trade.
+Most Relevant Skills
 
-Entrepreneurial abilities, accuracy, and strong communication skills are the key ingredients for a successful career trading at Glencore.
+Please see the requirements listed above.
 
-Who we look for:
+------------------------------------------------------
 
-We are looking for students who are currently enrolled in or have recently graduated from a Bachelor’s or Master’s degree, ideally in STEM, Finance, Economics or similar, and are available to start in 2026.  We welcome graduates to start anytime from January through to December, based on your availability. 
+Other Relevant Skills
 
-Benefits
+For complementary skills, please see above and/or contact the recruiter.
 
-We are committed to providing benefits, which promote mental, physical, and financial well-being. From healthy meal options in our restaurants and bistros to free use of the in-house gym including sport classes with professional trainers.
+------------------------------------------------------
 
-We reimburse public transport for commuting to work; alternatively, we offer free parking space.
+Citi is an equal opportunity employer, and qualified candidates will receive consideration without regard to their race, color, religion, sex, sexual orientation, gender identity, national origin, disability, status as a protected veteran, or any other characteristic protected by law.
 
-We provide tuition assistance for further education and training courses.
+If you are a person with a disability and need a reasonable accommodation to use our search tools and/or apply for a career opportunity review Accessibility at Citi.
 
-We have a competitive parental leave policy. Our childcare benefits also include emergency childcare services and financial assistance towards daycare costs.
-
-Employees’ Swiss Pension 2nd pillar is fully paid by Glencore.
-
-Who we are
-
-Glencore is one of the world’s largest global diversified natural resource companies and a major producer and marketer of more than 60 commodities that advance everyday life. Through a network of assets, customers and suppliers that spans the globe, we produce, process, recycle, source, market and distribute the commodities that support decarbonisation while meeting the energy needs of today.
-
-With over 150,000 employees and contractors and a strong footprint in over 35 countries in both established and emerging regions for natural resources, our marketing and industrial activities are supported by a global network of more than 50 offices.
-
-Glencore’s customers are industrial consumers, such as those in the automotive, steel, power generation, battery manufacturing and oil sectors. We also provide financing, logistics and other services to producers and consumers of commodities.
-
-Glencore is proud to be a member of the Voluntary Principles on Security and Human Rights and the International Council on Mining and Metals. We are an active participant in the Extractive Industries Transparency Initiative.
-
-We will support the global effort to achieve the goals of the Paris Agreement through our efforts to decarbonise our own operational footprint. We believe that we should take a holistic approach and have considered our commitment through the lens of our global industrial emissions. Against a restated 2019 baseline, we are targeting to reduce our Scope 1, 2 and 3 industrial emissions by 15% by the end of 2026, 25% by the end of 2030, 50% by the end of 2035 and we have an ambition to achieve net zero industrial emissions by the end of 2050, subject to a supportive policy environment. For more information see our 2024-2026 Climate Action Transition Plan and the About our emissions calculation and reporting section in our 2023 Annual Report, available on our website at glencore.com/publications.​
-
-​Note*: All applications will be subject to potential background checks. You will be informed if this will be the case. Further information about the processing of your personal data will be made available during the application process. We'll seek your explicit consent prior to processing the data.
+View Citi’s EEO Policy Statement and the Know Your Rights poster.

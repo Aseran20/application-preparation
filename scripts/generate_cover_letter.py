@@ -168,6 +168,17 @@ def generate_cover_letter(
             if placeholder in paragraph.text and replacement:
                 replace_paragraph_text_cl(paragraph, placeholder, replacement)
 
+    # Remove trailing empty paragraphs to avoid blank pages in PDF
+    while len(doc.paragraphs) > 0:
+        last_para = doc.paragraphs[-1]
+        # Check if last paragraph is empty or only whitespace
+        if not last_para.text.strip():
+            # Remove the paragraph
+            p_element = last_para._element
+            p_element.getparent().remove(p_element)
+        else:
+            break
+
     # Save cover letter
     output_path = os.path.join(output_folder, "Cover_Letter_Adrian_Turion.docx")
     doc.save(output_path)
@@ -177,6 +188,7 @@ def generate_cover_letter(
     os.makedirs(pdf_folder, exist_ok=True)
 
     pdf_output_path = os.path.join(pdf_folder, "Cover_Letter_Adrian_Turion.pdf")
+    temp_pdf_path = os.path.join(pdf_folder, "Cover_Letter_Adrian_Turion_temp.pdf")
 
     try:
         # Convert DOCX to PDF using LibreOffice (cross-platform)
@@ -189,13 +201,58 @@ def generate_cover_letter(
             "--outdir", abs_pdf_folder, abs_output_path
         ], check=True, capture_output=True)
 
-        print(f"[PDF] {pdf_output_path}")
+        # Keep only first page of PDF using PyPDF2
+        try:
+            from PyPDF2 import PdfReader, PdfWriter
+
+            reader = PdfReader(pdf_output_path)
+            writer = PdfWriter()
+
+            # Add only the first page
+            if len(reader.pages) > 0:
+                writer.add_page(reader.pages[0])
+
+            # Write to temp file then replace original
+            with open(temp_pdf_path, 'wb') as output_file:
+                writer.write(output_file)
+
+            # Replace original with single-page version
+            shutil.move(temp_pdf_path, pdf_output_path)
+            print(f"[PDF] {pdf_output_path} (1 page)")
+        except ImportError:
+            print(f"[PDF] {pdf_output_path} (PyPDF2 not installed - may contain blank pages)")
+        except Exception as e:
+            print(f"[PDF] {pdf_output_path} (page trimming failed: {e})")
+
     except (subprocess.CalledProcessError, FileNotFoundError):
         # LibreOffice not available, try docx2pdf (Windows)
         try:
             from docx2pdf import convert
             convert(abs_output_path, pdf_output_path)
-            print(f"[PDF] {pdf_output_path}")
+
+            # Keep only first page of PDF using PyPDF2
+            try:
+                from PyPDF2 import PdfReader, PdfWriter
+
+                reader = PdfReader(pdf_output_path)
+                writer = PdfWriter()
+
+                # Add only the first page
+                if len(reader.pages) > 0:
+                    writer.add_page(reader.pages[0])
+
+                # Write to temp file then replace original
+                with open(temp_pdf_path, 'wb') as output_file:
+                    writer.write(output_file)
+
+                # Replace original with single-page version
+                shutil.move(temp_pdf_path, pdf_output_path)
+                print(f"[PDF] {pdf_output_path} (1 page)")
+            except ImportError:
+                print(f"[PDF] {pdf_output_path} (PyPDF2 not installed - may contain blank pages)")
+            except Exception as e:
+                print(f"[PDF] {pdf_output_path} (page trimming failed: {e})")
+
         except ImportError:
             print("[WARNING] PDF conversion skipped (install LibreOffice or docx2pdf)")
             pdf_output_path = None
