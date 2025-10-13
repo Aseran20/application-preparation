@@ -98,7 +98,7 @@ Use `mcp__tavily-mcp__tavily-search` with `topic="news"`:
 ### 4. Generate Cover Letter Content
 
 **Constraints:**
-- **1 page maximum** (~350-450 words ideal)
+- **1 page maximum** (~300-400 words ideal)
 - **Times New Roman 10pt, black text only**
 - **Paragraphs left-aligned (NOT justified)**
 - **NO repetition of resume** - expand stories, don't list

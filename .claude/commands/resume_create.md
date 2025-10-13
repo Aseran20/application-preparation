@@ -86,7 +86,7 @@ Use your understanding of the job to select the MOST RELEVANT content:
 - **CRITICAL**: Keep this short to maintain 1-page CV format
 
 #### Professional Summary (Introduction)
-- Write a **SHORT, PUNCHY** 2-3 line summary (max 2-3 sentences) that:
+- Write a **SHORT, PUNCHY** 2 line summary (max 2-3 sentences) that:
   - **Mentions the company name** - shows personalization immediately
   - Positions Adrian for THIS SPECIFIC role with the RIGHT tone (deal-maker vs analyst vs consultant vs sales or other)
   - **CRITICAL - USE EXACT KEYWORDS from job description** - if they say "commercial aptitude", use "commercial aptitude"; if they say "resilience", use "resilience"
