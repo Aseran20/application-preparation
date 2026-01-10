@@ -4,16 +4,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Resume.ai generates personalized, ATS-optimized resumes and cover letters. It analyzes job descriptions, selects relevant experiences from JSON databases, and produces formatted Word/PDF documents.
+Resume.ai generates personalized, ATS-optimized resumes and cover letters. It analyzes job descriptions, performs web research, selects relevant experiences from JSON databases, and produces formatted Word/PDF documents.
 
 ## Commands
 
-### Primary Slash Commands
+### Primary Slash Command
 
 ```bash
-/resume_create      # Generate tailored resume from job_description.md
-/cover_letter_create  # Generate cover letter with Tavily research
+/generate "paste job description here"
 ```
+
+Generates both resume AND cover letter in a single command. Creates a project folder with all documents.
 
 ### Validation
 
@@ -33,54 +34,102 @@ pip install python-docx PyPDF2 docx2pdf
 ### Generation Flow
 
 ```
-job_description.md (paste job posting here)
+/generate "job description..."
         │
         ▼
-/resume_create or /cover_letter_create
+┌─────────────────────────────────────┐
+│  1. ANALYZE JOB DESCRIPTION         │
+│  - Extract company, position        │
+│  - Identify 10-15 keywords          │
+│  - Detect sector/tone               │
+│  - Write job_summary                │
+└─────────────────────────────────────┘
         │
         ▼
-Read data/*.json → Select relevant content
-        │
-        ▼ (cover letter only)
-Tavily web search: company values, recent news
+┌─────────────────────────────────────┐
+│  2. WEB RESEARCH (WebSearch)        │
+│  - Company values, mission          │
+│  - Recent news, initiatives         │
+│  - Flexible queries per context     │
+└─────────────────────────────────────┘
         │
         ▼
-scripts/generate_*.py → Replace template placeholders
+┌─────────────────────────────────────┐
+│  3. SELECT CONTENT                  │
+│  - Read data/*.json                 │
+│  - Choose relevant bullets          │
+│  - Adapt to sector/tone             │
+└─────────────────────────────────────┘
         │
         ▼
-jobs/[Company]_[Position]_[DD-MM-YYYY]/
+┌─────────────────────────────────────┐
+│  4. WRITE CONTENT                   │
+│  - Professional summary (CV)        │
+│  - Cover letter paragraphs          │
+│  - Integrate research findings      │
+└─────────────────────────────────────┘
+        │
+        ▼
+┌─────────────────────────────────────┐
+│  5. CREATE content.json             │
+│  - Save all content to JSON         │
+│  - Easy to modify later             │
+└─────────────────────────────────────┘
+        │
+        ▼
+┌─────────────────────────────────────┐
+│  6. GENERATE DOCUMENTS              │
+│  - content.json → Resume.docx → PDF │
+│  - content.json → Cover.docx → PDF  │
+└─────────────────────────────────────┘
 ```
 
-### Key Script Functions
+### Modification Flow
 
-**`scripts/generate_resume.py`**
-```python
-generate_resume(
-    professional_summary,      # 2-3 lines, mention company name
-    auraia_bullets,           # List[str] - 3 items
-    rc_group_bullet,          # str
-    europ_assistance_bullet,  # str
-    leadership_bullets,       # List[str] - 3 items
-    courses,                  # str - comma-separated, 3-4 max
-    skills,                   # str - one line, 5-7 tools max
-    company, position
-) -> (folder_name, docx_path, pdf_path)
+```
+User: "Shorten the 2nd Auraia bullet"
+        │
+        ▼
+1. Read content.json
+2. Modify resume.auraia_bullets[1]
+3. Regenerate only the resume (not cover letter)
 ```
 
-**`scripts/generate_cover_letter.py`**
+### Script Structure
+
+```
+scripts/
+├── generate.py           # Main orchestrator
+├── resume.py             # Resume generation (content.json → DOCX)
+├── cover_letter.py       # Cover letter generation (content.json → DOCX)
+├── validate_resume.py    # Resume validation
+├── validate_cover_letter.py  # Cover letter validation
+└── utils/
+    ├── config.py         # Paths, constants, placeholders
+    ├── docx.py           # Placeholder replacement, markdown
+    └── pdf.py            # DOCX → PDF conversion, 1-page trim
+```
+
+### Key Functions
+
+**`scripts/generate.py`**
 ```python
-generate_cover_letter(
-    company_name, recipient_name,
-    street_number, postal_city_country,
-    intro_paragraph,          # 60-80 words, Tavily hook required
-    body_paragraph_1,         # "**Title** — content" format
-    body_paragraph_2,
-    body_paragraph_3,
-    additional_context,       # "" to skip
-    company_attraction,       # "" to skip
-    closing_paragraph,
-    output_folder
-) -> (folder_name, docx_path, pdf_path)
+create_project_folder(company, position) -> Path
+save_content(content, folder) -> Path
+load_content(folder) -> dict
+generate_all(folder) -> dict  # Returns paths to generated files
+regenerate_resume(folder) -> dict
+regenerate_cover_letter(folder) -> dict
+```
+
+**`scripts/resume.py`**
+```python
+generate_resume(content: dict, output_folder) -> (docx_path, pdf_path)
+```
+
+**`scripts/cover_letter.py`**
+```python
+generate_cover_letter(content: dict, output_folder) -> (docx_path, pdf_path)
 ```
 
 ### Data Files
@@ -90,6 +139,48 @@ generate_cover_letter(
 | `data/work_experiences.json` | 3 roles: Auraia (9), RC Group (6), Europ Assistance (7 accomplishments) |
 | `data/leadership.json` | 5 experiences: McKinsey finalist, AIESEC, Startup, Screeny.ai, Portfolio |
 | `data/courses_and_other.json` | Bachelor (17) + Master (15) courses |
+
+## content.json Schema
+
+```json
+{
+  "metadata": {
+    "company": "Glencore",
+    "position": "Commercial Graduate",
+    "position_exact": "Commercial Graduate Programme - Metals (LME Desk)",
+    "date_created": "2026-01-10",
+    "job_keywords": ["commercial aptitude", "resilience", "data analysis"],
+    "job_summary": "2-year program with rotations on metals desks..."
+  },
+  "research": {
+    "company_values": ["entrepreneurialism", "integrity"],
+    "company_mission": "Responsibly sourcing commodities...",
+    "recent_news": "Expansion copper production to 1M tons by 2028",
+    "used_in": ["cover_letter_intro", "resume_summary"]
+  },
+  "resume": {
+    "professional_summary": "...",
+    "auraia_bullets": ["...", "...", "..."],
+    "rc_bullet": "...",
+    "europ_bullet": "...",
+    "leadership_bullets": ["...", "...", "..."],
+    "courses": "...",
+    "skills": "..."
+  },
+  "cover_letter": {
+    "recipient": "Hiring Manager",
+    "street_number": "",
+    "postal_city_country": "",
+    "intro": "...",
+    "body_1": "**Title** - ...",
+    "body_2": "**Title** - ...",
+    "body_3": "**Title** - ...",
+    "additional_context": "",
+    "company_attraction": "",
+    "closing": "..."
+  }
+}
+```
 
 ## Content Selection
 
@@ -102,34 +193,16 @@ generate_cover_letter(
 - **Skills**: 5-7 MAX (one line, may use `|` separator)
 
 ### Cover Letter Requirements
-- **MANDATORY**: 2 Tavily searches before writing
-  - `"[Company] mission values culture"`
-  - `"[Company] news 2025"`
-- **Intro**: Must reference specific Tavily finding
-- **Body**: `**Bold Title** — content` format
+- **Web research**: Use WebSearch for company values and recent news
+- **Intro**: Must reference specific research finding
+- **Body**: `**Bold Title** - content` format (use hyphen, not em-dash)
 - **Word count**: 250-550 (ideal 350-450)
 
 ## Formatting Rules
 
 - **Font**: Times New Roman, 10pt body (11-22pt headings)
 - **Output**: 1-page PDF (trimmed via PyPDF2)
-- **Cover letter markdown**: `**bold**` syntax supported
-
-## Placeholder Reference
-
-**Resume:**
-- `[Your professional summary...]` → Professional summary
-- `[...W1-B1/B2/B3]` → Auraia bullets
-- `[...W2-B1]` → RC Group bullet
-- `[...W3-B1]` → Europ Assistance bullet
-- `[...L-B1/B2/B3]` → Leadership bullets
-- `[Relevant coursework here]` / `[Relevant software here]`
-
-**Cover Letter:**
-- `[DATE]`, `[COMPANY_NAME]`, `[SALUTATION]`
-- `[INTRO_PARAGRAPH]`, `[BODY_PARAGRAPH_1/2/3]`
-- `[ADDITIONAL_CONTEXT]`, `[COMPANY_ATTRACTION]` (optional, removed if empty)
-- `[CLOSING_PARAGRAPH]`
+- **Cover letter markdown**: `**bold**` syntax supported in body paragraphs
 
 ## Writing Style
 
@@ -138,6 +211,7 @@ generate_cover_letter(
 - Adapt tone to sector (trading=action, consulting=strategic, M&A=technical)
 - Include quantifiable metrics from JSON data
 - Mention company name in professional summary
+- Reference specific company values/news in cover letter intro
 
 **DON'T:**
 - Generic phrases ("passionate about", "excited to leverage")
@@ -149,11 +223,21 @@ generate_cover_letter(
 
 ```
 jobs/[Company]_[Position]_[DD-MM-YYYY]/
+├── content.json              # Intermediate data (easy to modify)
+├── job_description.md        # Original job posting
 ├── Resume_Adrian_Turion.docx
 ├── Cover_Letter_Adrian_Turion.docx
-├── job_description.md
-├── tavily_research.md (cover letter only)
 └── PDF/
     ├── Resume_Adrian_Turion.pdf
     └── Cover_Letter_Adrian_Turion.pdf
 ```
+
+## Modification Examples
+
+| Request | Action |
+|---------|--------|
+| "CV too long" | Shorten longest bullets in content.json, regenerate resume |
+| "Change pro summary" | Edit `resume.professional_summary`, regenerate resume |
+| "More AI focus" | Adjust relevant bullets + summary, regenerate resume |
+| "Intro too generic" | Edit `cover_letter.intro`, regenerate cover letter |
+| "Replace 3rd leadership" | Pick different one from `data/leadership.json`, regenerate resume |
