@@ -101,6 +101,11 @@ results = generate_all(folder)
     "additional": "",
     "attraction": "",
     "closing": "..."
+  },
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - [Position] - Adrian Turion",
+    "body": "..."
   }
 }
 ```
@@ -167,9 +172,33 @@ Examples:
 jobs/[Company] - [Position] - [DD.MM.YYYY]/
 ├── content.json
 ├── job_description.md
+├── email_draft.txt                              ← For email applications
 ├── Adrian Turion - [Company] - Resume.docx
 ├── Adrian Turion - [Company] - Cover Letter.docx
 └── PDF/
     ├── Adrian Turion - [Company] - Resume.pdf
     └── Adrian Turion - [Company] - Cover Letter.pdf
 ```
+
+## Email draft
+
+Always generated for email applications. Format:
+
+```
+Subject: Application - [Position] - Adrian Turion
+
+Dear [Recipient],
+
+Please find attached my resume and cover letter for the [Position] position at [Company].
+
+[1-2 sentences with hook from cover letter intro - company-specific]
+
+I would welcome the opportunity to discuss my application further.
+
+Best regards,
+Adrian Turion
++41 77 262 37 96
+turionadrian@gmail.com
+```
+
+**Keep it short** (5-7 sentences max). The cover letter has the details.

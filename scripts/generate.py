@@ -90,9 +90,55 @@ def save_job_description(job_description: str, folder: Path) -> Path:
     return jd_path
 
 
+def generate_email_draft(content: dict, folder: Path) -> Path:
+    """
+    Génère un brouillon d'email pour candidature par mail.
+
+    Args:
+        content: Dict contenant les données
+        folder: Dossier de destination
+
+    Returns:
+        Path vers le fichier email_draft.txt
+    """
+    metadata = content.get("metadata", {})
+    email_data = content.get("email", {})
+
+    company = metadata.get("company", "Company")
+    position = metadata.get("position", "Position")
+    recipient = email_data.get("recipient", "Hiring Team")
+    subject = email_data.get("subject", f"Application - {position} - Adrian Turion")
+    body = email_data.get("body", "")
+
+    # Si pas de body personnalisé, générer un template par défaut
+    if not body:
+        body = f"""Dear {recipient},
+
+Please find attached my resume and cover letter for the {position} position at {company}.
+
+I would welcome the opportunity to discuss my application further.
+
+Best regards,
+Adrian Turion
++41 77 262 37 96
+turionadrian@gmail.com"""
+
+    email_content = f"""Subject: {subject}
+
+{body}
+"""
+
+    email_path = folder / "email_draft.txt"
+    with open(email_path, 'w', encoding='utf-8') as f:
+        f.write(email_content)
+    print(f"[EMAIL] {email_path}")
+
+    return email_path
+
+
 def generate_all(folder: Path) -> dict:
     """
-    Génère CV et lettre de motivation depuis content.json.
+    Génère CV, lettre de motivation et brouillon email depuis content.json.
 
     Args:
         folder: Dossier contenant content.json
@@ -104,12 +150,14 @@ def generate_all(folder: Path) -> dict:
 
     resume_docx, resume_pdf = generate_resume(content, folder)
     cl_docx, cl_pdf = generate_cover_letter(content, folder)
+    email_path = generate_email_draft(content, folder)
 
     return {
         "resume_docx": str(resume_docx),
         "resume_pdf": str(resume_pdf) if resume_pdf else None,
         "cover_letter_docx": str(cl_docx),
-        "cover_letter_pdf": str(cl_pdf) if cl_pdf else None
+        "cover_letter_pdf": str(cl_pdf) if cl_pdf else None,
+        "email_draft": str(email_path)
     }
 
 
