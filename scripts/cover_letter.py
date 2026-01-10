@@ -6,7 +6,7 @@ from pathlib import Path
 from datetime import datetime
 from docx import Document
 
-from scripts.utils.config import TEMPLATES, OUTPUT_NAMES, COVER_LETTER_PLACEHOLDERS
+from scripts.utils.config import TEMPLATES, get_output_names, COVER_LETTER_PLACEHOLDERS
 from scripts.utils.docx import replace_all_placeholders, remove_empty_paragraphs
 from scripts.utils.pdf import convert_and_trim
 
@@ -31,6 +31,10 @@ def generate_cover_letter(content: dict, output_folder: str | Path) -> tuple[Pat
     # Extraire les données
     metadata = content.get("metadata", {})
     cl_data = content.get("cover_letter", {})
+
+    # Noms de fichiers basés sur l'entreprise
+    company = metadata.get("company", "Company")
+    output_names = get_output_names(company)
 
     # Date et salutation
     current_date = datetime.now().strftime("%B %d, %Y")
@@ -71,7 +75,7 @@ def generate_cover_letter(content: dict, output_folder: str | Path) -> tuple[Pat
     remove_empty_paragraphs(doc)
 
     # Sauvegarder le DOCX
-    docx_path = output_folder / OUTPUT_NAMES["cover_letter_docx"]
+    docx_path = output_folder / output_names["cover_letter_docx"]
     doc.save(docx_path)
     print(f"[DOCX] {docx_path}")
 

@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from docx import Document
 
-from scripts.utils.config import TEMPLATES, OUTPUT_NAMES, RESUME_PLACEHOLDERS
+from scripts.utils.config import TEMPLATES, get_output_names, RESUME_PLACEHOLDERS
 from scripts.utils.docx import replace_all_placeholders, remove_empty_paragraphs
 from scripts.utils.pdf import convert_and_trim
 
@@ -23,6 +23,10 @@ def generate_resume(content: dict, output_folder: str | Path) -> tuple[Path, Pat
     """
     output_folder = Path(output_folder)
     output_folder.mkdir(parents=True, exist_ok=True)
+
+    # Récupérer le nom de l'entreprise pour les noms de fichiers
+    company = content.get("metadata", {}).get("company", "Company")
+    output_names = get_output_names(company)
 
     # Charger le template
     doc = Document(TEMPLATES["resume"])
@@ -51,7 +55,7 @@ def generate_resume(content: dict, output_folder: str | Path) -> tuple[Path, Pat
     remove_empty_paragraphs(doc)
 
     # Sauvegarder le DOCX
-    docx_path = output_folder / OUTPUT_NAMES["resume_docx"]
+    docx_path = output_folder / output_names["resume_docx"]
     doc.save(docx_path)
     print(f"[DOCX] {docx_path}")
 

@@ -15,14 +15,22 @@ TEMPLATES = {
     "cover_letter": TEMPLATES_DIR / "Cover Letter - Adrian Turion.docx"
 }
 
-# Noms des fichiers de sortie
+# Nom de l'auteur
+AUTHOR_NAME = "Adrian Turion"
+
+# Noms des fichiers de sortie (statiques)
 OUTPUT_NAMES = {
-    "resume_docx": "Resume_Adrian_Turion.docx",
-    "resume_pdf": "Resume_Adrian_Turion.pdf",
-    "cover_letter_docx": "Cover_Letter_Adrian_Turion.docx",
-    "cover_letter_pdf": "Cover_Letter_Adrian_Turion.pdf",
     "content": "content.json"
 }
+
+def get_output_names(company: str) -> dict:
+    """Génère les noms de fichiers avec le nom de l'entreprise."""
+    return {
+        "resume_docx": f"{AUTHOR_NAME} - {company} - Resume.docx",
+        "resume_pdf": f"{AUTHOR_NAME} - {company} - Resume.pdf",
+        "cover_letter_docx": f"{AUTHOR_NAME} - {company} - Cover Letter.docx",
+        "cover_letter_pdf": f"{AUTHOR_NAME} - {company} - Cover Letter.pdf",
+    }
 
 # Formatting
 FONT_NAME = "Times New Roman"
