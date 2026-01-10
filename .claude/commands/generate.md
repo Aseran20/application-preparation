@@ -1,58 +1,68 @@
-Génère un CV et une lettre de motivation personnalisés à partir d'une description de poste.
+Generate a personalized resume and cover letter from a job description.
 
 ---
 
 ## Input
 
-L'utilisateur fournit la job description en argument.
+The user provides the job description as an argument.
 
 ## Workflow
 
-### 1. Analyse de la job description
-- Extraire : company, position, position_exact
-- Identifier 10-15 keywords exacts (pour ATS)
-- Détecter secteur et tone (trading/M&A/consulting/tech)
-- Rédiger job_summary (2-3 phrases pour rappel avant entretien)
+### 1. Analyze job description
+- Extract: company, position, position_exact
+- Identify 10-15 exact keywords (for ATS)
+- Detect sector and tone (trading/M&A/consulting/tech)
+- Write job_summary (2-3 sentences for interview prep recall)
 
-### 2. Recherche web (WebSearch)
-Effectuer les recherches pertinentes selon le contexte :
-- Valeurs/culture de l'entreprise
-- Actualités récentes
-- Secteur d'activité / concurrents
-- Projets ou initiatives spécifiques mentionnés dans l'offre
+### 2. Web research (WebSearch)
+Perform relevant searches based on context:
+- Company values/culture
+- Recent news
+- Industry / competitors
+- Specific projects or initiatives mentioned in the posting
 
-Objectif : trouver des éléments concrets pour personnaliser les documents.
+Goal: find concrete elements to personalize the documents.
 
-### 3. Sélection du contenu
-Depuis `data/*.json`, sélectionner :
-- 3 bullets Auraïa (sur 9 disponibles)
-- 1 bullet RC Group (sur 6)
-- 1 bullet Europ Assistance (sur 7)
-- 3 leadership (sur 5)
+### 3. Content selection
+From `data/*.json`, select and adjust if needed:
+- 3 Auraia bullets (from 9 available)
+- 1 RC Group bullet (from 6)
+- 1 Europ Assistance bullet (from 7)
+- 3 leadership (from 5)
 - 3-4 courses, 5-7 skills
 
-Critères : keywords match, secteur, tone adapté.
+Criteria: keyword match, sector relevance, adapted tone.
 
-### 4. Rédaction
-**CV :**
-- Professional summary : 2-3 lignes, mentionne le nom de l'entreprise
+### 4. Writing
+**Resume:**
+- Professional summary: 2-3 lines, mention company name
 
-**Lettre de motivation :**
-- Intro : 60-80 mots, hook basé sur la recherche web
-- Body 1/2/3 : 60-80 mots chacun, format "**Titre** — contenu"
-- Closing : 50-70 mots
+**Cover letter:**
+- Subject line: position title
+- Intro: 60-80 words, hook based on web research
+- Body 1/2/3: 60-80 words each, format "**Title** - content"
+- Closing: 50-70 words
 
-### 5. Génération
-1. Créer le dossier `jobs/[Company]_[Position]_[DD-MM-YYYY]/`
-2. Sauvegarder `content.json` avec tout le contenu
-3. Sauvegarder `job_description.md`
-4. Appeler `scripts/generate.py` pour générer DOCX + PDF
+### 5. Generation
+1. Create folder `jobs/[Company] - [Position] - [DD.MM.YYYY]/`
+2. Save `content.json` with all content
+3. Save `job_description.md`
+4. Call Python scripts to generate DOCX + PDF
+
+```python
+from scripts.generate import create_project_folder, save_content, save_job_description, generate_all
+
+folder = create_project_folder(company, position)
+save_content(content, folder)
+save_job_description(job_description_text, folder)
+results = generate_all(folder)
+```
 
 ### 6. Validation
-- Vérifier qu'aucun placeholder ne reste
-- Confirmer que les PDFs sont générés
+- Verify no placeholders remain
+- Confirm PDFs are generated (1 page each)
 
-## Structure du content.json
+## content.json Structure
 
 ```json
 {
@@ -83,10 +93,11 @@ Critères : keywords match, secteur, tone adapté.
     "recipient": "...",
     "street": "...",
     "postal": "...",
+    "subject": "...",
     "intro": "...",
-    "body_1": "**Titre** — ...",
-    "body_2": "**Titre** — ...",
-    "body_3": "**Titre** — ...",
+    "body_1": "**Title** - ...",
+    "body_2": "**Title** - ...",
+    "body_3": "**Title** - ...",
     "additional": "",
     "attraction": "",
     "closing": "..."
@@ -94,30 +105,42 @@ Critères : keywords match, secteur, tone adapté.
 }
 ```
 
-## Modifications post-génération
+## Post-generation modifications
 
-Si l'utilisateur demande un changement :
-1. Lire `content.json` du dossier
-2. Modifier le champ concerné
-3. Régénérer uniquement le document impacté :
-   - `python scripts/generate.py <folder>` pour tout
-   - Ou modifier et régénérer via les fonctions Python
+If the user requests a change:
+1. Read `content.json` from the folder
+2. Modify the relevant field
+3. Regenerate only the impacted document
 
-Exemples :
-- "CV trop long" → raccourcir bullets dans content.json, régénérer CV
-- "Change le résumé pro" → modifier `resume.professional_summary`
-- "Intro lettre trop générique" → modifier `cover_letter.intro`
+Examples:
+- "Resume too long" → shorten bullets in content.json, regenerate resume
+- "Change the intro" → modify `cover_letter.intro`, regenerate cover letter
+- "More focus on AI" → adjust relevant bullets + summary
 
-## Style d'écriture
+## Writing style
 
-**À FAIRE :**
-- Utiliser les EXACT keywords de la job description (ATS)
-- Adapter le tone au secteur
-- Inclure des métriques quantifiables
-- Mentionner le nom de l'entreprise dans le summary
+**DO:**
+- Use EXACT keywords from job description (ATS optimization)
+- Adapt tone to sector
+- Include quantifiable metrics
+- Mention company name in summary
+- Reference specific company values/news in cover letter intro
 
-**À ÉVITER :**
-- Phrases génériques ("passionate about", "excited to leverage")
-- Em-dashes (utiliser tirets ou deux-points)
-- Répéter le contenu du CV dans la lettre
-- Dépasser 1 page
+**DON'T:**
+- Generic phrases ("passionate about", "excited to leverage")
+- Em-dashes (use hyphens or colons)
+- Repeat resume content in cover letter
+- Exceed 1 page
+
+## Output files
+
+```
+jobs/[Company] - [Position] - [DD.MM.YYYY]/
+├── content.json
+├── job_description.md
+├── Adrian Turion - [Company] - Resume.docx
+├── Adrian Turion - [Company] - Cover Letter.docx
+└── PDF/
+    ├── Adrian Turion - [Company] - Resume.pdf
+    └── Adrian Turion - [Company] - Cover Letter.pdf
+```
