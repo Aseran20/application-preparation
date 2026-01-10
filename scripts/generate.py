@@ -22,12 +22,17 @@ def create_project_folder(company: str, position: str) -> Path:
     Returns:
         Path vers le dossier créé
     """
-    date_str = datetime.now().strftime("%d-%m-%Y")
-    # Nettoyer les noms (remplacer espaces par underscore)
-    company_clean = company.replace(" ", "_").replace("/", "-")
-    position_clean = position.replace(" ", "_").replace("/", "-")
+    date_str = datetime.now().strftime("%d.%m.%Y")
 
-    folder_name = f"{company_clean}_{position_clean}_{date_str}"
+    # Nettoyer les caractères interdits dans les noms de dossiers Windows
+    invalid_chars = ['/', '\\', ':', '*', '?', '"', '<', '>', '|']
+    company_clean = company
+    position_clean = position
+    for char in invalid_chars:
+        company_clean = company_clean.replace(char, "-")
+        position_clean = position_clean.replace(char, "-")
+
+    folder_name = f"{company_clean} - {position_clean} - {date_str}"
     folder_path = JOBS_DIR / folder_name
     folder_path.mkdir(parents=True, exist_ok=True)
 
