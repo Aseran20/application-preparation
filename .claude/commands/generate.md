@@ -117,6 +117,34 @@ Examples:
 - "Change the intro" → modify `cover_letter.intro`, regenerate cover letter
 - "More focus on AI" → adjust relevant bullets + summary
 
+## Character limits (1-page guardrail)
+
+**CRITICAL: Documents must fit on 1 page. Respect these limits:**
+
+**Resume:**
+| Field | Max characters |
+|-------|----------------|
+| professional_summary | 300 |
+| auraia_bullets (each) | 220 |
+| rc_bullet | 280 |
+| europ_bullet | 250 |
+| leadership_bullets (each) | 180 |
+| courses | 100 |
+| skills | 120 |
+
+**Cover letter:**
+| Field | Max characters |
+|-------|----------------|
+| intro | 450 |
+| body_1, body_2, body_3 (each) | 400 |
+| closing | 350 |
+
+**If PDF generation shows WARNING about exceeding 1 page:**
+1. Check which fields are longest
+2. Shorten them in content.json
+3. Regenerate the document
+4. Repeat until no warning
+
 ## Writing style
 
 **DO:**
@@ -125,6 +153,7 @@ Examples:
 - Include quantifiable metrics
 - Mention company name in summary
 - Reference specific company values/news in cover letter intro
+- **Stay within character limits above**
 
 **DON'T:**
 - Generic phrases ("passionate about", "excited to leverage")

@@ -1,9 +1,35 @@
 # scripts/utils/pdf.py
-"""Conversion DOCX vers PDF avec trim à 1 page."""
+"""Conversion DOCX vers PDF avec validation et trim à 1 page."""
 
 import subprocess
 import shutil
 from pathlib import Path
+
+
+class PageLimitExceeded(Exception):
+    """Raised when a document exceeds the 1-page limit."""
+    def __init__(self, pdf_path: Path, page_count: int):
+        self.pdf_path = pdf_path
+        self.page_count = page_count
+        super().__init__(f"Document has {page_count} pages (limit: 1): {pdf_path.name}")
+
+
+def get_page_count(pdf_path: str | Path) -> int:
+    """
+    Returns the number of pages in a PDF.
+
+    Args:
+        pdf_path: Path to the PDF file
+
+    Returns:
+        Number of pages, or 0 if unable to read
+    """
+    try:
+        from PyPDF2 import PdfReader
+        reader = PdfReader(pdf_path)
+        return len(reader.pages)
+    except Exception:
+        return 0
 
 
 def convert_to_pdf(docx_path: str | Path, output_folder: str | Path) -> Path | None:
@@ -82,7 +108,7 @@ def trim_to_one_page(pdf_path: str | Path) -> bool:
         return False
 
 
-def convert_and_trim(docx_path: str | Path, output_folder: str | Path) -> Path | None:
+def convert_and_trim(docx_path: str | Path, output_folder: str | Path) -> tuple[Path | None, int]:
     """
     Convertit DOCX en PDF et garde uniquement la première page.
 
@@ -91,10 +117,13 @@ def convert_and_trim(docx_path: str | Path, output_folder: str | Path) -> Path |
         output_folder: Dossier de destination pour le PDF
 
     Returns:
-        Path vers le PDF généré (1 page), ou None si échec
+        Tuple (pdf_path, original_page_count):
+        - pdf_path: Path vers le PDF généré (1 page), ou None si échec
+        - original_page_count: Nombre de pages avant trim (0 si échec)
     """
     pdf_path = convert_to_pdf(docx_path, output_folder)
     if pdf_path and pdf_path.exists():
+        original_page_count = get_page_count(pdf_path)
         trim_to_one_page(pdf_path)
-        return pdf_path
-    return None
+        return pdf_path, original_page_count
+    return None, 0

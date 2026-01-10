@@ -61,9 +61,12 @@ def generate_resume(content: dict, output_folder: str | Path) -> tuple[Path, Pat
 
     # Générer le PDF
     pdf_folder = output_folder / "PDF"
-    pdf_path = convert_and_trim(docx_path, pdf_folder)
+    pdf_path, original_pages = convert_and_trim(docx_path, pdf_folder)
     if pdf_path:
-        print(f"[PDF] {pdf_path} (1 page)")
+        if original_pages > 1:
+            print(f"[WARNING] Resume exceeded 1 page ({original_pages} pages) - content was trimmed!")
+            print(f"[WARNING] Please shorten the content in content.json and regenerate.")
+        print(f"[PDF] {pdf_path} (trimmed to 1 page)")
 
     return docx_path, pdf_path
 
