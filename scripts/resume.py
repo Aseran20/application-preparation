@@ -5,9 +5,9 @@ import json
 from pathlib import Path
 from docx import Document
 
-from utils.config import TEMPLATES, OUTPUT_NAMES, RESUME_PLACEHOLDERS
-from utils.docx import replace_all_placeholders, remove_empty_paragraphs
-from utils.pdf import convert_and_trim
+from scripts.utils.config import TEMPLATES, OUTPUT_NAMES, RESUME_PLACEHOLDERS
+from scripts.utils.docx import replace_all_placeholders, remove_empty_paragraphs
+from scripts.utils.pdf import convert_and_trim
 
 
 def generate_resume(content: dict, output_folder: str | Path) -> tuple[Path, Path | None]:

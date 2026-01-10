@@ -6,9 +6,9 @@ import shutil
 from pathlib import Path
 from datetime import datetime
 
-from utils.config import JOBS_DIR, OUTPUT_NAMES
-from resume import generate_resume
-from cover_letter import generate_cover_letter
+from scripts.utils.config import JOBS_DIR, OUTPUT_NAMES
+from scripts.resume import generate_resume
+from scripts.cover_letter import generate_cover_letter
 
 
 def create_project_folder(company: str, position: str) -> Path:
