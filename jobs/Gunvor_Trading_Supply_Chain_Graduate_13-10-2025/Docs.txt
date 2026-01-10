@@ -1,0 +1,13 @@
+How do you recommend preparing on the technical side for this program beyond the commodities demystified guide?
+
+Read Trafi's other white paper on the economics of commodity trading firms. Edward's Energy Trading & Investing is also a good overview. The books The World for Sale and The King of Oil are also relevant - plus you'll probably find them personally interesting if you want to work in energy commodities. You should know where WTI, Brent, and HH are trading at and what's been driving them. Have a substantiated opinion on where they're going. Know the macro landscape and when news items hit the tape (eg FOMC, CPI, etc.). Know your stats well. One of the things that helped separate me was stats, experience with R, and ability to succinctly explain basic stuff (eg what's r^2 actually mean). Dig into anything that interests you when it comes to the infrastructure (eg difference between Panamax vs Suezmax vs Aframax, or what's more economical/faster pipeline or boat?). McKinsey's Refinery Reference Desk has short definitions on a ton of relevant things (eg. different grades of crude + their gravity & sulfur, or what's the difference between an FCC vs coker?)
+
+
+If anyone has completed that hirevue test, what type of question/games were they asking?
+
+First there are 3 hv questions that you can re-record 3 (three) times each if you want. Like why gunvor, why commodities trading and something they could invest in. Second there are the two games: first is number/letter sequence memorization, second one is recognize the same grids where each one has triangles/circles inside.
+
+1. Fiche Gunvor et programme
+2. Fiche questions et réponses
+3. Affinage et 2 répétitions
+4. Faire HV
