@@ -38,17 +38,17 @@ FONT_SIZE_PT = 10
 
 # Placeholders CV
 RESUME_PLACEHOLDERS = {
-    "summary": "[Your professional summary here - describe your background, expertise, and career goals]",
-    "auraia_1": "[Describe your key responsibility or achievement here W1-B1]",
-    "auraia_2": "[Describe your key responsibility or achievement here W1-B2]",
-    "auraia_3": "[Describe your key responsibility or achievement here W1-B3]",
-    "rc": "[Describe your key responsibility or achievement here W2-B1]",
-    "europ": "[Describe your key responsibility or achievement here W3-B1]",
-    "leadership_1": "[Describe your key responsibility or achievement here L-B1]",
-    "leadership_2": "[Describe your key responsibility or achievement here L-B2]",
-    "leadership_3": "[Describe your key responsibility or achievement here L-B3]",
-    "courses": "[Relevant coursework here]",
-    "skills": "[Relevant software here]"
+    "introduction": "[INTRODUCTION]",
+    "auraia_1": "[W1-B1]",
+    "auraia_2": "[W1-B2]",
+    "auraia_3": "[W1-B3]",
+    "rc": "[W2-B1]",
+    "europ": "[W3-B1]",
+    "leadership_1": "[L-B1]",
+    "leadership_2": "[L-B2]",
+    "leadership_3": "[L-B3]",
+    "courses": "[COURSEWORK]",
+    "skills": "[SOFTWARE]"
 }
 
 # Placeholders lettre
@@ -58,6 +58,7 @@ COVER_LETTER_PLACEHOLDERS = {
     "street": "[STREET_NUMBER]",
     "postal": "[POSTAL_CITY_COUNTRY]",
     "company": "[COMPANY_NAME]",
+    "subject": "[SUBJECT_LINE]",
     "salutation": "[SALUTATION]",
     "intro": "[INTRO_PARAGRAPH]",
     "body_1": "[BODY_PARAGRAPH_1]",

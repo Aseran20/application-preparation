@@ -35,7 +35,7 @@ def generate_resume(content: dict, output_folder: str | Path) -> tuple[Path, Pat
     resume_data = content.get("resume", {})
 
     replacements = {
-        RESUME_PLACEHOLDERS["summary"]: resume_data.get("professional_summary", ""),
+        RESUME_PLACEHOLDERS["introduction"]: resume_data.get("professional_summary", ""),
         RESUME_PLACEHOLDERS["auraia_1"]: resume_data.get("auraia_bullets", ["", "", ""])[0],
         RESUME_PLACEHOLDERS["auraia_2"]: resume_data.get("auraia_bullets", ["", "", ""])[1],
         RESUME_PLACEHOLDERS["auraia_3"]: resume_data.get("auraia_bullets", ["", "", ""])[2],

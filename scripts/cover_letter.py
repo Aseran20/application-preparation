@@ -48,6 +48,7 @@ def generate_cover_letter(content: dict, output_folder: str | Path) -> tuple[Pat
         COVER_LETTER_PLACEHOLDERS["street"]: cl_data.get("street", ""),
         COVER_LETTER_PLACEHOLDERS["postal"]: cl_data.get("postal", ""),
         COVER_LETTER_PLACEHOLDERS["company"]: metadata.get("company", ""),
+        COVER_LETTER_PLACEHOLDERS["subject"]: cl_data.get("subject", ""),
         COVER_LETTER_PLACEHOLDERS["salutation"]: salutation,
         COVER_LETTER_PLACEHOLDERS["intro"]: cl_data.get("intro", ""),
         COVER_LETTER_PLACEHOLDERS["body_1"]: cl_data.get("body_1", ""),
