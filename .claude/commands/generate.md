@@ -182,23 +182,22 @@ jobs/[Company] - [Position] - [DD.MM.YYYY]/
 
 ## Email draft
 
-Always generated for email applications. Format:
+**ALWAYS personalize the email body** - never use generic template.
 
-```
-Subject: Application - [Position] - Adrian Turion
+Write the `email.body` in content.json with:
+1. Brief intro mentioning the position
+2. 1-2 sentences with the hook from cover letter intro (company-specific research)
+3. Call to action
 
-Dear [Recipient],
-
-Please find attached my resume and cover letter for the [Position] position at [Company].
-
-[1-2 sentences with hook from cover letter intro - company-specific]
-
-I would welcome the opportunity to discuss my application further.
-
-Best regards,
-Adrian Turion
-+41 77 262 37 96
-turionadrian@gmail.com
+**Example:**
+```json
+{
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - Commercial Graduate Programme - Adrian Turion",
+    "body": "Dear Hiring Team,\n\nPlease find attached my resume and cover letter for the Commercial Graduate Programme at Glencore.\n\nYour core value of entrepreneurialism and emphasis on individual responsibility from day one resonates with my experience leading deal execution autonomously in a lean M&A team. I am eager to bring this mindset to your trading operations.\n\nI would welcome the opportunity to discuss my application further.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96\nturionadrian@gmail.com"
+  }
+}
 ```
 
 **Keep it short** (5-7 sentences max). The cover letter has the details.
