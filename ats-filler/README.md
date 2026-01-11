@@ -74,6 +74,31 @@ uv run pytest
 
 ## Production Usage
 
+### Connecting from Claude Code
+
+From the project directory:
+
+```bash
+claude mcp add ats-filler -- uv run --directory C:/Users/Adrian/Downloads/devprojects/resume.ai/ats-filler ats-filler
+```
+
+Verify connection:
+```bash
+claude mcp get ats-filler
+# Should show: Status: ✓ Connected
+```
+
+The 9 MCP tools will now be available in your Claude Code session:
+- `start()` - Initialize session and detect platform
+- `bulk_fill()` - Fill multiple fields at once
+- `upsert_experiences()` - Add/update work experience entries
+- `upsert_education()` - Add/update education entries
+- `upload_resume()` - Upload resume file
+- `navigate()` - Go to URL or click button
+- `snapshot()` - Get current page fields
+- `next_page()` - Navigate to next section
+- `close()` - Close browser and cleanup
+
 ### Connecting from Claude Desktop
 
 Add to `claude_desktop_config.json`:
