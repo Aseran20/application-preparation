@@ -188,6 +188,41 @@ Personal data is stored in `config.local.json` (gitignored):
 
 **Key principle:** Run all scripts for a page at once, then fix errors via MCP before moving to next page.
 
+### ATS MCP Server (New)
+
+**Token-optimized automation via custom MCP server.**
+
+```
+Claude → MCP start(url, job_folder) → Session created
+      → MCP bulk_fill(session_id, data) → Fields filled
+      → MCP upsert_experiences(session_id, experiences) → Entries added
+      → MCP next_page(session_id) → Navigate
+```
+
+**Token efficiency:**
+- Before: ~5000 tokens/page (JS generation + reading + execution)
+- After: ~500 tokens/page (tool calls + structured responses)
+- **Reduction: 90%**
+
+**Usage:**
+
+```python
+# Start session
+result = start(url="<workday_url>", job_folder="jobs/...")
+session_id = result["session_id"]
+
+# Fill page
+bulk_fill(session_id, {"given_name": "Adrian", "email": "..."})
+
+# Add experiences
+upsert_experiences(session_id, [{"job_title": "...", ...}])
+
+# Next page
+next_page(session_id)
+```
+
+See `ats-filler/README.md` for complete documentation.
+
 ### Modification Flow
 
 ```
