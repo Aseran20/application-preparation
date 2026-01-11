@@ -3,6 +3,7 @@
 from typing import List, Optional
 from ats_filler.platforms.base import PlatformAdapter
 from ats_filler.schemas.responses import SnapshotResponse, SnapshotField
+from ats_filler.common.field_matchers import fuzzy_match_option
 
 
 class WorkdayAdapter(PlatformAdapter):
@@ -135,9 +136,19 @@ class WorkdayAdapter(PlatformAdapter):
         if field.field_type == "text":
             await self.page.get_by_label(field.label).fill(str(value))
         elif field.field_type == "select":
-            # Simple exact match for now - will add fuzzy matching later
+            # Open dropdown
             await self.page.get_by_label(field.label).click()
-            await self.page.get_by_role("option", name=str(value)).click()
+
+            # Get all options
+            option_elements = await self.page.get_by_role("option").all()
+
+            # Try fuzzy match
+            matched = await fuzzy_match_option(option_elements, str(value))
+            if matched:
+                await matched.click()
+            else:
+                # Fallback: exact match
+                await self.page.get_by_role("option", name=str(value)).click()
         elif field.field_type == "checkbox":
             if value:
                 await self.page.get_by_label(field.label).check()
