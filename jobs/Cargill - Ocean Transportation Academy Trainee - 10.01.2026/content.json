@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "company": "Cargill",
+    "position": "Ocean Transportation Academy Trainee",
+    "position_exact": "Ocean Transportation Academy Trainee M/F/D",
+    "date_created": "2026-01-10",
+    "job_keywords": ["trading", "risk management", "vessel operations", "analytics", "data analysis", "supply and demand", "contract negotiation", "profit and loss analysis", "customer relationships", "digitalization", "quantitative skills", "learning agility", "fast-paced environment", "integrity", "problem-solving"],
+    "job_summary": "18-month rotational graduate program in Cargill Ocean Transportation's Geneva-based freight-trading business. Covers trading, risk management, vessel operations, and analytics to build foundational merchandising and trading competency in shipping. Includes project ownership and client exposure."
+  },
+  "research": {
+    "company_values": ["do the right thing", "put people first", "reach higher", "integrity", "transparency"],
+    "company_mission": "To nourish the world in a safe, responsible and sustainable way",
+    "recent_news": "Named to Fortune's 2025 Change the World list for circular bioeconomy solutions; ordered methanol dual-fuel bulk carriers for delivery late 2025/Q1 2026",
+    "used_in": ["cover_letter_intro", "resume_summary"]
+  },
+  "resume": {
+    "professional_summary": "MSc Finance graduate with M&A execution and financial analysis experience in Geneva, combining quantitative rigor with hands-on client exposure across 10+ live mandates. Manages a personal options portfolio with disciplined risk management. Eager to build foundational trading competency at Cargill Ocean Transportation through rotational exposure to freight trading, vessel operations, and analytics.",
+    "auraia_bullets": [
+      "End-to-end deal execution in a lean 3-person team: sourcing, valuation, due diligence, negotiations, and closing across 7 live mandates",
+      "Built LBO, DCF, and trading comps models; prepared Board presentations and managed data rooms across multiple concurrent transactions",
+      "Managed relationships with clients, advisors, and counterparties throughout transaction lifecycle on deals valued EUR 5M-50M"
+    ],
+    "rc_bullet": "Worked directly with the CEO of Healthcare and Retail divisions on evaluating acquisition targets in France and Belgium; prepared investment memos with market analysis, competitive positioning, and financial projections; conducted due diligence and built synergy models for targets with revenues EUR 10M-30M",
+    "europ_bullet": "Supported CFO and Head of Controlling on FP&A for the Swiss subsidiary (CHF 50M+ revenues); built automated dashboards in Excel and PowerBI to track KPIs; performed variance analysis on monthly P&L and supported annual budget planning and quarterly forecasting for 5 business units",
+    "leadership_bullets": [
+      "McKinsey Case Finalist: Developed predictive model for black swan events using order book data and statistical arbitrage; presented to Keyrock management",
+      "Personal Portfolio Manager: Execute options strategies (Cash Secured Puts, Covered Calls) with disciplined risk management; +8% annualized returns",
+      "Founded Screeny.ai: Built AI-driven buyer identification tool adopted by 3 M&A advisory firms; reduced search time from 10h+ to 20 minutes"
+    ],
+    "courses": "Risk Management, Derivatives, Quantitative Asset and Risk Management, Data Science for Finance",
+    "skills": "Financial Modeling | Risk Analysis | Python, SQL, PowerBI | Trading Strategies | Excel (Advanced)"
+  },
+  "cover_letter": {
+    "recipient": "Hiring Manager",
+    "street": "Esplanade de Pont-Rouge 4",
+    "postal": "1211 Geneva, Switzerland",
+    "subject": "**Subject:** Application for Ocean Transportation Academy Trainee Position",
+    "intro": "Cargill Ocean Transportation's recognition on Fortune's 2025 Change the World list for advancing circular bioeconomy solutions demonstrates a commitment to innovation that extends beyond traditional freight trading. Having spent the past two years executing cross-border deals in a lean M&A team in Geneva, I am drawn to Cargill's combination of 160-year heritage with forward-looking sustainability initiatives and the Academy's rotational exposure to trading, risk, and analytics.",
+    "body_1": "**Analytical Rigor in Fast-Paced Environments** - As sole analyst at Auraia Capital, I managed 7 concurrent mandates across healthcare, tech, and financial services with deal values from EUR 5M to 50M. This required building valuation models under tight deadlines, coordinating multiple workstreams, and adapting quickly to shifting client priorities - skills directly applicable to freight trading's dynamic market conditions.",
+    "body_2": "**Risk Management and Trading Mindset** - Beyond M&A, I manage a personal options portfolio using Cash Secured Puts and Covered Calls with disciplined position sizing and 45-day expiry cycles. This hands-on experience with theta decay, market volatility, and P&L management has sharpened my instinct for balancing risk and reward in real-time trading decisions.",
+    "body_3": "**Data-Driven Problem Solving** - At Europ Assistance, I built automated dashboards tracking financial KPIs for a CHF 50M subsidiary. As a McKinsey case finalist, I developed a predictive model using order book data to forecast market dislocations. Both experiences reflect my ability to translate complex data into actionable insights for strategic decisions.",
+    "additional": "",
+    "attraction": "",
+    "closing": "The Academy's 18-month rotation across trading, risk management, vessel operations, and analytics aligns with my goal to build foundational expertise in commodities trading. I would welcome the opportunity to contribute to Cargill Ocean Transportation's commercial excellence while developing into a well-rounded freight trader."
+  },
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - Ocean Transportation Academy Trainee - Adrian Turion",
+    "body": "Dear Hiring Team,\n\nPlease find attached my resume and cover letter for the Ocean Transportation Academy Trainee position at Cargill.\n\nCargill's recognition on Fortune's 2025 Change the World list for circular bioeconomy solutions reflects the kind of forward-thinking approach I want to be part of. With M&A execution experience in Geneva and hands-on risk management through my personal trading portfolio, I am eager to build foundational trading competency through the Academy's rotational program.\n\nI would welcome the opportunity to discuss my application further.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96\nturionadrian@gmail.com"
+  }
+}

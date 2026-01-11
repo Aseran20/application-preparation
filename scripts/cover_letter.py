@@ -61,6 +61,10 @@ def generate_cover_letter(content: dict, output_folder: str | Path) -> tuple[Pat
 
     # Identifier les placeholders optionnels vides à supprimer
     placeholders_to_remove = []
+    if not cl_data.get("street"):
+        placeholders_to_remove.append(COVER_LETTER_PLACEHOLDERS["street"])
+    if not cl_data.get("postal"):
+        placeholders_to_remove.append(COVER_LETTER_PLACEHOLDERS["postal"])
     if not cl_data.get("additional"):
         placeholders_to_remove.append(COVER_LETTER_PLACEHOLDERS["additional"])
     if not cl_data.get("attraction"):

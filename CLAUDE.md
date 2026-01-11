@@ -19,14 +19,29 @@ Generates both resume AND cover letter in a single command. Creates a project fo
 ### Validation
 
 ```bash
-python scripts/validate_resume.py "jobs/[Folder]/Resume_Adrian_Turion.docx"
-python scripts/validate_cover_letter.py "jobs/[Folder]/Cover_Letter_Adrian_Turion.docx"
+py scripts/validate_resume.py "jobs/[Folder]/Resume_Adrian_Turion.docx"
+py scripts/validate_cover_letter.py "jobs/[Folder]/Cover_Letter_Adrian_Turion.docx"
 ```
+
+Note: On Windows, use `py` instead of `python`.
 
 ### Dependencies
 
 ```bash
-pip install python-docx PyPDF2 docx2pdf
+pip install -r requirements.txt
+```
+
+Or manually: `pip install python-docx PyPDF2 docx2pdf`
+
+### Configuration
+
+Personal data is stored in `config.local.json` (gitignored):
+```json
+{
+  "author_name": "Your Name",
+  "email": "your.email@example.com",
+  "phone": "+00 00 000 00 00"
+}
 ```
 
 ## Architecture
@@ -115,12 +130,29 @@ scripts/
 **`scripts/generate.py`**
 ```python
 create_project_folder(company, position) -> Path
-save_content(content, folder) -> Path
-load_content(folder) -> dict
-generate_all(folder) -> dict  # Returns paths to generated files
+save_content(content, folder) -> Path  # folder accepts str or Path
+load_content(folder) -> dict           # folder accepts str or Path
+generate_all(folder) -> dict           # Validates content, then generates
 regenerate_resume(folder) -> dict
 regenerate_cover_letter(folder) -> dict
+validate_content(content) -> (errors, warnings)  # Pre-generation validation
 ```
+
+**Validation** runs automatically in `generate_all()`:
+- Errors if `auraia_bullets` or `leadership_bullets` != 3 elements
+- Errors if content is too short (with 5% tolerance)
+- Warnings if content exceeds max limits (risk of >1 page)
+
+**Character limits** (defined in `scripts/generate.py`):
+| Field | Min | Max |
+|-------|-----|-----|
+| professional_summary | 340 | 420 |
+| auraia_bullets (each) | 210 | 260 |
+| rc_bullet | 260 | 320 |
+| europ_bullet | 260 | 320 |
+| leadership_bullets (each) | 160 | 200 |
+| courses | 60 | 100 |
+| skills | 55 | 90 |
 
 **`scripts/resume.py`**
 ```python
@@ -169,15 +201,21 @@ generate_cover_letter(content: dict, output_folder) -> (docx_path, pdf_path)
   },
   "cover_letter": {
     "recipient": "Hiring Manager",
-    "street_number": "",
-    "postal_city_country": "",
+    "street": "Company Address",
+    "postal": "City, Country",
+    "subject": "**Subject:** Application for [Position] Position",
     "intro": "...",
     "body_1": "**Title** - ...",
     "body_2": "**Title** - ...",
     "body_3": "**Title** - ...",
-    "additional_context": "",
-    "company_attraction": "",
+    "additional": "",
+    "attraction": "",
     "closing": "..."
+  },
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - [Position] - Adrian Turion",
+    "body": "..."
   }
 }
 ```
@@ -222,14 +260,14 @@ generate_cover_letter(content: dict, output_folder) -> (docx_path, pdf_path)
 ## Output Structure
 
 ```
-jobs/[Company]_[Position]_[DD-MM-YYYY]/
+jobs/[Company] - [Position] - [DD.MM.YYYY]/
 ├── content.json              # Intermediate data (easy to modify)
-├── job_description.md        # Original job posting
-├── Resume_Adrian_Turion.docx
-├── Cover_Letter_Adrian_Turion.docx
+├── email_draft.txt           # For email applications
+├── Adrian Turion - [Company] - Resume.docx
+├── Adrian Turion - [Company] - Cover Letter.docx
 └── PDF/
-    ├── Resume_Adrian_Turion.pdf
-    └── Cover_Letter_Adrian_Turion.pdf
+    ├── Adrian Turion - [Company] - Resume.pdf
+    └── Adrian Turion - [Company] - Cover Letter.pdf
 ```
 
 ## Modification Examples

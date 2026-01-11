@@ -1,6 +1,7 @@
 # scripts/utils/config.py
 """Configuration centralisée pour la génération de documents."""
 
+import json
 from pathlib import Path
 
 # Chemins
@@ -8,15 +9,24 @@ PROJECT_ROOT = Path(__file__).parent.parent.parent
 TEMPLATES_DIR = PROJECT_ROOT / "templates"
 JOBS_DIR = PROJECT_ROOT / "jobs"
 DATA_DIR = PROJECT_ROOT / "data"
+CONFIG_LOCAL = PROJECT_ROOT / "config.local.json"
+
+# Charger config locale si elle existe
+_local_config = {}
+if CONFIG_LOCAL.exists():
+    with open(CONFIG_LOCAL, 'r', encoding='utf-8') as f:
+        _local_config = json.load(f)
+
+# Données personnelles (depuis config.local.json ou défaut)
+AUTHOR_NAME = _local_config.get("author_name", "Your Name")
+AUTHOR_EMAIL = _local_config.get("email", "your.email@example.com")
+AUTHOR_PHONE = _local_config.get("phone", "+00 00 000 00 00")
 
 # Templates
 TEMPLATES = {
-    "resume": TEMPLATES_DIR / "Resume - Adrian Turion.docx",
-    "cover_letter": TEMPLATES_DIR / "Cover Letter - Adrian Turion.docx"
+    "resume": TEMPLATES_DIR / f"Resume - {AUTHOR_NAME}.docx",
+    "cover_letter": TEMPLATES_DIR / f"Cover Letter - {AUTHOR_NAME}.docx"
 }
-
-# Nom de l'auteur
-AUTHOR_NAME = "Adrian Turion"
 
 # Noms des fichiers de sortie (statiques)
 OUTPUT_NAMES = {

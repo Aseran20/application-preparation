@@ -1,0 +1,29 @@
+{
+  "platforms": {
+    "workday": {
+      "detect": ["workday.com", "myworkdayjobs.com"],
+      "quirks": {
+        "search_fields_need_enter": true,
+        "checkbox_click_target": "span",
+        "login_use_enter": true
+      }
+    },
+    "successfactors": {
+      "detect": ["successfactors.com", "jobs.sap.com"]
+    },
+    "greenhouse": {
+      "detect": ["greenhouse.io", "boards.greenhouse.io"]
+    },
+    "lever": {
+      "detect": ["lever.co", "jobs.lever.co"]
+    },
+    "linkedin": {
+      "detect": ["linkedin.com/jobs"]
+    }
+  },
+  "default_quirks": {
+    "search_fields_need_enter": false,
+    "checkbox_click_target": "input",
+    "login_use_enter": false
+  }
+}

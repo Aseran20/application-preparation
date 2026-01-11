@@ -35,10 +35,10 @@ Criteria: keyword match, sector relevance, adapted tone.
 
 ### 4. Writing
 **Resume:**
-- Professional summary: 2-3 lines, mention company name
+- Professional summary: 3-4 lines, mention company name AND specific program/role details, personalize to job
 
 **Cover letter:**
-- Subject line: position title
+- Subject line: "**Subject:** Application for [Position] Position" (bold with prefix)
 - Intro: 60-80 words, hook based on web research
 - Body 1/2/3: 60-80 words each, format "**Title** - content"
 - Closing: 50-70 words
@@ -46,16 +46,17 @@ Criteria: keyword match, sector relevance, adapted tone.
 ### 5. Generation
 1. Create folder `jobs/[Company] - [Position] - [DD.MM.YYYY]/`
 2. Save `content.json` with all content
-3. Save `job_description.md`
-4. Call Python scripts to generate DOCX + PDF
+3. Call Python scripts to generate DOCX + PDF
+
+**Note:** Do NOT save job_description.md - it wastes output tokens rewriting content already in the prompt.
 
 ```python
-from scripts.generate import create_project_folder, save_content, save_job_description, generate_all
+from pathlib import Path
+from scripts.generate import create_project_folder, save_content, generate_all
 
 folder = create_project_folder(company, position)
 save_content(content, folder)
-save_job_description(job_description_text, folder)
-results = generate_all(folder)
+results = generate_all(Path(folder))  # Pass Path object to avoid str/Path error
 ```
 
 ### 6. Validation
@@ -93,7 +94,7 @@ results = generate_all(folder)
     "recipient": "...",
     "street": "...",
     "postal": "...",
-    "subject": "...",
+    "subject": "**Subject:** Application for [Position] Position",
     "intro": "...",
     "body_1": "**Title** - ...",
     "body_2": "**Title** - ...",
@@ -127,15 +128,17 @@ Examples:
 **CRITICAL: Documents must fit on 1 page. Respect these limits:**
 
 **Resume:**
-| Field | Max characters |
-|-------|----------------|
-| professional_summary | 300 |
-| auraia_bullets (each) | 220 |
-| rc_bullet | 280 |
-| europ_bullet | 250 |
-| leadership_bullets (each) | 180 |
-| courses | 100 |
-| skills | 120 |
+| Field | Min chars | Max chars |
+|-------|-----------|-----------|
+| professional_summary | 340 | 420 |
+| auraia_bullets (each) | 210 | 260 |
+| rc_bullet | 260 | 320 |
+| europ_bullet | 260 | 320 |
+| leadership_bullets (each) | 160 | 200 |
+| courses | 60 | 100 |
+| skills | 55 | 90 |
+
+**Note:** rc_bullet and europ_bullet have higher limits since there's only 1 bullet each. Limits are validated in `scripts/generate.py` - too short = error, too long = warning.
 
 **Cover letter:**
 | Field | Max characters |
@@ -171,7 +174,6 @@ Examples:
 ```
 jobs/[Company] - [Position] - [DD.MM.YYYY]/
 ├── content.json
-├── job_description.md
 ├── email_draft.txt                              ← For email applications
 ├── Adrian Turion - [Company] - Resume.docx
 ├── Adrian Turion - [Company] - Cover Letter.docx

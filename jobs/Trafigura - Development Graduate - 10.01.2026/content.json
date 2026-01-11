@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "company": "Trafigura",
+    "position": "Development Graduate",
+    "position_exact": "Geneva Development Graduate Programme - Deals Desk & Operations",
+    "date_created": "2026-01-10",
+    "job_keywords": [
+      "mark-to-market valuation",
+      "P&L reporting",
+      "trade lifecycle",
+      "Deals Desk",
+      "Operations",
+      "trade capture",
+      "trading positions",
+      "vessel logistics",
+      "cargo movements",
+      "compliance",
+      "intellectual curiosity",
+      "grit",
+      "collaborative",
+      "global mindset",
+      "reconcile positions"
+    ],
+    "job_summary": "Two-year rotational programme across Deals Desk and Operations in Energy and Metals & Minerals. Deals Desk handles mark-to-market valuation, daily P&L, and risk reporting. Operations manages physical commodity logistics and contract execution."
+  },
+  "research": {
+    "company_values": [
+      "integrity",
+      "excellence",
+      "respect",
+      "entrepreneurial spirit",
+      "teamwork"
+    ],
+    "company_mission": "To efficiently and responsibly connect global supply and demand for raw materials, optimizing trade flows and managing complex logistics across the commodity value chain.",
+    "recent_news": "FY2025 results: USD 2.7B net income, traded 358M metric tonnes of oil and products. 25% of 2025 expenditure directed towards energy transition metals.",
+    "used_in": [
+      "cover_letter_intro",
+      "resume_summary"
+    ]
+  },
+  "resume": {
+    "professional_summary": "M&A analyst with hands-on experience in financial modeling, P&L analysis, and cross-border deal execution across 10+ mandates valued EUR 5M-50M. Built automated dashboards tracking KPIs and conducted variance analysis on monthly results for a CHF 50M subsidiary. Eager to apply analytical rigor and collaborative mindset to Trafigura's Deals Desk and Operations rotations.",
+    "auraia_bullets": [
+      "Led end-to-end execution in a lean 3-person deal team across 10+ live mandates: sourcing targets, building valuation models (DCF, LBO, trading comps), coordinating due diligence, and managing negotiations through closing",
+      "Built detailed financial models and prepared client presentations for Board meetings and investor pitches; maintained buyer universes of 30+ potential acquirers per mandate and coordinated data room management",
+      "Managed relationships with clients, legal advisors, and counterparties throughout transaction lifecycle; reconciled positions daily with stakeholders across Europe, US, and Asia to ensure accurate deal tracking"
+    ],
+    "rc_bullet": "Worked directly with CEO of Healthcare and Retail divisions on evaluating acquisition targets in France and Belgium; prepared investment memos with market analysis and financial projections; conducted financial due diligence on targets with EUR 10M-30M revenues",
+    "europ_bullet": "Built automated financial dashboards in Excel and PowerBI to track KPIs for 5 business units; performed variance analysis on monthly P&L results and investigated discrepancies for CFO reporting; developed new cost allocation model improving profitability analysis",
+    "leadership_bullets": [
+      "McKinsey Case Finalist: Developed data-driven model to forecast black swan events using order book data and statistical arbitrage; presented to Keyrock management with CHF 200K revenue impact",
+      "AIESEC Associate: Led post-COVID financial recovery by sourcing corporate leads and negotiating partnerships; closed 3 deals generating CHF 60K annual revenue and +40% volunteer placements",
+      "Founded Screeny.ai: Built AI software for M&A buyer identification adopted by 3 advisory firms; reduced search time from 10h+ to 20min through automated screening algorithms"
+    ],
+    "courses": "Derivatives, Quantitative Risk Management, Corporate Governance & M&A, Fixed Income",
+    "skills": "Financial Modeling | Valuation | P&L Analysis | Excel, PowerBI | EN, FR, ES"
+  },
+  "cover_letter": {
+    "recipient": "Hiring Manager",
+    "street": "Trafigura Group Pte Ltd",
+    "postal": "Geneva, Switzerland",
+    "subject": "**Subject:** Application for Development Graduate Programme Position",
+    "intro": "With Trafigura trading 358 million metric tonnes annually and directing 25% of expenditure towards energy transition metals, the scale of your operations demands rigorous analytical infrastructure. Your mission to connect global supply and demand responsibly resonates with my experience executing cross-border deals where accuracy in valuation and stakeholder coordination directly determined outcomes.",
+    "body_1": "**Trade Lifecycle Expertise** - At Auraia Capital, I managed 10+ mandates end-to-end, from initial sourcing through closing. This involved daily tracking of deal progress, reconciling positions with counterparties across multiple time zones, and ensuring accurate documentation at each stage. My exposure to the full transaction lifecycle directly prepares me for Deals Desk responsibilities.",
+    "body_2": "**P&L and Risk Reporting** - At Europ Assistance, I built automated dashboards in Excel and PowerBI tracking KPIs for 5 business units and performed variance analysis on monthly P&L results. Investigating discrepancies and reporting to the CFO taught me the rigor required for accurate financial reporting, aligning with Deals Desk functions in P&L accuracy.",
+    "body_3": "**Collaborative Problem-Solving** - M&A execution demands coordination across legal, tax, and accounting advisors under tight deadlines. Managing concurrent mandates taught me to break down barriers and drive progress in dynamic environments. As AIESEC lead, I closed 3 corporate partnerships by removing roadblocks through persistent follow-up.",
+    "additional": "",
+    "attraction": "",
+    "closing": "The Development Graduate Programme offers the operational depth and mentorship to build expertise across Deals Desk and Operations. I am drawn to Trafigura's entrepreneurial culture and global scale. I would welcome the opportunity to discuss how my analytical skills can contribute to your trading operations."
+  },
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - Development Graduate Programme - Adrian Turion",
+    "body": "Dear Hiring Team,\n\nPlease find attached my resume and cover letter for the Geneva Development Graduate Programme at Trafigura.\n\nWith Trafigura trading 358 million metric tonnes annually and investing heavily in energy transition metals, the scale of your operations resonates strongly. My experience in M&A deal execution and P&L analysis has prepared me to contribute to Deals Desk and Operations from day one.\n\nI would welcome the opportunity to discuss my application further.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96\nturionadrian@gmail.com"
+  }
+}
