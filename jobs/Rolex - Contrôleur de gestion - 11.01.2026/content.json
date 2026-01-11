@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "company": "Rolex",
+    "position": "Contrôleur de gestion",
+    "position_exact": "Contrôleur de gestion (H/F) - Division Finance",
+    "date_created": "2026-01-11",
+    "job_keywords": [
+      "ERP",
+      "SAP S/4",
+      "reporting",
+      "KPIs",
+      "projets transverses",
+      "analyses financières",
+      "Excel avancé",
+      "tableaux croisés dynamiques",
+      "Business Intelligence",
+      "optimisation des processus",
+      "outils d'aide à la décision",
+      "évaluations d'impacts financiers",
+      "esprit d'analyse et de synthèse",
+      "support opérationnel et méthodologique"
+    ],
+    "job_summary": "Management Controller role at Rolex Geneva supporting the Finance division with operational and methodological assistance. Key responsibilities include supporting cross-functional enterprise projects (ERP implementation, regulatory changes), evolving management tools (ERP, reporting, KPIs), creating decision-support tools (BI), and optimizing internal financial processes. Requires 3+ years experience, university degree in business management (HEC/HEG), expertise in Excel and SAP S/4, and strong analytical skills for producing in-depth reports and financial impact evaluations."
+  },
+  "research": {
+    "company_values": [
+      "Excellence in everything",
+      "Precision and reliability",
+      "Long-term commitment (Perpetual philosophy)",
+      "Innovation and continuous improvement",
+      "Durability and timeless quality"
+    ],
+    "company_mission": "Founded on seven pillars—precision, waterproofness, self-winding mechanism, autonomy, resistance to magnetism, reliability, and durability—Rolex's vision of watchmaking embodies the 'superlative' standard. This mindset permeates every department, driving every individual to produce nothing but beautiful work and continuously strive to think and act differently.",
+    "recent_news": "Rolex began 2026 with retail price increases averaging 7% in the US due to record-high gold costs, global inflation, and a 15% tariff on Swiss watch imports. The company continues its commitment to excellence with anticipated product releases at Watches & Wonders Geneva (April 14-20), potentially celebrating the 70th anniversary of the Day-Date flagship model.",
+    "used_in": [
+      "cover_letter_intro",
+      "resume_summary"
+    ]
+  },
+  "resume": {
+    "professional_summary": "Finance professional with 3+ years in M&A analysis, FP&A, and management reporting. Built automated dashboards in Excel and PowerBI at Europ Assistance (CHF 50M+ revenue). Currently building financial models at Auraïa Capital across multiple mandates. Eager to support Rolex's Finance division in ERP evolution and BI tool development.",
+    "auraia_bullets": [
+      "Built financial models (LBO, DCF, comps, precedent transactions) and prepared client presentations for Board meetings across 7 live mandates in healthcare, tech, and life sciences",
+      "Coordinated with legal, tax, and accounting advisors to structure transactions and negotiate terms, managing client and counterparty relationships throughout deal lifecycle",
+      "Led production of marketing materials and data room management across multiple concurrent mandates in a lean 3-person team, ensuring seamless information flow for cross-border transactions"
+    ],
+    "rc_bullet": "Prepared investment memos with market analysis, competitive positioning, and financial projections for 3 acquisitions, conducting due diligence on EUR 10M–30M targets in French healthcare and retail",
+    "europ_bullet": "Supported CFO on FP&A for a CHF 50M+ revenue subsidiary, building automated dashboards in Excel and PowerBI to track KPIs, performing variance analysis on monthly P&L, and developing a cost allocation model",
+    "leadership_bullets": [
+      "Finalist in 2024 McKinsey Business Case, presenting a data-driven model to forecast black swan events using order book data and statistical arbitrage with potential CHF 200K annual revenue gain",
+      "Founded Screeny.ai, an AI-driven software for investment banks to identify acquirers, adopted by 3 advisory firms and reducing buyer search time from 10h+ to 20 minutes",
+      "Led post-COVID financial recovery at AIESEC by sourcing corporate leads and negotiating partnerships, closing 3 key deals generating CHF 60K annual revenue and increasing volunteer placements by 40%"
+    ],
+    "courses": "Corporate Finance, Data Science for Finance, Valuation, Financial Accounting",
+    "skills": "Excel (VBA, Power Query) | PowerBI & Tableau | SAP | Financial Modeling"
+  },
+  "cover_letter": {
+    "recipient": "Hiring Manager",
+    "street": "Rolex SA",
+    "postal": "Geneva, Switzerland",
+    "subject": "**Subject:** Application for Contrôleur de gestion Position",
+    "intro": "Rolex's 'superlative' standard—driving every individual to produce nothing but beautiful work—resonates with my approach to finance. Having built decision-support tools that reduced analysis time by 90% and supported CFO operations at a CHF 50M+ revenue company, I am eager to bring this precision-driven mindset to your Finance division.",
+    "body_1": "**Operational Support for Cross-Functional Projects** - At Europ Assistance, I supported the CFO on budget planning for 5 business units, developed a cost allocation model, and prepared Board presentations. At Auraïa Capital, I coordinate with legal, tax, and accounting advisors to structure M&A transactions across multiple mandates. This cross-functional experience aligns with supporting ERP implementations and regulatory change analyses.",
+    "body_2": "**Evolution of Management Tools and BI** - I built automated dashboards in Excel and PowerBI to track KPIs at Europ Assistance. As founder of Screeny.ai, I developed AI-driven software adopted by 3 firms that reduced search time from 10+ hours to 20 minutes. My technical proficiency in Excel, PowerBI, and SAP positions me to contribute to evolving Rolex's ERP and reporting systems.",
+    "body_3": "**Financial Analysis and Impact Evaluation** - Across 7 M&A mandates, I built financial models (LBO, DCF, comps) and prepared investment memos with market analysis for EUR 10M–30M acquisitions. I conducted due diligence analyzing pricing strategies and profitability impacts. This analytical rigor enables me to deliver high-quality financial evaluations for Rolex's partner departments.",
+    "additional": "",
+    "attraction": "",
+    "closing": "I would welcome the opportunity to discuss how my methodological rigor and technical expertise can support your Finance division. Thank you for considering my application."
+  },
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - Contrôleur de gestion - Adrian Turion",
+    "body": "Dear Hiring Team,\n\nPlease find attached my resume and cover letter for the Contrôleur de gestion position at Rolex Geneva.\n\nRolex's 'superlative' standard—driving every department to produce nothing but beautiful work—resonates with my approach to finance. Having built automated dashboards and decision-support tools that reduced analysis time by 90%, I am eager to bring this precision-driven mindset to your Finance division.\n\nI would welcome the opportunity to discuss my application further.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96\nturionadrian@gmail.com"
+  }
+}

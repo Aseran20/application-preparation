@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "company": "EFG Bank",
+    "position": "Graduate Programme 2026 - Business Functions",
+    "position_exact": "EFG Graduate Programme 2026 - Business Functions - Geneva",
+    "date_created": "2026-01-11",
+    "job_keywords": [
+      "private banking",
+      "client-oriented",
+      "analytical skills",
+      "problem solving",
+      "entrepreneurial spirit",
+      "international mindset",
+      "investment solutions",
+      "global markets",
+      "treasury",
+      "relationship management",
+      "forward thinking",
+      "continuous learning",
+      "collaborative",
+      "proactive self-starter"
+    ],
+    "job_summary": "18-month rotational graduate programme at EFG Bank starting September 2026 with three 6-month rotations across Private Banking, Global Markets & Treasury, and Investment & Client Solutions. Includes 2-week onboarding in Switzerland, mentorship, and development opportunities in a global private banking environment."
+  },
+  "research": {
+    "company_values": [
+      "Accountable",
+      "Hands-on",
+      "Passionate",
+      "Solution-driven",
+      "Partnership-oriented"
+    ],
+    "company_mission": "Empowering entrepreneurial minds to create value – today and for the future",
+    "recent_news": "EFG presented 2026-2028 strategic plan with CHF 130M investment in technology to augment CROs through AI-driven solutions and digital tools, aiming for 15% annual profit growth",
+    "used_in": [
+      "cover_letter_intro",
+      "resume_summary",
+      "email_body"
+    ]
+  },
+  "resume": {
+    "professional_summary": "Master in Finance graduate with M&A advisory, financial analysis, and investment management experience. Currently supporting cross-border deal execution at Auraïa Capital, with prior FP&A experience at Europ Assistance and buy-side M&A at RC Group. Combines analytical skills with client relationship management to contribute to EFG Bank's entrepreneurial private banking approach.",
+    "auraia_bullets": [
+      "End-to-end execution in a lean 3-person deal team across sourcing, valuation, due diligence, negotiations, and closing for cross-border M&A mandates in healthcare, tech, and life sciences",
+      "Built financial models (LBO, DCF, trading comps, precedent transactions) and prepared client presentations for Board meetings and investor pitches with deal values EUR 5M–50M",
+      "Managed client, advisor, and counterparty relationships throughout transaction lifecycle, coordinating with legal, tax, and accounting specialists to structure deals and negotiate terms"
+    ],
+    "rc_bullet": "Worked with the CEO of Healthcare and Retail divisions on evaluating acquisition targets in France and Belgium, preparing investment memos with market analysis, competitive positioning, and financial projections for 3 acquisitions (EUR 10M–30M revenues)",
+    "europ_bullet": "Built automated financial dashboards in Excel and PowerBI to track KPIs and performed variance analysis on monthly P&L, supporting the CFO on FP&A and strategic projects for the Swiss subsidiary with CHF 50M+ revenues",
+    "leadership_bullets": [
+      "Finalist in 2024 McKinsey Business Case, presenting a data-driven predictive model using order book data and statistical arbitrage with potential CHF 200K annual revenue gain",
+      "Led post-COVID financial recovery at AIESEC by sourcing corporate leads and negotiating partnerships, closing 3 key deals generating CHF 60K annual revenue and increasing volunteer placements by 40%",
+      "Manages diversified investment portfolio using Cash Secured Puts and Covered Calls, executing disciplined options strategies generating CHF 5K+ annual premiums with +8% returns"
+    ],
+    "courses": "Corporate Governance & M&A, Investments, Derivatives, Fixed Income & Credit Risk",
+    "skills": "Financial Modeling | Investment Analysis | Client Management | Options Trading"
+  },
+  "cover_letter": {
+    "recipient": "Hiring Manager",
+    "street": "EFG Bank",
+    "postal": "Geneva, Switzerland",
+    "subject": "**Subject:** Application for Graduate Programme 2026 - Business Functions Position",
+    "intro": "I am writing to express my strong interest in the EFG Graduate Programme 2026 - Business Functions. EFG's commitment to \"empowering entrepreneurial minds to create value\" resonates deeply with my experience leading autonomous deal execution in a lean M&A team. Your recent strategic plan emphasizing digital solutions and AI-driven tools to augment Client Relationship Officers aligns with my background in developing AI-powered financial tools and hands-on client management across multiple mandates.",
+    "body_1": "**Client-Focused Problem Solving** - At Auraïa Capital, I manage relationships with clients, advisors, and counterparties throughout transaction lifecycles, coordinating with legal, tax, and accounting specialists to structure deals and negotiate terms. This client-oriented approach, combined with my experience building financial models and preparing Board presentations, has taught me to design customized solutions that align with client goals - a core principle of EFG's entrepreneurial private banking model.",
+    "body_2": "**Analytical Rigor & Forward Thinking** - My experience spans financial modeling (LBO, DCF, trading comps), building automated PowerBI dashboards at Europ Assistance, and developing Screeny.ai - an AI tool that reduces buyer search time by 90% for M&A advisors. As a McKinsey Business Case finalist, I presented predictive models for financial forecasting. This blend of analytical skills and innovative thinking positions me to contribute meaningfully to EFG's investment solutions and global markets functions.",
+    "body_3": "**International Mindset & Adaptability** - Working across cross-border mandates spanning Europe, US, and Asia, I have developed strong adaptability and collaborative skills. At RC Group, I evaluated acquisition targets in France and Belgium, while at AIESEC I negotiated partnerships that generated CHF 60K annual revenue. These experiences, combined with my personal investment portfolio management, reflect the proactive self-starter mentality and entrepreneurial spirit that EFG values in its graduates.",
+    "additional": "",
+    "attraction": "",
+    "closing": "The opportunity to rotate through Private Banking, Global Markets & Treasury, and Investment Solutions aligns perfectly with my career aspirations to develop expertise in client-facing and market-focused roles. I am eager to contribute to EFG's culture of excellence and continuous learning while building lasting relationships within your international network. Thank you for considering my application."
+  },
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - Graduate Programme 2026 Business Functions - Adrian Turion",
+    "body": "Dear Hiring Team,\n\nPlease find attached my resume and cover letter for the EFG Graduate Programme 2026 - Business Functions in Geneva.\n\nEFG's commitment to \"empowering entrepreneurial minds\" and your recent CHF 130M investment in AI-driven solutions resonates with my experience developing AI-powered financial tools and managing client relationships autonomously in M&A. I am eager to bring this entrepreneurial mindset to your private banking operations.\n\nI would welcome the opportunity to discuss my application further.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96\nturionadrian@gmail.com"
+  }
+}

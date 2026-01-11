@@ -51,8 +51,13 @@ Criteria: keyword match, sector relevance, adapted tone.
 **Note:** Do NOT save job_description.md - it wastes output tokens rewriting content already in the prompt.
 
 ```python
+import sys
 from pathlib import Path
-from scripts.generate import create_project_folder, save_content, generate_all
+
+# Add project root to path
+sys.path.insert(0, str(Path.cwd()))
+
+from generator.scripts.generate import create_project_folder, save_content, generate_all
 
 folder = create_project_folder(company, position)
 save_content(content, folder)

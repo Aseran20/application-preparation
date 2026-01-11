@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "company": "Accenture",
+    "position": "Graduate Academy Switzerland",
+    "position_exact": "Accenture Graduate Academy Switzerland (Technology, Strategy & Consulting)",
+    "date_created": "2026-01-11",
+    "job_keywords": [
+      "Technology",
+      "Security",
+      "Software Engineering",
+      "Data & AI",
+      "Strategy & Consulting",
+      "Financial Services",
+      "AI-enabled learning",
+      "AI-driven tools",
+      "Strategic thinker",
+      "Empathetic collaborator",
+      "Cross-service learning",
+      "Multidisciplinary",
+      "Client simulations",
+      "Fast learner",
+      "Analytical skills"
+    ],
+    "job_summary": "6-month graduate program with 7-week intensive training in Zurich, offsite experience, and real-client project phase. Focus on Technology (AI, Security, Software) and Strategy & Consulting across Financial Services, Consumer Goods, and Life Sciences. Permanent position upon successful completion. Emphasis on AI-driven transformation and multidisciplinary consulting capabilities."
+  },
+  "research": {
+    "company_values": [
+      "Client Value Creation",
+      "One Global Network",
+      "Respect for the Individual",
+      "Diversity and inclusion as innovation drivers"
+    ],
+    "company_mission": "Deliver 360° value by leveraging worldwide insight and collaboration while fostering an inclusive environment where cognitive diversity drives innovation and reinvention",
+    "recent_news": "Accenture Switzerland opened a new 9,000 sqm Zurich campus for 1,000 employees with focus on sustainability and neurodiverse-friendly design. Q1 2026 results showed 6% revenue growth and 9.7% EPS growth driven by strong AI bookings. Switzerland ranks third globally in generative AI impact with potential 92 billion CHF GDP capture by 2030. Accenture's Generative AI revenue tripled to $2.7 billion in fiscal 2025, with expanded OpenAI partnership for autonomous digital workers.",
+    "used_in": [
+      "cover_letter_intro",
+      "resume_summary"
+    ]
+  },
+  "resume": {
+    "professional_summary": "Finance graduate with M&A and FP&A experience across Financial Services, Healthcare, and Technology, building AI-driven deal sourcing software. Combining analytical rigor from cross-border transactions with data science capabilities, I am excited to join Accenture's Graduate Academy to develop multidisciplinary consulting skills and drive AI-enabled transformation for clients across industries.",
+    "auraia_bullets": [
+      "Led end-to-end execution in a lean 3-person team across sourcing, valuation, due diligence, and closing for 7 live mandates (sell-side, buy-side, debt advisory) in healthcare, tech, and life sciences with deal values of EUR 5M–50M",
+      "Built financial models (LBO, DCF, comps, precedent transactions) and prepared client presentations for Board meetings and investor pitches, conducting industry research to identify strategic buyers for cross-border deals in Europe, US, and Asia",
+      "Developed expertise in healthcare IT, digital health, and life sciences through sector analysis, performing quality of earnings assessments and identifying value drivers while coordinating with legal, tax, and accounting advisors to structure transactions"
+    ],
+    "rc_bullet": "Worked with CEOs of Healthcare and Retail divisions to evaluate acquisition targets in France and Belgium, preparing investment memos with market analysis and financial projections for 3 acquisitions while conducting due diligence on EUR 10M–30M revenue targets",
+    "europ_bullet": "Built automated dashboards in Excel and PowerBI to track KPIs for the CHF 50M+ Swiss subsidiary, performed variance analysis on monthly P&L, assisted budget planning and forecasting for 5 business units, and developed a cost allocation model to improve profitability analysis",
+    "leadership_bullets": [
+      "Top 5 finalist at 2024 McKinsey Business Case, presenting a data-driven model that forecasts black swan events using order book data and statistical arbitrage (CHF 200K revenue potential)",
+      "Founded Screeny.ai, AI-driven acquirer sourcing software. Built full stack, led sales to M&A boutiques, achieving adoption by 3 firms and reducing buyer search from 10h+ to 20min",
+      "Led AIESEC's post-COVID recovery by sourcing corporate leads and negotiating partnerships, closing 3 deals that generated CHF 60K annual revenue and increased volunteer placements by 40%"
+    ],
+    "courses": "Data Science for Finance, Corporate Governance & M&A, FinTech - Financial Innovation",
+    "skills": "Data & AI | Financial Modeling | Strategic Analysis | Client Engagement | Python & SQL"
+  },
+  "cover_letter": {
+    "recipient": "Hiring Team",
+    "street": "Accenture Switzerland",
+    "postal": "Geneva, Switzerland",
+    "subject": "**Subject:** Application for Graduate Academy Switzerland Position",
+    "intro": "I am writing to apply for the Accenture Graduate Academy Switzerland program in Geneva. Your 9,000 sqm Zurich campus with neurodiverse-friendly design and Switzerland's third-place global ranking in generative AI impact reflect the innovation-driven culture defining Accenture. Having built AI software that reduced M&A buyer sourcing from 10 hours to 20 minutes, I am eager to drive AI-enabled transformation for clients across industries.",
+    "body_1": "**Multidisciplinary Consulting Expertise** - My experience spans Financial Services, Healthcare, and Technology through 7 live M&A mandates (EUR 5M–50M) across Europe, US, and Asia. At RC Group, I worked with CEOs to evaluate acquisition targets. At Europ Assistance, I built automated dashboards for the CHF 50M+ subsidiary. This cross-sector exposure aligns with navigating Strategy to Technology to deliver client value from day one.",
+    "body_2": "**AI-Driven Innovation** - As founder of Screeny.ai, I developed full-stack AI software adopted by 3 investment banks, turning data and AI into business outcomes. Combined with Data Science for Finance and FinTech coursework, this positions me to master AI-driven tools in the Academy's learning journey. My healthcare IT and digital health sector analysis strengthens readiness to tackle real-client challenges across industries.",
+    "body_3": "**Strategic Thinking and Leadership** - As Top 5 finalist at the 2024 McKinsey Business Case, I presented a data-driven model showcasing CHF 200K revenue potential, demonstrating my ability to challenge norms. At AIESEC, I negotiated 3 partnerships generating CHF 60K revenue and +40% placements. In a lean M&A team, I trained 2 interns. These experiences prepare me to thrive in the Academy's feedback-driven environment.",
+    "additional": "",
+    "attraction": "",
+    "closing": "I am excited to develop consulting and analytical skills through the 7-week intensive training and real-client project phase. I am fully committed to the on-location presence in Zurich and look forward to contributing to Accenture's mission of delivering 360° value. Thank you for considering my application."
+  },
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - Graduate Academy Switzerland - Adrian Turion",
+    "body": "Dear Hiring Team,\n\nPlease find attached my resume and cover letter for the Accenture Graduate Academy Switzerland program in Geneva.\n\nYour recent Zurich campus expansion with neurodiverse-friendly design and Switzerland's third-place global ranking in generative AI impact demonstrate Accenture's commitment to innovation-driven, human-centered consulting. As founder of AI-driven software that reduced M&A buyer sourcing from 10 hours to 20 minutes, I am eager to bring this entrepreneurial mindset to your multidisciplinary teams driving AI-enabled transformation.\n\nI am fully committed to the 7-week on-location training in Zurich and would welcome the opportunity to discuss my application further.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96\nturionadrian@gmail.com"
+  }
+}

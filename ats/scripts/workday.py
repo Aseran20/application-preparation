@@ -321,7 +321,12 @@ def generate_work_experience(data: dict) -> dict:
             lines.append(f"  await page.getByLabel('Company').nth({i}).fill('{escape_js(exp['company'])}');")
             filled.append(f"company_{i}")
         if "location" in exp:
-            lines.append(f"  await page.getByLabel('Location').nth({i}).fill('{escape_js(exp['location'])}');")
+            # Location is optional - not all Workday instances have this field
+            lines.append(f"  // Location (optional - not all Workday instances have this)")
+            lines.append(f"  const locationField_{i} = page.getByLabel('Location').nth({i});")
+            lines.append(f"  if (await locationField_{i}.count() > 0) {{")
+            lines.append(f"    await locationField_{i}.fill('{escape_js(exp['location'])}');")
+            lines.append(f"  }}")
             filled.append(f"location_{i}")
         if "role_description" in exp:
             lines.append(f"  await page.getByLabel('Role Description').nth({i}).fill('{escape_js(exp['role_description'])}');")

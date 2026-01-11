@@ -102,7 +102,7 @@ Navigate to URL, handle login if needed, take initial snapshot.
 ### Page 1: My Information
 
 ```bash
-py scripts/form_filler.py workday my_information --data '<json from profile.json>'
+py ats/scripts/form_filler.py workday my_information --data '<json from profile.json>'
 ```
 
 Execute returned code → Snapshot → Fix if needed → Save and Continue
@@ -113,13 +113,13 @@ Run ALL scripts, then verify:
 
 ```bash
 # 1. Work Experience
-py scripts/form_filler.py workday work_experience --data '<json>'
+py ats/scripts/form_filler.py workday work_experience --data '<json>'
 
 # 2. Education
-py scripts/form_filler.py workday education --data '<json>'
+py ats/scripts/form_filler.py workday education --data '<json>'
 
 # 3. Languages
-py scripts/form_filler.py workday languages --data '<json>'
+py ats/scripts/form_filler.py workday languages --data '<json>'
 
 # 4. Upload CV (manual via browser_file_upload)
 # 5. Add LinkedIn URL (manual)
@@ -146,7 +146,7 @@ User reviews and clicks Submit manually.
 ## Form Filler Usage
 
 ```bash
-py scripts/form_filler.py <platform> <section> --data '<json>'
+py ats/scripts/form_filler.py <platform> <section> --data '<json>'
 ```
 
 Sections:

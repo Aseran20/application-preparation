@@ -168,6 +168,7 @@ LABEL_ALIASES = {
 SCHOOL_FALLBACKS = {
     "Université de Lausanne": ["University of Lausanne", "UNIL"],
     "HEC Lausanne": ["Université de Lausanne", "University of Lausanne"],
+    "HEC Lausanne (Faculty of Business and Economics of the University of Lausanne)": ["Université de Lausanne", "University of Lausanne"],
     "EPFL": ["École Polytechnique Fédérale de Lausanne", "Swiss Federal Institute"],
     "ETH Zurich": ["ETH Zürich", "Swiss Federal Institute of Technology"],
     "_default": "Other/School Not Listed",

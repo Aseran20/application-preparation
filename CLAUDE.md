@@ -4,11 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Resume.ai generates personalized, ATS-optimized resumes and cover letters. It analyzes job descriptions, performs web research, selects relevant experiences from JSON databases, and produces formatted Word/PDF documents.
+Resume.ai generates personalized, ATS-optimized resumes and cover letters, then automates job application form filling. It analyzes job descriptions, performs web research, selects relevant experiences from JSON databases, produces formatted Word/PDF documents, and fills Workday ATS forms using Playwright automation.
 
 ## Commands
 
-### Primary Slash Command
+### Primary Workflow
 
 ```bash
 /generate "paste job description here"
@@ -16,14 +16,61 @@ Resume.ai generates personalized, ATS-optimized resumes and cover letters. It an
 
 Generates both resume AND cover letter in a single command. Creates a project folder with all documents.
 
+```bash
+/apply
+```
+
+Automates Workday ATS form filling using Playwright MCP Local. Runs page-by-page with batch execution.
+
+### Manual Generation/Regeneration
+
+```python
+# Generate all documents from content.json
+py generator/scripts/generate.py "jobs/[Company] - [Position] - [DD.MM.YYYY]"
+
+# Or programmatically:
+import sys
+from pathlib import Path
+
+# Add project root to path
+sys.path.insert(0, str(Path.cwd()))
+
+from generator.scripts.generate import create_project_folder, save_content, generate_all, regenerate_resume, regenerate_cover_letter
+
+# Full generation
+folder = create_project_folder(company, position)
+save_content(content, folder)
+results = generate_all(Path(folder))  # Pass Path object, not string
+
+# Modify content.json, then regenerate only CV:
+regenerate_resume(folder)
+
+# Or only cover letter:
+regenerate_cover_letter(folder)
+```
+
+### ATS Form Filling
+
+```python
+# Generate Playwright code for Workday sections
+py ats/scripts/form_filler.py workday my_information --data '<json>'
+py ats/scripts/form_filler.py workday work_experience --data '<json>'
+py ats/scripts/form_filler.py workday education --data '<json>'
+py ats/scripts/form_filler.py workday languages --data '<json>'
+
+# Also supports auth:
+py ats/scripts/form_filler.py workday create_account --data '<json>'
+py ats/scripts/form_filler.py workday sign_in --data '<json>'
+```
+
+Outputs JavaScript code to run via Playwright MCP's `browser_run_code` tool.
+
 ### Validation
 
 ```bash
-py scripts/validate_resume.py "jobs/[Folder]/Resume_Adrian_Turion.docx"
-py scripts/validate_cover_letter.py "jobs/[Folder]/Cover_Letter_Adrian_Turion.docx"
+py generator/scripts/validate_resume.py "jobs/[Folder]/Adrian Turion - [Company] - Resume.docx"
+py generator/scripts/validate_cover_letter.py "jobs/[Folder]/Adrian Turion - [Company] - Cover Letter.docx"
 ```
-
-Note: On Windows, use `py` instead of `python`.
 
 ### Dependencies
 
@@ -38,9 +85,9 @@ Or manually: `pip install python-docx PyPDF2 docx2pdf`
 Personal data is stored in `config.local.json` (gitignored):
 ```json
 {
-  "author_name": "Your Name",
-  "email": "your.email@example.com",
-  "phone": "+00 00 000 00 00"
+  "author_name": "Adrian Turion",
+  "email": "turionadrian@gmail.com",
+  "phone": "+41 77 262 37 96"
 }
 ```
 
@@ -96,8 +143,50 @@ Personal data is stored in `config.local.json` (gitignored):
 │  6. GENERATE DOCUMENTS              │
 │  - content.json → Resume.docx → PDF │
 │  - content.json → Cover.docx → PDF  │
+│  - Generate email_draft.txt         │
 └─────────────────────────────────────┘
 ```
+
+### ATS Automation Flow
+
+```
+/apply → Playwright MCP Local + Workday form filling
+        │
+        ▼
+┌─────────────────────────────────────┐
+│  PAGE 1: My Information             │
+│  - Generate code via form_filler.py │
+│  - Run via browser_run_code         │
+│  - Snapshot → fix errors via MCP    │
+│  - Save and Continue                │
+└─────────────────────────────────────┘
+        │
+        ▼
+┌─────────────────────────────────────┐
+│  PAGE 2: Experience (batch)         │
+│  - Work experience                  │
+│  - Education                        │
+│  - Languages                        │
+│  - Upload CV + LinkedIn             │
+│  - Snapshot → fix ALL errors        │
+│  - Save and Continue                │
+└─────────────────────────────────────┘
+        │
+        ▼
+┌─────────────────────────────────────┐
+│  PAGE 3: Voluntary Disclosures      │
+│  - DOB + T&C acceptance             │
+│  - Save and Continue                │
+└─────────────────────────────────────┘
+        │
+        ▼
+┌─────────────────────────────────────┐
+│  PAGE 4: Review                     │
+│  - User clicks Submit               │
+└─────────────────────────────────────┘
+```
+
+**Key principle:** Run all scripts for a page at once, then fix errors via MCP before moving to next page.
 
 ### Modification Flow
 
@@ -113,21 +202,42 @@ User: "Shorten the 2nd Auraia bullet"
 ### Script Structure
 
 ```
-scripts/
-├── generate.py           # Main orchestrator
-├── resume.py             # Resume generation (content.json → DOCX)
-├── cover_letter.py       # Cover letter generation (content.json → DOCX)
-├── validate_resume.py    # Resume validation
-├── validate_cover_letter.py  # Cover letter validation
-└── utils/
-    ├── config.py         # Paths, constants, placeholders
-    ├── docx.py           # Placeholder replacement, markdown
-    └── pdf.py            # DOCX → PDF conversion, 1-page trim
+generator/               # Document generation
+├── scripts/
+│   ├── generate.py       # Main orchestrator
+│   ├── resume.py         # Resume generation (content.json → DOCX)
+│   ├── cover_letter.py   # Cover letter generation (content.json → DOCX)
+│   ├── validate_resume.py
+│   └── validate_cover_letter.py
+├── utils/
+│   ├── config.py         # Paths, constants, placeholders
+│   ├── docx.py           # Placeholder replacement, markdown
+│   └── pdf.py            # DOCX → PDF conversion, 1-page trim
+└── templates/
+    ├── Resume - Adrian Turion.docx
+    └── Cover Letter - Adrian Turion v2.docx
+
+ats/                     # ATS automation
+├── scripts/
+│   ├── base.py           # Shared fuzzy matching, code generators
+│   ├── workday.py        # Workday-specific patterns and generators
+│   ├── form_filler.py    # CLI to generate Playwright code
+│   └── detector.py       # ATS platform detection (future)
+└── browser_use/
+
+data/                    # SHARED personal data
+├── work_experiences.json
+├── leadership.json
+├── courses_and_other.json
+└── my_information.json
+
+jobs/                    # SHARED output folder
+└── [Company] - [Position] - [Date]/
 ```
 
 ### Key Functions
 
-**`scripts/generate.py`**
+**`generator/scripts/generate.py`**
 ```python
 create_project_folder(company, position) -> Path
 save_content(content, folder) -> Path  # folder accepts str or Path
@@ -135,6 +245,7 @@ load_content(folder) -> dict           # folder accepts str or Path
 generate_all(folder) -> dict           # Validates content, then generates
 regenerate_resume(folder) -> dict
 regenerate_cover_letter(folder) -> dict
+generate_email_draft(content, folder) -> Path
 validate_content(content) -> (errors, warnings)  # Pre-generation validation
 ```
 
@@ -154,15 +265,37 @@ validate_content(content) -> (errors, warnings)  # Pre-generation validation
 | courses | 60 | 100 |
 | skills | 55 | 90 |
 
-**`scripts/resume.py`**
+**`generator/scripts/resume.py`**
 ```python
 generate_resume(content: dict, output_folder) -> (docx_path, pdf_path)
 ```
 
-**`scripts/cover_letter.py`**
+**`generator/scripts/cover_letter.py`**
 ```python
 generate_cover_letter(content: dict, output_folder) -> (docx_path, pdf_path)
 ```
+
+**`ats/scripts/workday.py`**
+```python
+SECTIONS = {
+    "create_account": generate_create_account,
+    "sign_in": generate_sign_in,
+    "my_information": generate_my_information,
+    "work_experience": generate_work_experience,
+    "education": generate_education,
+    "languages": generate_languages,
+}
+```
+
+Each generator returns `{"code": str, "filled": list, "notes": str}` with Playwright JavaScript to run via MCP.
+
+**`ats/scripts/base.py`**
+Contains:
+- `FUZZY_PATTERNS`: Maps intent to dropdown option keywords (e.g., "level_native" → ["native", "bilingual", "c2"])
+- `LABEL_ALIASES`: Maps field keys to ATS label variations (e.g., "given_name" → ["Given Name(s)", "First Name"])
+- `SCHOOL_FALLBACKS`: Alternative school names when exact match fails
+- `generate_fuzzy_select_code()`: Creates JavaScript for robust dropdown selection
+- `generate_search_code()`: Creates JavaScript for search fields with fallbacks
 
 ### Data Files
 
@@ -171,6 +304,7 @@ generate_cover_letter(content: dict, output_folder) -> (docx_path, pdf_path)
 | `data/work_experiences.json` | 3 roles: Auraia (9), RC Group (6), Europ Assistance (7 accomplishments) |
 | `data/leadership.json` | 5 experiences: McKinsey finalist, AIESEC, Startup, Screeny.ai, Portfolio |
 | `data/courses_and_other.json` | Bachelor (17) + Master (15) courses |
+| `data/my_information.json` | Personal data for ATS forms (address, phone, etc.) |
 
 ## content.json Schema
 
@@ -270,6 +404,56 @@ jobs/[Company] - [Position] - [DD.MM.YYYY]/
     └── Adrian Turion - [Company] - Cover Letter.pdf
 ```
 
+## ATS Automation Details
+
+### Workday Form Filling
+
+The `/apply` command automates Workday application forms using Playwright MCP Local.
+
+**Workflow:**
+1. Generate Playwright code via `form_filler.py` for each section
+2. Run code via Playwright MCP's `browser_run_code` tool
+3. Take snapshot to verify success
+4. Fix errors via MCP if needed
+5. Move to next page
+
+**Pre-authorized Actions:**
+The user gives permanent consent for:
+- Accepting Terms and Conditions / Privacy Policy checkboxes
+- Accepting cookies (decline when possible, accept if required)
+
+**Fuzzy Matching:**
+The ATS system uses fuzzy pattern matching for robust dropdown selection across different Workday instances. For example:
+- "Native" level matches "4 - Native", "Native or Bilingual", "C2"
+- "Master Degree" matches "Master", "MSc", "M.S.", "Graduate Degree"
+
+**School Fallbacks:**
+If exact school name not found, tries alternatives:
+- "HEC Lausanne" → "Université de Lausanne" → "University of Lausanne"
+- Finally falls back to "Other/School Not Listed"
+
+### Code Generation Pattern
+
+```python
+# Example: Generate code for My Information section
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path.cwd()))
+from ats.scripts import fill_section
+
+data = {
+    "prefix": "Mr.",
+    "given_name": "Adrian",
+    "family_name": "Turion",
+    # ... more fields
+}
+
+result = fill_section("workday", "my_information", data)
+# result["code"] contains JavaScript for browser_run_code
+# result["filled"] lists successfully mapped fields
+```
+
 ## Modification Examples
 
 | Request | Action |
@@ -279,3 +463,10 @@ jobs/[Company] - [Position] - [DD.MM.YYYY]/
 | "More AI focus" | Adjust relevant bullets + summary, regenerate resume |
 | "Intro too generic" | Edit `cover_letter.intro`, regenerate cover letter |
 | "Replace 3rd leadership" | Pick different one from `data/leadership.json`, regenerate resume |
+| "Fix My Information script" | Edit `ats/scripts/workday.py`, test via `py ats/scripts/form_filler.py workday my_information --data '<json>'` |
+
+## Platform Notes
+
+- **Windows**: Use `py` instead of `python` for all commands
+- **Python version**: Python 3.13 (C:\Users\Adrian\AppData\Local\Programs\Python\Python313\python.exe)
+- **Character encoding**: All files use UTF-8

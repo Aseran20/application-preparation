@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "company": "Freight Investor Services",
+    "position": "Physical Shipbroker",
+    "position_exact": "Physical Shipbroker (Geneva)",
+    "date_created": "2026-01-11",
+    "job_keywords": [
+      "price discovery",
+      "client relationships",
+      "market intelligence",
+      "risk management",
+      "commodity markets",
+      "freight futures",
+      "revenue generation",
+      "analytical skills",
+      "shipping trends",
+      "derivatives",
+      "physical markets",
+      "trade execution",
+      "counterparty risk",
+      "client focus",
+      "relationship building"
+    ],
+    "job_summary": "Physical shipbroker role at FIS Geneva, focusing on freight and commodity brokerage. Responsibilities include client relationship management, price discovery, market intelligence provision, and revenue generation in physical shipping markets. Requires strong analytical skills and commodities market knowledge."
+  },
+  "research": {
+    "company_values": [
+      "professionalism and continuous innovation",
+      "customer focus",
+      "first mover advantage and pioneering spirit",
+      "expertise and client support"
+    ],
+    "company_mission": "Leading global brokerage providing full brokerage services, trade execution, and in-depth market intelligence for freight and commodities. Pioneering derivatives markets including Forward Freight Agreements (FFAs), iron ore, coking coal, and container freight futures.",
+    "recent_news": "FIS announced the opening of their new Geneva office in April 2025, following successful expansion with GR8 Chartering acquisition in Athens and Manhattan office opening. Named No. 1 bulk commodity broker by SGX Exchange in 2024. Launched FIS Live app combining live pricing with market intelligence, winning Asia Innovation of the Year from Risk.net.",
+    "used_in": [
+      "cover_letter_intro",
+      "resume_summary"
+    ]
+  },
+  "resume": {
+    "professional_summary": "Finance professional with M&A and derivatives experience, seeking to leverage analytical skills and client-facing expertise at FIS Geneva. Demonstrated track record in relationship building, revenue generation, and financial analysis across cross-border transactions. Strong understanding of risk management and market intelligence from managing personal derivatives portfolio and executing multi-sector M&A mandates.",
+    "auraia_bullets": [
+      "Managed relationships with clients, advisors, and counterparties throughout transaction lifecycle across 7 live mandates in healthcare, tech, and life sciences sectors with deal values ranging from EUR 5M to EUR 50M",
+      "Built detailed financial models including LBO, DCF, trading comps, and precedent transactions while performing quality of earnings analysis to identify key value drivers and support client presentations for Board meetings",
+      "Conducted comprehensive industry research and identified strategic buyers for cross-border deals spanning Europe, US, and Asia, coordinating with legal, tax, and accounting advisors to structure transactions"
+    ],
+    "rc_bullet": "Worked directly with the CEO of Healthcare and Retail divisions on evaluating multiple acquisition targets in France and Belgium, preparing investment memos including market analysis, competitive positioning, and financial projections for 3 potential acquisitions with revenues of EUR 10M-30M",
+    "europ_bullet": "Built automated financial dashboards in Excel and PowerBI to track KPIs and performed variance analysis on monthly P&L results, supporting the CFO on FP&A and strategic projects for Swiss subsidiary with CHF 50M+ revenues while assisting in annual budget planning and quarterly forecasting",
+    "leadership_bullets": [
+      "Led post-COVID financial recovery at AIESEC by sourcing corporate leads and negotiating partnerships, closing 3 key deals generating CHF 60K annual revenue and increasing volunteer placements by 40%",
+      "Presented strategic project as finalist in 2024 McKinsey-sponsored business case, developing data-driven model to forecast black swan events with potential CHF 200K annual revenue gain",
+      "Manages diversified investment portfolio using options strategies with 45-day expiries, generating consistent income through theta decay while managing risk with ETFs"
+    ],
+    "courses": "Derivatives, Fixed Income and Credit Risk, Investment and Portfolio Management, Risk Management",
+    "skills": "Financial Modeling | Derivatives | Risk Management | Market Analysis | Excel"
+  },
+  "cover_letter": {
+    "recipient": "Hiring Manager",
+    "street": "Freight Investor Services",
+    "postal": "Geneva, Switzerland",
+    "subject": "**Subject:** Application for Physical Shipbroker Position",
+    "intro": "I am writing to express my strong interest in the Physical Shipbroker position at Freight Investor Services' Geneva office. FIS's recent Geneva expansion in April 2025 and recognition as the No. 1 bulk commodity broker by SGX Exchange demonstrates a commitment to innovation and market leadership that aligns with my background in derivatives trading and client-facing financial services. Your pioneering role in developing Forward Freight Agreements from niche products to widely-traded risk management tools reflects the entrepreneurial and analytical environment where I thrive.",
+    "body_1": "**Client Relationship Management and Revenue Generation** - Throughout my M&A experience at Auraïa Capital, I managed relationships with clients, advisors, and counterparties across 7 live mandates with deal values from EUR 5M to EUR 50M. At AIESEC, I demonstrated revenue-generating capabilities by sourcing leads and negotiating partnerships that closed 3 key deals worth CHF 60K annually. This client-focused approach directly translates to maintaining and enhancing FIS client relationships in physical shipping markets.",
+    "body_2": "**Analytical Rigor and Market Intelligence** - My experience building financial models (LBO, DCF, trading comps) and conducting industry research for cross-border M&A has sharpened my analytical skills. As a McKinsey business case finalist, I developed a data-driven model for forecasting black swan events using statistical arbitrage. I actively manage a derivatives portfolio using options strategies, generating CHF 5K+ annual premiums with 8% annualized returns, demonstrating practical understanding of derivatives and risk management that will support price discovery activities at FIS.",
+    "body_3": "**Performance Under Pressure and Team Collaboration** - Working as the sole analyst in a lean M&A team, I managed multiple concurrent mandates while training 2 interns, demonstrating my ability to thrive in pressurized environments. At Europ Assistance, I built automated dashboards tracking KPIs and performed variance analysis on CHF 50M+ revenues, showcasing strong numeracy skills. My academic foundation in Derivatives, Fixed Income, and Risk Management from the University of Geneva provides the technical knowledge base for shipping and commodity markets.",
+    "additional": "",
+    "attraction": "",
+    "closing": "I am excited about the opportunity to contribute to FIS Geneva's growth trajectory and leverage my analytical skills, client relationship management experience, and derivatives knowledge in the physical shipbroking role. I would welcome the opportunity to discuss how my background aligns with FIS's client-focused and innovative culture. Thank you for considering my application."
+  },
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - Physical Shipbroker - Adrian Turion",
+    "body": "Dear Hiring Team,\n\nPlease find attached my resume and cover letter for the Physical Shipbroker position at Freight Investor Services' Geneva office.\n\nYour recent Geneva expansion in April 2025 and recognition as the No. 1 bulk commodity broker by SGX Exchange demonstrates market leadership that resonates with my background in derivatives trading and client-facing M&A advisory. I am particularly drawn to FIS's pioneering role in developing Forward Freight Agreements and your commitment to continuous innovation in commodities markets.\n\nI would welcome the opportunity to discuss how my analytical skills and client relationship management experience can contribute to FIS Geneva's growth.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96\nturionadrian@gmail.com"
+  }
+}
