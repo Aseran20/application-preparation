@@ -9,6 +9,14 @@ from ats_filler.common.field_matchers import fuzzy_match_option
 class WorkdayAdapter(PlatformAdapter):
     """Workday-specific implementation."""
 
+    # School fallbacks for autocomplete fields
+    SCHOOL_FALLBACKS = {
+        "HEC Lausanne": ["Université de Lausanne", "University of Lausanne", "UNIL"],
+        "Universität St. Gallen": ["University of St. Gallen", "HSG"],
+        "ETH Zürich": ["ETH Zurich", "Swiss Federal Institute of Technology"],
+        # Add more as needed
+    }
+
     # Field mappings from ats/scripts/workday.py
     FIELD_MAPPINGS = {
         "prefix": {
@@ -191,9 +199,63 @@ class WorkdayAdapter(PlatformAdapter):
             await self.page.get_by_label("Description").nth(index).fill(data["role_description"])
 
     async def fill_education(self, index: int, data: dict):
-        """Fill education entry."""
-        # Minimal implementation for now - will expand later
+        """Fill education with school autocomplete and fallbacks."""
+        group = f"Education {index + 1}"
+
+        # School autocomplete with fallback
         if "school_name" in data:
             await self.page.get_by_label("School or University").nth(index).fill(data["school_name"])
+            await self.page.get_by_label("School or University").nth(index).press("Enter")
+            await self.page.wait_for_timeout(800)
+
+            # Try primary school name
+            option = self.page.get_by_role("option", name=f"{data['school_name']} not checked")
+            if await option.count() == 0:
+                # Try fallback names
+                fallbacks = self.SCHOOL_FALLBACKS.get(data["school_name"], [])
+                for fallback in fallbacks:
+                    option = self.page.get_by_role("option", name=f"{fallback} not checked")
+                    if await option.count() > 0:
+                        break
+
+                # Ultimate fallback: "Other/School Not Listed"
+                if await option.count() == 0:
+                    option = self.page.get_by_role("option", name="Other not checked")
+
+            await option.click()
+
+        # Degree (fuzzy matching via fill_field)
+        if "degree" in data:
+            # Use existing fuzzy logic
+            await self.page.get_by_label("Degree").nth(index).click()
+            option_elements = await self.page.get_by_role("option").all()
+            matched = await fuzzy_match_option(option_elements, data["degree"])
+            if matched:
+                await matched.click()
+
+        # Field of study
         if "field_of_study" in data:
             await self.page.get_by_label("Field of Study").nth(index).fill(data["field_of_study"])
+
+        # Currently studying checkbox
+        if data.get("currently_studying_here", False):
+            await self.page.get_by_label("I am currently studying here").nth(index).check()
+
+        # Dates using GROUP-BASED selectors (same pattern as work experience)
+        edu_group = self.page.get_by_role("group", name=group)
+
+        if "from_month" in data:
+            await edu_group.get_by_role("group", name="From").get_by_role("spinbutton", name="Month").fill(data["from_month"])
+        if "from_year" in data:
+            await edu_group.get_by_role("group", name="From").get_by_role("spinbutton", name="Year").fill(data["from_year"])
+
+        # To dates (only if not currently studying)
+        if not data.get("currently_studying_here", False):
+            if "to_month" in data:
+                await edu_group.get_by_role("group", name="To").get_by_role("spinbutton", name="Month").fill(data["to_month"])
+            if "to_year" in data:
+                await edu_group.get_by_role("group", name="To").get_by_role("spinbutton", name="Year").fill(data["to_year"])
+
+        # GPA (optional)
+        if "gpa" in data and data["gpa"]:
+            await self.page.get_by_label("GPA").nth(index).fill(data["gpa"])
