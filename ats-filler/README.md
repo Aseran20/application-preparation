@@ -10,17 +10,69 @@ pip install -e .
 playwright install chromium
 ```
 
-## Usage
+## Development Workflow
 
-### Connecting via MCP Inspector
+### Method 1: `uv run mcp dev` (Recommended)
+
+**Best for rapid iteration during development:**
 
 ```bash
-# Install MCP inspector
-npm install -g @modelcontextprotocol/inspector
+cd ats-filler
 
-# Run server via inspector
-mcp-inspector python -m ats_filler.server
+# Launch server + inspector in one command
+uv run mcp dev server.py
+
+# With editable mode (hot reload)
+uv run mcp dev server.py --with-editable .
+
+# Add dependencies on the fly
+uv run mcp dev server.py --with playwright --with pydantic
 ```
+
+**Workflow (30-second iteration):**
+1. Edit code in `ats-filler/platforms/workday.py`
+2. Ctrl+C in terminal
+3. Up arrow + Enter (relaunch)
+4. Test in browser inspector UI
+5. Repeat
+
+### Method 2: NPX Inspector (Fallback)
+
+**If `uv` is unavailable:**
+
+```bash
+# Terminal 1: Launch inspector
+npx -y @modelcontextprotocol/inspector
+
+# Terminal 2: Run server
+python -m ats_filler.server
+```
+
+### Method 3: Unit Tests (Automated)
+
+**For regression prevention:**
+
+```python
+# ats-filler/tests/test_workday.py
+import pytest
+from mcp.shared.memory import create_connected_server_and_client_session
+
+@pytest.mark.asyncio
+async def test_bulk_fill():
+    async with create_connected_server_and_client_session(app) as session:
+        result = await session.call_tool("bulk_fill", {
+            "session_id": "test",
+            "data": {"given_name": "Adrian"}
+        })
+        assert result.status == "success"
+```
+
+Run tests:
+```bash
+uv run pytest
+```
+
+## Production Usage
 
 ### Connecting from Claude Desktop
 
