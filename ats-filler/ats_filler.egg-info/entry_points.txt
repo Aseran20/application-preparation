@@ -1,0 +1,2 @@
+[console_scripts]
+ats-filler = ats_filler.server:main
