@@ -183,6 +183,36 @@ echo "Commercial Graduate Programme - Glencore..." > job_description.md
 - Resume prompt: `.claude/commands/resume_create.md`
 - Cover Letter prompt: `.claude/commands/cover_letter_create.md`
 
+## ATS MCP Server
+
+**NEW:** Custom MCP server for automated ATS form filling with 90% token reduction.
+
+See `ats-filler/README.md` for installation and usage.
+
+**Key features:**
+- Session-based workflow (detect platform once, reuse)
+- 9 MCP tools (start, snapshot, bulk_fill, upsert_*, upload_file, next_page, validate, probe)
+- Normalized data models (PersonalInfo, WorkExperience, Education)
+- Platform adapters (Workday reuses existing form_filler.py logic, Generic uses heuristics)
+- Graceful degradation (optional fields automatically skipped)
+- Fuzzy matching for dropdown variations
+- Token efficiency: ~500 tokens/page vs ~5000 before
+
+**Architecture:**
+```
+ats-filler/
+├── server.py           # FastMCP server with 9 tools
+├── engine/
+│   ├── session.py     # Session + platform detection
+│   └── actions.py     # BulkFiller, macros
+├── platforms/
+│   ├── workday.py     # Workday adapter
+│   └── generic.py     # Heuristic-based adapter
+└── schemas/
+    ├── profile.py     # PersonalInfo, WorkExperience, etc.
+    └── responses.py   # BulkFillResponse, SnapshotResponse
+```
+
 ---
 
-**Built with**: Python, python-docx, Claude AI, Tavily MCP
+**Built with**: Python, python-docx, Claude AI, Tavily MCP, FastMCP, Playwright
