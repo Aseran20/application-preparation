@@ -15,7 +15,7 @@ from ats_filler.schemas.responses import BulkFillResponse, SnapshotResponse
 # Initialize FastMCP
 mcp = FastMCP(
     "ATS Filler",
-    description="Automated ATS form filling with session-based workflow"
+    instructions="Automated ATS form filling with session-based workflow"
 )
 
 # Global session manager
