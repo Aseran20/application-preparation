@@ -249,21 +249,22 @@ generate_email_draft(content, folder) -> Path
 validate_content(content) -> (errors, warnings)  # Pre-generation validation
 ```
 
-**Validation** runs automatically in `generate_all()`:
+**Validation** runs automatically in `generate_all()` and BLOCKS generation if errors:
 - Errors if `auraia_bullets` or `leadership_bullets` != 3 elements
-- Errors if content is too short (with 5% tolerance)
-- Warnings if content exceeds max limits (risk of >1 page)
+- Errors if content is too short (with 5% tolerance on min)
+- **Errors if content exceeds max limits (BLOCKS to guarantee 1-page fit)**
 
 **Character limits** (defined in `scripts/generate.py`):
+**CRITICAL: These are STRICT limits - exceeding max will block generation to ensure 1-page fit.**
 | Field | Min | Max |
 |-------|-----|-----|
-| professional_summary | 340 | 420 |
-| auraia_bullets (each) | 210 | 260 |
-| rc_bullet | 260 | 320 |
-| europ_bullet | 260 | 320 |
-| leadership_bullets (each) | 160 | 200 |
-| courses | 60 | 100 |
-| skills | 55 | 90 |
+| professional_summary | 340 | 400 |
+| auraia_bullets (each) | 210 | 245 |
+| rc_bullet | 260 | 300 |
+| europ_bullet | 260 | 300 |
+| leadership_bullets (each) | 160 | 190 |
+| courses | 60 | 95 |
+| skills | 55 | 85 |
 
 **`generator/scripts/resume.py`**
 ```python

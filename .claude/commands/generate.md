@@ -130,20 +130,20 @@ Examples:
 
 ## Character limits (1-page guardrail)
 
-**CRITICAL: Documents must fit on 1 page. Respect these limits:**
+**CRITICAL: Documents must fit on 1 page. These limits are STRICT and BLOCK generation if exceeded.**
 
 **Resume:**
 | Field | Min chars | Max chars |
 |-------|-----------|-----------|
-| professional_summary | 340 | 420 |
-| auraia_bullets (each) | 210 | 260 |
-| rc_bullet | 260 | 320 |
-| europ_bullet | 260 | 320 |
-| leadership_bullets (each) | 160 | 200 |
-| courses | 60 | 100 |
-| skills | 55 | 90 |
+| professional_summary | 340 | 400 |
+| auraia_bullets (each) | 210 | 245 |
+| rc_bullet | 260 | 300 |
+| europ_bullet | 260 | 300 |
+| leadership_bullets (each) | 160 | 190 |
+| courses | 60 | 95 |
+| skills | 55 | 85 |
 
-**Note:** rc_bullet and europ_bullet have higher limits since there's only 1 bullet each. Limits are validated in `scripts/generate.py` - too short = error, too long = warning.
+**Note:** rc_bullet and europ_bullet have higher limits since there's only 1 bullet each. Limits are validated in `scripts/generate.py` - **too short OR too long = ERROR (blocks generation)**.
 
 **Cover letter:**
 | Field | Max characters |

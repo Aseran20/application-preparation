@@ -233,14 +233,15 @@ def regenerate_cover_letter(folder) -> dict:
 
 # Character limits - keep in sync with .claude/commands/generate.md
 # Note: rc_bullet and europ_bullet can be longer since there's only 1 bullet each
+# Reduced by ~5-10% from original to ensure 1-page fit with margin
 CHAR_LIMITS_MAX = {
-    "professional_summary": 420,
-    "auraia_bullet": 260,
-    "rc_bullet": 320,
-    "europ_bullet": 320,
-    "leadership_bullet": 200,
-    "courses": 100,
-    "skills": 90,
+    "professional_summary": 400,  # was 420 (-5%)
+    "auraia_bullet": 245,  # was 260 (-6%)
+    "rc_bullet": 300,  # was 320 (-6%)
+    "europ_bullet": 300,  # was 320 (-6%)
+    "leadership_bullet": 190,  # was 200 (-5%)
+    "courses": 95,  # was 100 (-5%)
+    "skills": 85,  # was 90 (-6%)
 }
 
 CHAR_LIMITS_MIN = {
@@ -286,10 +287,10 @@ def validate_content_length(content: dict) -> tuple[list[str], list[str]]:
         content: Dict avec les données
 
     Returns:
-        Tuple (errors pour trop court, warnings pour trop long)
+        Tuple (errors pour min/max dépassés, warnings pour info)
     """
-    errors = []  # Trop court = erreur (page vide)
-    warnings = []  # Trop long = warning (risque > 1 page)
+    errors = []  # Trop court ou trop long = erreur (bloque génération)
+    warnings = []  # Réservé pour info non-bloquante
     resume = content.get("resume", {})
 
     def check_field(value: str, field_name: str, display_name: str = None):
@@ -303,7 +304,7 @@ def validate_content_length(content: dict) -> tuple[list[str], list[str]]:
         if len(value) < effective_min:
             errors.append(f"{display} trop court: {len(value)}/{min_len} chars min")
         elif len(value) > max_len:
-            warnings.append(f"{display} trop long: {len(value)}/{max_len} chars max")
+            errors.append(f"{display} trop long: {len(value)}/{max_len} chars max")
 
     # Professional summary
     check_field(resume.get("professional_summary", ""), "professional_summary")
