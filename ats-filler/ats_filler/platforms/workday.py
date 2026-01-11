@@ -259,3 +259,14 @@ class WorkdayAdapter(PlatformAdapter):
         # GPA (optional)
         if "gpa" in data and data["gpa"]:
             await self.page.get_by_label("GPA").nth(index).fill(data["gpa"])
+
+    async def count_work_experiences(self) -> int:
+        """Count existing work experience entries."""
+        # Count all "Job Title" input fields
+        count = await self.page.get_by_label("Job Title").count()
+        return count
+
+    async def click_add_work_experience(self):
+        """Click 'Add Work Experience' button."""
+        await self.page.get_by_role("button", name="Add Work Experience").click()
+        await self.page.wait_for_timeout(500)  # Wait for form to expand
