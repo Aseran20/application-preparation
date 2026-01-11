@@ -3,14 +3,13 @@
 import asyncio
 import signal
 from pathlib import Path
-from typing import List, Optional
+from typing import List
 
 from mcp.server.fastmcp import FastMCP
 from pydantic import Field
 
 from ats_filler.engine.session import SessionManager
 from ats_filler.engine.actions import BulkFiller, ExperienceManager, FileUploader
-from ats_filler.schemas.responses import BulkFillResponse, SnapshotResponse
 
 # Initialize FastMCP
 mcp = FastMCP(
