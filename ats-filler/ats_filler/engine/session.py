@@ -1,5 +1,6 @@
 """Session management for browser automation."""
 
+import re
 from typing import Optional
 from pathlib import Path
 from playwright.async_api import async_playwright, Browser, Page, BrowserContext
@@ -32,6 +33,9 @@ class Session:
 
         await self.page.goto(self.url)
 
+        # Auto-dismiss cookie consent popups
+        await self._dismiss_cookies()
+
         # Platform detection
         self.platform = await self._detect_platform()
 
@@ -43,6 +47,36 @@ class Session:
 
         # Detect initial page
         self.current_step = await self.adapter.detect_current_step()
+
+    async def _dismiss_cookies(self):
+        """Auto-dismiss cookie consent popups (decline when possible)."""
+        decline_buttons = [
+            "Decline",
+            "Reject",
+            "Reject All",
+            "Reject all",
+            "Only necessary",
+            "Decline optional cookies",
+            "Deny",
+        ]
+
+        for text in decline_buttons:
+            btn = self.page.get_by_role("button", name=re.compile(f"^{text}$", re.I))
+            if await btn.count() > 0 and await btn.first.is_visible():
+                await btn.first.click()
+                await self.page.wait_for_timeout(500)
+                return True
+
+        # If no decline button, try generic cookie dismiss buttons
+        accept_buttons = ["Accept", "Accept All", "OK", "Got it"]
+        for text in accept_buttons:
+            btn = self.page.get_by_role("button", name=re.compile(f"^{text}$", re.I))
+            if await btn.count() > 0 and await btn.first.is_visible():
+                await btn.first.click()
+                await self.page.wait_for_timeout(500)
+                return True
+
+        return False
 
     async def _detect_platform(self) -> str:
         """Auto-detect ATS platform from URL and page content."""

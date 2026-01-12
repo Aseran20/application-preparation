@@ -1,5 +1,6 @@
 """Workday-specific platform adapter."""
 
+from pathlib import Path
 from typing import List, Optional
 from ats_filler.platforms.base import PlatformAdapter
 from ats_filler.schemas.responses import SnapshotResponse, SnapshotField
@@ -270,3 +271,28 @@ class WorkdayAdapter(PlatformAdapter):
         """Click 'Add Work Experience' button."""
         await self.page.get_by_role("button", name="Add Work Experience").click()
         await self.page.wait_for_timeout(500)  # Wait for form to expand
+
+    async def upload_file(self, file_type: str, file_path: Path):
+        """Upload file using Workday-specific selectors."""
+        # Workday uses data-automation-id for file inputs
+        selectors = [
+            "[data-automation-id='file-upload-input-ref']",  # Workday standard
+            "input[type='file']",                            # Generic fallback
+        ]
+
+        for selector in selectors:
+            file_input = self.page.locator(selector)
+            if await file_input.count() > 0:
+                await file_input.first.set_input_files(str(file_path))
+                return {"uploaded": file_path.name, "selector": selector}
+
+        # Fallback: try clicking upload zone then use file chooser
+        upload_zone = self.page.get_by_text("Select file")
+        if await upload_zone.count() > 0:
+            async with self.page.expect_file_chooser() as fc:
+                await upload_zone.click()
+            file_chooser = await fc.value
+            await file_chooser.set_files(str(file_path))
+            return {"uploaded": file_path.name, "selector": "file_chooser"}
+
+        raise ValueError("No file upload element found")
