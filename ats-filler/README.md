@@ -2,6 +2,26 @@
 
 Custom MCP server for automated ATS form filling. Achieves 90% token reduction compared to JavaScript code generation.
 
+## Architecture
+
+**Simplified 8-tool design:**
+
+| Tool | Type | Purpose |
+|------|------|---------|
+| `start` | Setup | Opens browser, returns session_id |
+| `snapshot` | Read | Returns real selectors from page |
+| `bulk_fill` | Write | Fills text, checkbox, radio fields |
+| `click` | Action | Clicks by text or selector |
+| `dropdown_select` | Smart | Handles Workday custom dropdowns |
+| `autocomplete` | Smart | Type + wait + Enter (schools, cities) |
+| `next_page` | Navigation | Clicks Save/Continue/Next |
+| `upload_file` | File | Uploads resume/cover letter |
+
+**Philosophy:**
+- `snapshot()` returns REAL selectors - Claude does the mapping
+- `bulk_fill()` is dumb - just fills what you give it
+- Smart helpers only for genuinely complex interactions (dropdowns, autocomplete)
+
 ## Installation
 
 ```bash
@@ -10,111 +30,15 @@ pip install -e .
 playwright install chromium
 ```
 
-## Development Workflow
+## Usage
 
-### Method 1: `uv run mcp dev` (Recommended)
-
-**Best for rapid iteration during development:**
-
-```bash
-cd ats-filler
-
-# Launch server + inspector in one command
-uv run mcp dev server.py
-
-# With editable mode (hot reload)
-uv run mcp dev server.py --with-editable .
-
-# Add dependencies on the fly
-uv run mcp dev server.py --with playwright --with pydantic
-```
-
-**Workflow (30-second iteration):**
-1. Edit code in `ats-filler/platforms/workday.py`
-2. Ctrl+C in terminal
-3. Up arrow + Enter (relaunch)
-4. Test in browser inspector UI
-5. Repeat
-
-### Method 2: NPX Inspector (Fallback)
-
-**If `uv` is unavailable:**
-
-```bash
-# Terminal 1: Launch inspector
-npx -y @modelcontextprotocol/inspector
-
-# Terminal 2: Run server
-python -m ats_filler.server
-```
-
-### Method 3: Unit Tests (Automated)
-
-**For regression prevention:**
-
-```python
-# ats-filler/tests/test_workday.py
-import pytest
-from mcp.shared.memory import create_connected_server_and_client_session
-
-@pytest.mark.asyncio
-async def test_bulk_fill():
-    async with create_connected_server_and_client_session(app) as session:
-        result = await session.call_tool("bulk_fill", {
-            "session_id": "test",
-            "data": {"given_name": "Adrian"}
-        })
-        assert result.status == "success"
-```
-
-Run tests:
-```bash
-uv run pytest
-```
-
-## Production Usage
-
-### Connecting from Claude Code
-
-From the project directory:
+### From Claude Code
 
 ```bash
 claude mcp add ats-filler -- uv run --directory C:/Users/Adrian/Downloads/devprojects/resume.ai/ats-filler ats-filler
 ```
 
-Verify connection:
-```bash
-claude mcp get ats-filler
-# Should show: Status: ✓ Connected
-```
-
-The 9 MCP tools will now be available in your Claude Code session:
-- `start()` - Initialize session and detect platform
-- `bulk_fill()` - Fill multiple fields at once
-- `upsert_experiences()` - Add/update work experience entries
-- `upsert_education()` - Add/update education entries
-- `upload_resume()` - Upload resume file
-- `navigate()` - Go to URL or click button
-- `snapshot()` - Get current page fields
-- `next_page()` - Navigate to next section
-- `close()` - Close browser and cleanup
-
-### Connecting from Claude Desktop
-
-Add to `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "ats-filler": {
-      "command": "python",
-      "args": ["-m", "ats_filler.server"]
-    }
-  }
-}
-```
-
-## Example Workflow
+### Workflow
 
 ```python
 # 1. Start session
@@ -122,42 +46,56 @@ result = start(
     url="https://company.wd1.myworkdayjobs.com/position",
     job_folder="jobs/Company - Position - 11.01.2026/"
 )
-session_id = result["session_id"]  # "session_1"
-platform = result["platform"]  # "workday"
+session_id = result["session_id"]
 
-# 2. Fill personal info
+# 2. Take snapshot to see available fields
+fields = snapshot(session_id)
+# Returns: {"fields": [{"selector": "#name--firstName", "label": "Given Name", "type": "text"}, ...]}
+
+# 3. Fill fields using real selectors from snapshot
 bulk_fill(session_id, {
-    "given_name": "Adrian",
-    "family_name": "Turion",
-    "email": "adrian@example.com",
-    "phone": "+41772623796",
-    "city": "Lausanne"
+    "#name--legalName--firstName": "Adrian",
+    "#name--legalName--lastName": "Turion",
+    "#emailAddress--emailAddress": "adrian@example.com"
 })
 
-# 3. Add work experiences
-upsert_experiences(session_id, [
-    {
-        "job_title": "M&A Analyst",
-        "company": "Auraia Partners",
-        "from_month": "02",
-        "from_year": "2024",
-        "currently_work_here": True
-    }
-])
+# 4. Handle dropdowns with smart helper
+dropdown_select(session_id, "#country--country", "Switzerland")
+dropdown_select(session_id, "#phoneNumber--phoneType", "Mobile")
 
-# 4. Next page
+# 5. Handle autocomplete fields (schools, cities)
+autocomplete(session_id, "#education--school", "HEC Lausanne",
+    fallbacks=["Université de Lausanne", "University of Lausanne"])
+
+# 6. Navigate to next page
 next_page(session_id)
 ```
 
-## Architecture
+## Development
 
-- **Session-based workflow**: Platform detected once, reused across calls
-- **Normalized data models**: Platform-agnostic PersonalInfo, WorkExperience, etc.
-- **Graceful degradation**: Optional fields automatically skipped if not present
-- **Platform adapters**: Workday adapter reuses existing form_filler.py logic
+### Quick Test with Inspector
+
+```bash
+cd ats-filler
+uv run mcp dev ats_filler/server.py
+```
+
+### Verify Installation
+
+```python
+py -c "
+from ats_filler.server import mcp
+print([t for t in mcp._tool_manager._tools.keys()])
+"
+# Output: ['start', 'snapshot', 'bulk_fill', 'click', 'dropdown_select', 'autocomplete', 'next_page', 'upload_file']
+```
 
 ## Token Efficiency
 
-- **Before**: ~5000 tokens/page (JS generation + reading + execution)
-- **After**: ~500 tokens/page (tool calls + structured responses)
-- **Reduction**: 90%
+| Approach | Tokens/Page | Notes |
+|----------|-------------|-------|
+| Playwright MCP | ~3000 | 1 action at a time |
+| JS Code Gen | ~5000 | Generate + read + execute |
+| **ATS Filler** | **~500** | Bulk operations |
+
+**90% reduction** vs code generation.
