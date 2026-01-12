@@ -446,18 +446,7 @@ async def autocomplete(
         await field.fill(search_text)
         await page.wait_for_timeout(500)  # Wait for suggestions
 
-        # Check if suggestions appeared
-        suggestions = page.locator('[data-automation-id="promptOption"], [role="option"], .suggestion-item')
-        if await suggestions.count() > 0:
-            # Click first suggestion or press Enter
-            await suggestions.first.click()
-            return {
-                "selected": search_text,
-                "method": "suggestion_click",
-                "attempt": attempt + 1
-            }
-
-        # Try pressing Enter if no visible suggestions
+        # Press Enter to select first suggestion (don't click - it might navigate away)
         await page.keyboard.press("Enter")
         await page.wait_for_timeout(300)
 
