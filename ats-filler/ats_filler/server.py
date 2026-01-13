@@ -110,104 +110,176 @@ sessions = SessionManager()
 
 SNAPSHOT_JS = """() => {
     const fields = [];
-    const seen = new Set();
+    const selectorCounts = {};  // Track how many times we've seen each base selector
 
-    function addField(field) {
-        if (field.selector && !seen.has(field.selector)) {
-            seen.add(field.selector);
-            fields.push(field);
+    // Helper: get a unique selector for an element
+    function getSelector(el, index) {
+        let base = null;
+
+        // Priority: id > name > type+index
+        if (el.id) {
+            base = '#' + el.id;
+        } else if (el.name) {
+            base = '[name="' + el.name + '"]';
+        } else if (el.getAttribute('data-automation-id')) {
+            base = '[data-automation-id="' + el.getAttribute('data-automation-id') + '"]';
+        } else {
+            // Fallback: use tag + type
+            base = el.tagName.toLowerCase();
+            if (el.type) base += '[type="' + el.type + '"]';
         }
+
+        // Track duplicates and add nth index if needed
+        if (!selectorCounts[base]) selectorCounts[base] = 0;
+        const nth = selectorCounts[base]++;
+
+        // Return with nth if there could be duplicates (we'll know after full scan)
+        return { base, nth };
     }
 
-    // 1. Standard inputs, selects, textareas
-    document.querySelectorAll('input, select, textarea').forEach(el => {
-        // Skip hidden elements (except file inputs which are always hidden)
+    // Helper: find label for an element
+    function getLabel(el) {
+        // 1. aria-label
+        if (el.getAttribute('aria-label')) return el.getAttribute('aria-label');
+
+        // 2. placeholder
+        if (el.placeholder) return el.placeholder;
+
+        // 3. Associated <label>
+        if (el.id) {
+            const label = document.querySelector('label[for="' + el.id + '"]');
+            if (label) return label.textContent.trim();
+        }
+
+        // 4. Parent/ancestor label
+        const parent = el.closest('label');
+        if (parent) return parent.textContent.trim().substring(0, 50);
+
+        // 5. Nearby label (previous sibling or parent's previous)
+        let prev = el.previousElementSibling;
+        while (prev) {
+            if (prev.tagName === 'LABEL') return prev.textContent.trim();
+            prev = prev.previousElementSibling;
+        }
+
+        // 6. Parent container's label
+        const container = el.closest('div, fieldset, section');
+        if (container) {
+            const label = container.querySelector('label');
+            if (label) return label.textContent.trim().substring(0, 50);
+        }
+
+        return null;
+    }
+
+    // Helper: find parent context (for grouping related fields)
+    function getContext(el) {
+        // Look for a named container (fieldset, section with id, etc.)
+        const fieldset = el.closest('fieldset');
+        if (fieldset?.id) return fieldset.id;
+
+        const section = el.closest('section[id], div[id]');
+        if (section?.id && section.id.length < 50) return section.id;
+
+        return null;
+    }
+
+    // Helper: find validation error for an element
+    function getError(el) {
+        // Look for error message near the element
+        const container = el.closest('div');
+        if (container) {
+            // Common error patterns
+            const error = container.querySelector('.error, .error-message, [class*="error"], [role="alert"]');
+            if (error && error.textContent.trim()) {
+                return error.textContent.trim().substring(0, 100);
+            }
+        }
+
+        // Check aria-describedby for error
+        const describedBy = el.getAttribute('aria-describedby');
+        if (describedBy) {
+            const desc = document.getElementById(describedBy);
+            if (desc && desc.textContent.includes('error')) {
+                return desc.textContent.trim().substring(0, 100);
+            }
+        }
+
+        return null;
+    }
+
+    // 1. ALL form inputs (generic)
+    document.querySelectorAll('input, select, textarea').forEach((el, index) => {
+        // Skip truly hidden elements (except file inputs)
+        if (el.type === 'hidden') return;
         if (el.offsetParent === null && el.type !== 'file') return;
 
-        const field = {
-            selector: null,
-            label: null,
+        const sel = getSelector(el, index);
+
+        fields.push({
+            selector: sel.base,
+            nth: sel.nth,
+            label: getLabel(el),
             type: el.type || el.tagName.toLowerCase(),
             tag: el.tagName.toLowerCase(),
-            isDropdown: el.tagName.toLowerCase() === 'select'
-        };
-
-        // Build selector (prefer data-automation-id, then id, then name)
-        if (el.getAttribute('data-automation-id')) {
-            field.selector = `[data-automation-id="${el.getAttribute('data-automation-id')}"]`;
-        } else if (el.id) {
-            field.selector = `#${el.id}`;
-        } else if (el.name) {
-            field.selector = `[name="${el.name}"]`;
-        }
-
-        // Get label
-        field.label = el.getAttribute('aria-label')
-            || el.getAttribute('placeholder')
-            || el.getAttribute('data-automation-id')
-            || null;
-
-        if (!field.label && el.id) {
-            const labelEl = document.querySelector(`label[for="${el.id}"]`);
-            if (labelEl) field.label = labelEl.textContent.trim();
-        }
-
-        addField(field);
+            value: el.type === 'password' ? '***' : (el.value || '').substring(0, 50),
+            context: getContext(el),
+            error: getError(el),
+            required: el.required || el.getAttribute('aria-required') === 'true'
+        });
     });
 
-    // 2. Workday custom dropdowns (buttons with aria-haspopup)
-    document.querySelectorAll('button[aria-haspopup="listbox"], [role="combobox"], [role="listbox"]').forEach(el => {
+    // 2. ARIA dropdowns/comboboxes (generic - any platform using ARIA)
+    document.querySelectorAll('[role="combobox"], [role="listbox"], button[aria-haspopup="listbox"], button[aria-haspopup="menu"]').forEach((el, index) => {
         if (el.offsetParent === null) return;
 
-        const field = {
-            selector: null,
-            label: null,
+        // Skip if already captured as input
+        if (el.tagName.toLowerCase() === 'input') return;
+
+        const sel = getSelector(el, index);
+
+        fields.push({
+            selector: sel.base,
+            nth: sel.nth,
+            label: getLabel(el),
             type: 'dropdown',
             tag: el.tagName.toLowerCase(),
-            isDropdown: true,
-            currentValue: el.textContent.trim().substring(0, 50)
-        };
-
-        if (el.getAttribute('data-automation-id')) {
-            field.selector = `[data-automation-id="${el.getAttribute('data-automation-id')}"]`;
-        } else if (el.id) {
-            field.selector = `#${el.id}`;
-        }
-
-        // Try to find label from parent container or aria-label
-        field.label = el.getAttribute('aria-label');
-        if (!field.label) {
-            const container = el.closest('[data-automation-id*="formField"]');
-            const labelEl = container?.querySelector('label');
-            if (labelEl) field.label = labelEl.textContent.trim();
-        }
-        if (!field.label && el.id) {
-            // Extract label from ID like "country--country" -> "country"
-            field.label = el.id.split('--').pop();
-        }
-
-        addField(field);
+            value: el.textContent.trim().substring(0, 50),
+            context: getContext(el),
+            error: getError(el),
+            required: el.getAttribute('aria-required') === 'true'
+        });
     });
 
-    // 3. Workday prompt icons (another dropdown pattern)
-    document.querySelectorAll('[data-automation-id$="promptIcon"]').forEach(el => {
+    // 3. Buttons that look like form controls (generic)
+    document.querySelectorAll('button[aria-expanded], button[aria-pressed]').forEach((el, index) => {
         if (el.offsetParent === null) return;
 
-        const container = el.closest('[data-automation-id*="formField"]');
-        const labelEl = container?.querySelector('label');
+        const sel = getSelector(el, index);
 
-        const field = {
-            selector: `[data-automation-id="${el.getAttribute('data-automation-id')}"]`,
-            label: labelEl?.textContent.trim() || el.getAttribute('aria-label'),
-            type: 'dropdown-prompt',
+        fields.push({
+            selector: sel.base,
+            nth: sel.nth,
+            label: getLabel(el) || el.textContent.trim().substring(0, 30),
+            type: 'button-control',
             tag: 'button',
-            isDropdown: true
-        };
-
-        addField(field);
+            value: el.getAttribute('aria-expanded') || el.getAttribute('aria-pressed'),
+            context: getContext(el),
+            error: null,
+            required: false
+        });
     });
 
-    return fields;
+    // Post-process: add >> nth=X to selectors that have duplicates
+    const finalFields = fields.map(f => {
+        if (selectorCounts[f.selector] > 1) {
+            return { ...f, selector: f.selector + ' >> nth=' + f.nth };
+        }
+        return f;
+    });
+
+    // Remove nth field from output (it was just for processing)
+    return finalFields.map(({ nth, ...rest }) => rest);
 }"""
 
 
