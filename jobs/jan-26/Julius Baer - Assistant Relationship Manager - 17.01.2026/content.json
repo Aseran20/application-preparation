@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "company": "Julius Baer",
+    "position": "Assistant Relationship Manager",
+    "position_exact": "Assistant Relationship Manager, Geneva, 100% (f/m/d)",
+    "date_created": "2026-01-17",
+    "job_keywords": [
+      "Relationship Manager support",
+      "order placement",
+      "payment execution",
+      "client requests",
+      "Intermediaries & FO",
+      "e-channels",
+      "compliance",
+      "risk management",
+      "organisational skills",
+      "English and French fluency",
+      "financial markets",
+      "MS Office",
+      "team player",
+      "accuracy and timeliness",
+      "client-focused mindset"
+    ],
+    "job_summary": "Support role for Relationship Managers in the Intermediaries & Family Office segment at Julius Baer Geneva. Responsibilities include order placement, payment execution, client requests handling, and e-channel promotion. Requires operational excellence, bilingual English/French skills, compliance awareness, and strong organizational abilities in a fast-paced private banking environment."
+  },
+  "research": {
+    "company_values": ["Care", "Passion", "Excellence", "client focus", "disciplined execution"],
+    "company_mission": "Create and preserve wealth for clients through passionate and personal advice, based on Swiss heritage and global reach",
+    "recent_news": "New CEO Stefan Bollinger appointed January 2025; strategic refocus on pure-play wealth management; AUM reached CHF 520bn in October 2025; Noel Quinn appointed Chairman May 2025",
+    "used_in": ["cover_letter_intro", "resume_summary"]
+  },
+  "resume": {
+    "professional_summary": "Operations-focused MSc Finance candidate with strong organizational skills and multi-stakeholder coordination experience in fast-paced financial environments. Demonstrated accuracy and timeliness managing 7 concurrent workstreams with client, advisor, and counterparty relationships. Bilingual English/French proficiency and solid foundation in financial markets and compliance.",
+    "auraia_bullets": [
+      "Managed relationships with clients, advisors, and counterparties throughout transaction lifecycle, ensuring timely communication and swift resolution of requests across multiple concurrent deals in healthcare, tech, and life sciences sectors",
+      "Coordinated marketing materials production, data room management, and buyer universe maintenance across 7 live mandates simultaneously, demonstrating strong organizational skills and accuracy under significant time pressure",
+      "Collaborated with legal, tax, and accounting advisors to structure transactions and negotiate deal terms, maintaining close cross-team coordination and ensuring full compliance with regulatory requirements"
+    ],
+    "rc_bullet": "Worked directly with the CEO of Healthcare and Retail divisions on evaluating acquisition targets, preparing investment memos with comprehensive market analysis and financial projections while coordinating due diligence across multiple stakeholders in France and Belgium",
+    "europ_bullet": "Built automated financial dashboards in Excel and PowerBI tracking KPIs for the CFO of this CHF 50M+ Generali subsidiary, performed variance analysis on monthly P&L results, and supported annual budget planning and quarterly forecasting for 5 business units",
+    "leadership_bullets": [
+      "Led post-COVID financial recovery at AIESEC by sourcing corporate leads, creating tailored pitchbooks, and negotiating 3 key partnerships generating CHF 60K annual revenue",
+      "Manage diversified investment portfolio using Cash Secured Puts and Covered Calls with 45-day expiries, achieving 8% annualized returns through disciplined options strategies",
+      "Presented strategic project to McKinsey consultants and Keyrock management as Top 5 finalist, developing data-driven model with potential CHF 200K annual revenue impact"
+    ],
+    "courses": "Investment and Portfolio Management, Risk Management, International Finance",
+    "skills": "Financial Markets | Client Relations | MS Office | Risk Management | French (Native)"
+  },
+  "cover_letter": {
+    "recipient": "Hiring Manager",
+    "street": "Julius Baer",
+    "postal": "Geneva, Switzerland",
+    "subject": "**Subject:** Application for Assistant Relationship Manager Position",
+    "intro": "I'm applying for this role because I want to build a career in wealth management, and the best way to understand client service is from the operational side first. Supporting Relationship Managers in the Intermediaries & FO segment means learning how the business actually works - orders, payments, requests - before moving into client-facing roles.",
+    "body": "My background is in M&A advisory, but what I actually did day-to-day translates directly to this role: managing relationships with multiple stakeholders, coordinating across teams, and ensuring nothing falls through the cracks. At Auraia, I was the sole analyst handling 7 concurrent mandates - that meant tracking deadlines, responding to client requests quickly, and maintaining accurate records across legal, tax, and accounting teams. The organizational discipline required to keep that many balls in the air is exactly what an ARM role demands.\nI'm bilingual French-English, comfortable with financial products from my Master's and personal portfolio management, and I understand compliance from the transaction side. What I'm looking for is to apply that foundation in a client-focused environment where operational excellence matters daily.",
+    "closing": "I'd welcome the opportunity to discuss how I can support your team."
+  },
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - Assistant Relationship Manager - Adrian Turion",
+    "body": "Dear Hiring Team,\n\nPlease find attached my resume and cover letter for the Assistant Relationship Manager position in Geneva.\n\nJulius Baer's focus on disciplined execution and client excellence under its new leadership resonates with my experience coordinating multi-stakeholder transactions at a Geneva M&A boutique. I am eager to bring my organizational skills and financial markets knowledge to support your Intermediaries & Family Office team.\n\nI would welcome the opportunity to discuss my application further.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96\nturionadrian@gmail.com"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "company": "UBS",
+    "position": "Global Markets Graduate Program",
+    "position_exact": "2026 Graduate Talent Program - IB GM Exchange Traded Derivatives",
+    "date_created": "2026-01-17",
+    "job_keywords": [
+      "exchange traded derivatives",
+      "market microstructure",
+      "execution services",
+      "global markets",
+      "automation strategy",
+      "innovation",
+      "client communication",
+      "collaboration",
+      "strategic thinker",
+      "tight deadlines",
+      "banking and finance",
+      "asset classes",
+      "seamless execution",
+      "control standards",
+      "idea generation"
+    ],
+    "job_summary": "An 18-month graduate program in UBS Global Markets Exchange Traded Derivatives team in Zurich. Role involves overseeing market microstructure and execution services for listed derivatives across asset classes, driving automation and innovation strategies, and collaborating with sales teams, developers, and clients."
+  },
+  "research": {
+    "company_values": [
+      "collaboration",
+      "accountability with integrity",
+      "innovation",
+      "client-centricity"
+    ],
+    "company_mission": "UBS is the leading global wealth manager and universal bank in Switzerland, emphasizing collaboration as the heart of everything they do under the One UBS philosophy.",
+    "recent_news": "UBS expects global equities to rise 15% by end of 2026, driven by AI innovation, accommodative monetary policy, and strong US growth. S&P 500 target of 7,700 by end of 2026.",
+    "used_in": [
+      "cover_letter_intro",
+      "resume_summary"
+    ]
+  },
+  "resume": {
+    "professional_summary": "Derivatives-focused MSc Finance candidate with hands-on options trading experience and automation-driven mindset, seeking to join UBS Global Markets ETD team. Combines practical market microstructure knowledge from active portfolio management with execution discipline developed across 10+ concurrent mandates. Strong collaboration skills and proven delivery under tight deadlines.",
+    "auraia_bullets": [
+      "End-to-end execution exposure in a lean 3-person deal team across 10+ live mandates spanning sourcing, valuation, due diligence, negotiations, and closing with deal values ranging from EUR 5M to EUR 50M across healthcare, tech, and life sciences",
+      "Built detailed financial models (LBO, DCF, trading comps, precedent transactions) and prepared client presentations for Board meetings and investor pitches across tech, healthcare, and life sciences sectors",
+      "Managed relationships with clients, advisors, and counterparties throughout transaction lifecycles, coordinating seamlessly with legal, tax, and accounting teams across Europe, US, and Asia to structure and close cross-border deals"
+    ],
+    "rc_bullet": "Prepared investment memos including market analysis, competitive positioning, and financial projections for 3 potential acquisitions while working directly with the CEO of Healthcare and Retail divisions on evaluating EUR 10M-30M targets across France and Belgium",
+    "europ_bullet": "Built automated financial dashboards in Excel and PowerBI tracking KPIs for the Swiss subsidiary (CHF 50M+ revenues), performed variance analysis on monthly P&L, and developed cost allocation models to improve profitability analysis by service line",
+    "leadership_bullets": [
+      "Manage a diversified investment portfolio using Cash Secured Puts and Covered Calls, generating +8% annualized returns through disciplined theta decay strategies with 45-day expiries",
+      "Developed Screeny.ai, an AI-driven software adopted by 3 M&A advisory firms that reduced buyer search time from 10+ hours to 20 minutes, demonstrating automation and innovation mindset",
+      "Finalist in 2024 McKinsey-sponsored case competition, presenting a data-driven model to forecast market events using order book data with potential CHF 200K annual revenue impact"
+    ],
+    "courses": "Derivatives, Quantitative Asset and Risk Management, Data Science for Finance",
+    "skills": "Financial Modeling, Derivatives, Risk Management | Python, Bloomberg, Excel/VBA"
+  },
+  "cover_letter": {
+    "recipient": "Hiring Manager",
+    "street": "UBS AG",
+    "postal": "Opfikon, Switzerland",
+    "subject": "**Subject:** Application for Global Markets Graduate Program - Exchange Traded Derivatives",
+    "intro": "I want to work in derivatives execution because it combines the analytical depth I enjoy with real-time market dynamics. The ETD team's focus on market microstructure and automation aligns with both my trading experience and my tendency to look for efficiency gains through technology.",
+    "body": "I actively manage my own options portfolio using Cash Secured Puts and Covered Calls, so I understand execution quality, theta decay, and position management from the practitioner side. Academically, my Master's covers derivatives and quantitative risk management. But beyond that, I've spent a year executing under pressure in M&A - 10+ concurrent mandates, tight deadlines, cross-functional coordination across Europe, US, and Asia. The discipline required to maintain control standards while moving fast translates directly to derivatives execution.\nI also built Screeny.ai, which cut research time by 90% and is now used by 3 advisory firms. I mention this because the ETD team's automation strategy resonates with how I think - when I see a manual process, I look for ways to systematize it.",
+    "closing": "I'd welcome the opportunity to discuss how I can contribute to the ETD team."
+  },
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - Global Markets Graduate Program ETD - Adrian Turion",
+    "body": "Dear Hiring Team,\n\nPlease find attached my resume and cover letter for the 2026 Global Markets Graduate Program in Exchange Traded Derivatives at UBS.\n\nYour \"One UBS\" collaborative philosophy resonates strongly with my experience coordinating cross-functional teams in M&A, while my hands-on derivatives trading and automation-focused mindset align with the team's focus on innovation and execution services.\n\nI would welcome the opportunity to discuss my application further.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96\nturionadrian@gmail.com"
+  }
+}

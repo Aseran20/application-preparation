@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "company": "Pictet",
+    "position": "Financial Analyst",
+    "position_exact": "Financial Analyst - Pictet North America Advisors SA",
+    "date_created": "2026-03-08",
+    "job_keywords": [
+      "wealth management",
+      "client advisory",
+      "investment management",
+      "portfolio management",
+      "relationship manager",
+      "client relations",
+      "portfolio diversification",
+      "financial analyst",
+      "CFA",
+      "discretionary",
+      "advisory",
+      "structured solutions",
+      "family office",
+      "US clients"
+    ],
+    "job_summary": "Pictet North America Advisors seeks a Financial Analyst for a 4-year rotational programme in Geneva covering client relationship management, investment platform, and portfolio advisory, leading to a Relationship Manager role within Pictet Wealth Management."
+  },
+  "research": {
+    "company_values": [
+      "independence",
+      "long-term thinking",
+      "partnership",
+      "responsibility",
+      "entrepreneurial spirit"
+    ],
+    "company_mission": "Partner-owned financial services group offering comprehensive service for wealthy individuals and families",
+    "recent_news": "CHF 757B AUM and CHF 667M profit in 2025; 220+ years of partnership heritage with only 47 partners since 1805",
+    "used_in": [
+      "paragraph_1"
+    ]
+  },
+  "resume": {
+    "introduction": "Multilingual finance professional combining cross-border M&A execution with academic grounding in portfolio management and derivatives. Moving into client-facing wealth advisory. Available from May 2026.",
+    "auraia_bullets": [
+      "Managed client relationships and coordinated with legal, tax, and financial advisors across Europe, US, and Asia throughout 7 cross-border advisory mandates (EUR 5M-50M)",
+      "Sole analyst in a 3-person team, responsible for producing tailored client deliverables, maintaining structured databases, and managing data rooms under competing deadlines",
+      "Built financial models (DCF, trading comps, precedent transactions) and delivered investment presentations for Board-level meetings and investor pitches across 4 sectors",
+      "Coordinated multi-stakeholder processes from initial client engagement through transaction completion, interfacing with 10+ external parties per mandate"
+    ],
+    "rc_bullets": [
+      "Prepared investment memos with market analysis, competitive positioning, and financial projections for 3 targets",
+      "Worked directly with divisional CEO on evaluating acquisition opportunities across France and Belgium",
+      "Screened 500+ companies, shortlisted 2 for due diligence, facilitating an 80% stake acquisition"
+    ],
+    "generali_bullets": [
+      "Supported CFO and Head of Controlling on FP&A and strategic projects for the Swiss subsidiary (CHF 50M+ revenues)",
+      "Built automated dashboards in Excel and PowerBI to track KPIs; performed variance analysis on monthly P&L",
+      "Prepared Board presentations on financial performance; assisted in annual budget planning for 5 business units"
+    ],
+    "extra_category_title": "ENTREPRENEURIAL & INDEPENDENT PROJECTS",
+    "extra_entries": [
+      {
+        "title": "McKinsey x Keyrock Business Case Finalist",
+        "sentence": "Developed a model to forecast market events using order book data and statistical arbitrage, presenting to senior management"
+      },
+      {
+        "title": "AIESEC Student Club, Associate",
+        "sentence": "Led financial recovery by sourcing corporate leads and negotiating partnerships, closing 3 deals generating CHF 60K revenue"
+      },
+      {
+        "title": "Personal Investment Portfolio Manager",
+        "sentence": "Manages a diversified portfolio using options strategies (Cash Secured Puts, Covered Calls), +8% annualized returns"
+      },
+      {
+        "title": "Founder & Developer, Screeny.ai",
+        "sentence": "Built an AI-driven tool for investment banks to identify strategic and financial acquirers, adopted by 3 advisory firms"
+      },
+      {
+        "title": "Founder, Second-Hand Luxury Business",
+        "sentence": "Founded and managed a luxury resale venture with a 2-person team, profitable within 6 months, 100+ units sold"
+      }
+    ],
+    "coursework": "Investments, Derivatives, Quantitative Asset and Risk Management, Corporate Finance",
+    "tools": "Excel (advanced), Bloomberg Terminal, Python, VBA, SQL, PowerBI, Claude Code, ChatGPT",
+    "skills": "Client Relationship Management, Financial Modeling, Valuation, Portfolio Analysis, Multi-stakeholder Advisory",
+    "interests": "Energy geopolitics, Fitness (strength & endurance), Applied AI tools"
+  },
+  "cover_letter": {
+    "recipient_name": "Recruitment Team",
+    "street_number": "Route des Acacias 60",
+    "postal_city_country": "1211 Geneva, Switzerland",
+    "company_name": "Pictet North America Advisors SA",
+    "subject_line": "Financial Analyst - Pictet North America Advisors SA",
+    "salutation": "Dear Hiring Manager,",
+    "paragraph_1": "Pictet's partnership model, unchanged since 1805 with only 47 partners across 220 years, reflects a commitment to long-term thinking and client stewardship that few institutions can match. With CHF 757 billion in assets under management and a philosophy built on independence and responsibility, Pictet stands apart in an industry increasingly driven by short-term pressures. The Financial Analyst programme's structured rotation through client advisory, investment platform, and portfolio management offers precisely the breadth of exposure needed to build a well-rounded wealth management career.",
+    "paragraph_2": "Over the past two years as the sole analyst in a Geneva-based M&A boutique, I have managed client relationships across 7 cross-border mandates spanning Europe, the US, and Asia, coordinated with legal, tax, and financial advisors on concurrent transactions, and delivered Board-level investment presentations. This environment required me to balance multiple projects with competing deadlines while maintaining the attention to detail that complex financial transactions demand. My earlier FP&A experience at Generali's Swiss subsidiary strengthened my analytical foundations through portfolio-level financial reporting and variance analysis across CHF 50M+ in revenues and 5 business units.",
+    "paragraph_3": "With a dual Master's in Finance from HEC Lausanne, multilingual capabilities in French, English, Spanish, and German, and international experience across Japan, the Netherlands, and the Dominican Republic, I bring the cross-cultural fluency and client-facing mindset that Pictet's global client base requires. The programme's path toward a Relationship Manager role aligns with my ambition to combine analytical depth with long-term client advisory.",
+    "closing": "I would welcome the opportunity to discuss my application further."
+  },
+  "email": {
+    "subject": "Application - Financial Analyst (Ref. FAPNAA/RS/JJV) - Adrian Turion",
+    "body": "Dear Hiring Manager,\n\nPlease find attached my resume and cover letter for the Financial Analyst position at Pictet North America Advisors (Ref. FAPNAA/RS/JJV).\n\nI am an M&A analyst at a Geneva-based boutique with cross-border deal execution experience and a strong analytical background in portfolio management. My multilingual profile (French, English, Spanish, German) and international exposure align well with the demands of your global client base.\n\nI would welcome the opportunity to discuss how my background can contribute to your team.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96"
+  }
+}

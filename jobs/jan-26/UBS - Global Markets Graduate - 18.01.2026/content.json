@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "company": "UBS",
+    "position": "Global Markets Graduate",
+    "position_exact": "2026 Graduate Talent Program - IB GM Cash Equities Advisory Sales",
+    "date_created": "2026-01-18",
+    "job_keywords": [
+      "institutional investors",
+      "financial markets",
+      "global economic trends",
+      "sector dynamics",
+      "corporate fundamentals",
+      "valuations",
+      "investment ideas",
+      "capital markets",
+      "IPOs",
+      "strategic thinker",
+      "communication skills",
+      "tight deadlines",
+      "marketing and communication",
+      "collaboration"
+    ],
+    "job_summary": "18-month graduate program in UBS Global Markets, focusing on Cash Equities Advisory Sales in Geneva. Role involves building relationships with institutional investors (hedge funds, asset managers, family offices), analyzing market trends and corporate fundamentals, creating differentiated investment content, and collaborating across derivatives and ECM teams on client solutions and IPOs."
+  },
+  "research": {
+    "company_values": [
+      "collaboration",
+      "integrity",
+      "client focus",
+      "innovation"
+    ],
+    "company_mission": "UBS is a leading global wealth manager and Switzerland's leading universal bank, present in 50+ markets globally. Their culture is built on 'working as one UBS' - trusting others and delivering together.",
+    "recent_news": "UBS Year Ahead 2026 outlook projects global equities rising ~15% by end of 2026, with AI and tech driving gains. Recommends 30% allocation to structural trends including AI, longevity, and resources. European equities upgraded to Attractive with 7% profit growth expected in 2026.",
+    "used_in": [
+      "cover_letter_intro",
+      "resume_summary"
+    ]
+  },
+  "resume": {
+    "professional_summary": "Client-focused MSc Finance candidate with proven ability to build relationships with sophisticated stakeholders and deliver investment insights under tight deadlines. Gained direct experience managing institutional relationships and producing research-driven content at a Geneva M&A boutique. Eager to apply analytical rigor and communication skills to UBS Global Markets' equities sales platform.",
+    "auraia_bullets": [
+      "Managed multi-stakeholder relationships with clients, advisors, and institutional counterparties across 10+ concurrent projects, coordinating communication and ensuring timely execution under tight deal deadlines",
+      "Conducted comprehensive sector research across healthcare, tech, and financial services, producing investment theses and identifying strategic opportunities across Europe, US, and Asia for institutional and strategic buyers",
+      "Led production of client-facing materials including pitch decks, market analyses, and investor presentations, delivering Board-ready content and supporting investor discussions across multiple live transactions"
+    ],
+    "rc_bullet": "Prepared investment memos for the CEO including market analysis, competitive positioning, and financial projections for 3 acquisition targets in French healthcare and retail sectors with valuations of EUR 10-30M, supporting strategic decision-making",
+    "europ_bullet": "Built automated financial dashboards in Excel and PowerBI to track KPIs for a CHF 50M+ subsidiary, delivering variance analysis, monthly P&L reporting, and executive Board presentations on financial performance, strategic initiatives, and cost reduction opportunities",
+    "leadership_bullets": [
+      "Led post-COVID financial recovery at AIESEC by sourcing corporate leads, creating tailored pitchbooks, and negotiating 3 key partnerships generating CHF 60K annual revenue",
+      "Manage diversified investment portfolio using options strategies (cash-secured puts, covered calls), generating 8% annualized returns through disciplined theta decay execution",
+      "McKinsey Case Finalist: developed predictive model for black swan events using order book data, presenting strategic insights to Keyrock management and McKinsey consultants"
+    ],
+    "courses": "Investments, Derivatives, International Finance, Data Science for Finance",
+    "skills": "Financial Markets | Equity Research | Derivatives | Client Relations | MS Excel"
+  },
+  "cover_letter": {
+    "recipient": "Hiring Manager",
+    "street": "Rue du Rhone 8",
+    "postal": "1204 Geneva, Switzerland",
+    "subject": "**Subject:** Application for Global Markets Graduate Talent Program",
+    "intro": "I want to work in equities sales because markets reward those who communicate conviction clearly - not just analyze well, but translate insights into actionable ideas for clients. UBS's 'one UBS' culture and your position as a core partner to the world's leading wealth management franchise offer the platform to learn this craft from the best.",
+    "body": "My background is in M&A advisory, but the skills transfer directly: managing relationships with multiple institutional counterparties, producing research-driven content under tight deadlines, and translating complex analyses into clear client presentations. At Auraia Capital, I coordinated communication across 10+ concurrent deals with sophisticated stakeholders - the same intensity I expect in equities coverage.\n\nWhat excites me about Global Markets is the real-time feedback loop. In M&A, you learn whether your thesis was right months later. In sales, you know immediately. I've built conviction in markets through managing my own options portfolio and presenting to McKinsey consultants at the Keyrock case competition. I'm applying to sharpen that conviction into client-ready ideas - and to learn the sector dynamics and corporate fundamentals that drive equity valuations.",
+    "closing": "I would welcome the opportunity to discuss how my experience in client relationships and investment research translates to your equities platform. I am available at your convenience."
+  },
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - Global Markets Graduate Talent Program - Adrian Turion",
+    "body": "Dear Hiring Team,\n\nPlease find attached my resume and cover letter for the 2026 Global Markets Graduate Talent Program in Cash Equities Advisory Sales.\n\nYour 'one UBS' culture and position as a core partner to the world's leading wealth management franchise attracted me to this role. My experience managing institutional relationships and producing investment content at a Geneva M&A boutique has prepared me for the client-facing intensity of equities sales.\n\nI would welcome the opportunity to discuss my application further.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96\nturionadrian@gmail.com"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "company": "DXT Commodities",
+    "position": "Gas LNG Logistics Junior",
+    "position_exact": "GAS & LNG LOGISTICS JUNIOR",
+    "date_created": "2026-01-17",
+    "job_keywords": [
+      "gas logistics",
+      "LNG logistics",
+      "nomination activity",
+      "TSOs",
+      "gas market hubs",
+      "storage plants",
+      "balancing",
+      "pipeline transportation",
+      "MS Excel",
+      "VBA",
+      "diligent and reliable",
+      "tight deadlines",
+      "team player",
+      "English and Italian",
+      "adaptability",
+      "shift schedule"
+    ],
+    "job_summary": "Junior role in DXT Commodities' Natural Gas Logistics team supporting the gas trading desk in Lugano. Daily execution of nomination activity on gas hubs, TSOs, storage plants and LNG terminals, plus IT data system management. Requires Excel proficiency, reliability under tight deadlines, and ability to work evening/weekend shifts in an international environment."
+  },
+  "research": {
+    "company_values": ["operational excellence", "international reach", "innovation", "flexibility"],
+    "company_mission": "Top European gas wholesaler optimizing physical gas flows through transportation and storage capacity, offering competitive pricing and structured products to 400+ counterparties",
+    "recent_news": "521 TWh natural gas traded in 2022; invested EUR 2.8M in Wesii for AI-driven renewable energy services; expanding CEE operations; featured on Swiss RSI TV for AI implementation in meteorology forecasting",
+    "used_in": ["cover_letter_intro", "resume_summary"]
+  },
+  "resume": {
+    "professional_summary": "Detail-oriented MSc Finance candidate with proven reliability managing multiple concurrent workstreams under tight deadlines. Strong Excel and VBA proficiency developed through financial modeling and automated dashboard creation. Adaptable to demanding schedules with solid foundation in data management, financial markets, and risk management principles.",
+    "auraia_bullets": [
+      "Executed daily operational tasks across 7 concurrent projects with strict deadlines, maintaining data accuracy in shared systems and coordinating timely delivery of client-facing materials under significant time pressure in a fast-paced environment",
+      "Built detailed financial models and automated reports in Excel, maintaining meticulous data accuracy while managing tight deadlines across multiple concurrent projects requiring precise coordination and reliable execution",
+      "Coordinated seamlessly with internal teams and external stakeholders throughout project lifecycles, ensuring alignment across multiple parties and timely execution of daily operational tasks in an international environment"
+    ],
+    "rc_bullet": "Conducted financial and operational due diligence on acquisition targets with revenues of EUR 10-30M, analyzing large datasets with precision and preparing comprehensive investment memos with market analysis and financial projections for the CEO of Healthcare and Retail divisions",
+    "europ_bullet": "Built automated financial dashboards in Excel and PowerBI tracking KPIs for the CFO of this CHF 50M+ Generali subsidiary, performed variance analysis on monthly P&L results, and managed data processes for quarterly forecasting across 5 business units",
+    "leadership_bullets": [
+      "Founded Screeny.ai, building automated data pipelines and user interfaces that reduced manual research time by 90%, demonstrating ability to streamline repetitive operational processes",
+      "Manage diversified investment portfolio using Cash Secured Puts and Covered Calls with 45-day expiries, achieving 8% annualized returns through disciplined execution and risk management",
+      "Led post-COVID financial recovery at AIESEC by sourcing corporate leads, creating tailored pitchbooks, and negotiating 3 key partnerships generating CHF 60K annual revenue"
+    ],
+    "courses": "Data Science for Finance, Risk Management, International Finance",
+    "skills": "MS Excel & VBA | Data Management | Process Automation | French (Native) | English"
+  },
+  "cover_letter": {
+    "recipient": "Hiring Manager",
+    "street": "DXT Commodities SA",
+    "postal": "Lugano, Switzerland",
+    "subject": "**Subject:** Application for Gas & LNG Logistics Junior Position",
+    "intro": "I want to work in commodities because I'm drawn to businesses where execution matters daily - not quarterly closings, but real flows of physical goods across markets. DXT's position as a top European gas wholesaler, combined with your investment in AI-driven forecasting, signals a team that values both operational rigor and innovation. That's where I want to build my career.",
+    "body": "My background is in M&A advisory, but the skills that made me effective there translate directly to logistics operations. Managing 7 concurrent projects with strict daily deadlines taught me that reliability isn't optional - when systems need updating and stakeholders need answers, you deliver. I built automated dashboards and data pipelines in Excel and VBA because I saw repetitive processes that could be streamlined. I thrive in small teams where individual responsibility is high and bureaucracy is low.\nWhat I don't have yet is deep knowledge of gas markets, TSOs, and nomination workflows. I'm applying to learn that - and I learn fast. I'm comfortable with demanding schedules, including evening and weekend shifts, and I'm ready to relocate to Lugano for this opportunity.",
+    "closing": "I'd welcome a conversation about how I can contribute to your logistics team. I'm available at your convenience."
+  },
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - Gas & LNG Logistics Junior - Adrian Turion",
+    "body": "Dear Hiring Team,\n\nPlease find attached my resume and cover letter for the Gas & LNG Logistics Junior position in Lugano.\n\nDXT's position as a top European gas wholesaler, combined with its innovative approach to AI-driven energy forecasting, represents the dynamic commodities environment where I want to develop my career. I am eager to bring my operational discipline and Excel proficiency to support your Natural Gas Logistics team.\n\nI would welcome the opportunity to discuss my application further.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96\nturionadrian@gmail.com"
+  }
+}

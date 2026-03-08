@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "company": "ECOM",
+    "position": "Corporate Development Junior Manager",
+    "position_exact": "Corporate Development Junior Manager",
+    "date_created": "2026-01-11",
+    "job_keywords": ["M&A", "due diligence", "financial modelling", "valuation analyses", "strategic planning", "deal origination", "post-merger integration", "cross-functional collaboration", "stakeholder management", "investment memoranda", "precedent transactions", "synergies", "project management", "financial analysis", "capital investment"],
+    "job_summary": "2-4 year experience M&A role at ECOM (commodities trading company) in Switzerland, supporting senior managers on deal origination, valuation, due diligence, and post-merger integration across strategic transactions including acquisitions, divestitures, and JVs."
+  },
+  "research": {
+    "company_values": ["responsible leadership", "sustainability", "origin-integrated approach", "farmer-focused solutions"],
+    "company_mission": "Responsibly sourcing commodities for 175+ years, helping secure the long-term future of coffee, cocoa, cotton, nuts and ingredients through transparent, sustainable supply chains.",
+    "recent_news": "In 2025, IFC provided $250M financing to ECOM for operations; ADB extended $100M loan for environmental sustainability in coffee milling. DM Brasil joint venture launched in September 2025 with San Roke Industrial for decaffeinated coffee.",
+    "used_in": ["cover_letter_intro", "resume_summary"]
+  },
+  "resume": {
+    "professional_summary": "Deal execution-focused MSc Finance candidate with end-to-end transaction experience across valuation, due diligence, and closing in a lean team environment. Strong financial modeling expertise (LBO, DCF, comps) and cross-border deal coordination across Europe. Proven project management skills handling multiple concurrent mandates with external advisors.",
+    "auraia_bullets": [
+      "End-to-end execution exposure in a lean 3-person deal team: sourcing, valuation, due diligence, negotiations, and closing on 10+ live mandates across healthcare, tech, and life sciences with deal values from EUR 5M to EUR 50M",
+      "Built detailed financial models (LBO, DCF, trading comps, precedent transactions) and prepared investment memoranda and client presentations for Board meetings and investor pitches across multiple concurrent mandates",
+      "Coordinated with legal, tax, and accounting advisors to structure transactions and negotiate deal terms, managing data rooms and ensuring alignment across all stakeholders throughout the transaction lifecycle"
+    ],
+    "rc_bullet": "Prepared investment memos including market analysis, competitive positioning, and financial projections for 3 potential acquisitions, working directly with the CEO of Healthcare and Retail divisions on evaluating targets in France and Belgium with revenues of EUR 10M-30M",
+    "europ_bullet": "Supported CFO and Head of Controlling on FP&A and strategic projects for Swiss subsidiary (CHF 50M+ revenues), preparing Board presentations on financial performance and building automated Excel dashboards to track KPIs and perform variance analysis",
+    "leadership_bullets": [
+      "McKinsey Case Finalist: Presented strategic project to Keyrock's management and McKinsey consultants, developing data-driven model showcasing CHF 200K annual revenue potential",
+      "Screeny.ai Founder: Built AI-driven buyer identification tool for investment banks, reducing search time from 10h+ to 20min; adopted by 3 advisory firms",
+      "Portfolio Manager: Manages diversified investment portfolio using options strategies, generating +8% annualized returns through disciplined risk management"
+    ],
+    "courses": "Corporate Governance and M&A, Valuation, Corporate Finance, Derivatives",
+    "skills": "Financial Modeling, Valuation, M&A Execution, Due Diligence, Project Management"
+  },
+  "cover_letter": {
+    "recipient": "Hiring Manager",
+    "street": "ECOM Agroindustrial Corp. Ltd.",
+    "postal": "Pully, Switzerland",
+    "subject": "**Subject:** Application for Corporate Development Junior Manager Position",
+    "intro": "ECOM's 175-year commitment to responsible commodity sourcing - recently reinforced by $350M in financing from the IFC and ADB for sustainability initiatives - reflects a long-term vision that aligns with my approach to value creation. The opportunity to support strategic M&A and capital investments within this origin-integrated framework is compelling.",
+    "body_1": "**End-to-End M&A Execution** - At Auraia Capital, I gained comprehensive deal exposure in a lean 3-person team, managing mandates from origination through closing. I led valuation analyses, coordinated due diligence across legal, tax, and financial workstreams, and prepared investment memoranda for Board presentations on transactions ranging from EUR 5M to EUR 50M.",
+    "body_2": "**Financial Modelling and Strategic Analysis** - I have built LBO, DCF, and precedent transaction models across healthcare, tech, and financial services sectors. At RC Group, I worked directly with divisional CEOs on acquisition evaluations, preparing investment memos with market analysis and financial projections for targets with revenues of EUR 10M-30M.",
+    "body_3": "**Cross-Functional Coordination** - Managing multiple concurrent mandates requires rigorous project management. I have coordinated data rooms, liaised with external advisors, and ensured alignment across stakeholders throughout transaction lifecycles. My experience navigating complex deal structures across Europe prepares me for ECOM's international operations.",
+    "additional": "",
+    "attraction": "",
+    "closing": "I would welcome the opportunity to contribute to ECOM's corporate development initiatives and support the strategic growth of your commodities business. I am available to discuss how my M&A experience can add value to your team."
+  },
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - Corporate Development Junior Manager - Adrian Turion",
+    "body": "Dear Hiring Team,\n\nPlease find attached my resume and cover letter for the Corporate Development Junior Manager position at ECOM.\n\nECOM's 175-year legacy in responsible commodity sourcing and recent $350M financing for sustainability initiatives reflect a long-term strategic vision. I am eager to support your M&A and capital investment activities, bringing end-to-end transaction experience from a lean deal team where I managed valuations, due diligence, and stakeholder coordination.\n\nI would welcome the opportunity to discuss my application further.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96\nturionadrian@gmail.com"
+  }
+}

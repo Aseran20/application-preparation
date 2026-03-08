@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "company": "XTS Commodities",
+    "position": "Summer Internship Commodities Trading",
+    "position_exact": "2026 Summer Intern - Commodities Trading",
+    "date_created": "2026-01-17",
+    "job_keywords": [
+      "physical commodity trading",
+      "market analysis",
+      "pricing structures",
+      "global supply chains",
+      "trade execution",
+      "logistics",
+      "risk management",
+      "supply-demand research",
+      "trade flows",
+      "analytical skills",
+      "quantitative skills",
+      "international trade",
+      "contracts",
+      "exposure tracking",
+      "commercial operations"
+    ],
+    "job_summary": "10-week paid internship at XTS Commodities Geneva office, working across energy, agricultural, and fertilizer trading desks. Focus on market analysis, pricing, trade execution workflows, logistics, and risk monitoring. Hands-on exposure to physical commodity trading with direct senior team interaction."
+  },
+  "research": {
+    "company_values": [
+      "emerging markets expertise",
+      "long-term relationships",
+      "operational risk management",
+      "effective product movement"
+    ],
+    "company_mission": "XTS Commodities addresses disruptions in global trade by providing direct distribution to end buyers in key destination markets, leveraging regional knowledge and global networks to manage logistical and market risks.",
+    "recent_news": "XTS Commodities maintains ISCC-EU certification for sustainable biofuels and is expanding across fertilizers, agricultural products (coffee, palm oils, grains), and energy (fuel oil, gas oil, LPG, biofuels including SAF).",
+    "used_in": [
+      "cover_letter_intro",
+      "resume_summary"
+    ]
+  },
+  "resume": {
+    "professional_summary": "Execution-focused MSc Finance candidate with cross-border transaction experience across Europe, US, and Asia, seeking to join XTS Commodities' trading desk. Strong quantitative and risk management background from active options trading and financial modeling across 10+ concurrent mandates. Proven ability to deliver under tight deadlines in fast-paced, international environments.",
+    "auraia_bullets": [
+      "End-to-end execution exposure in a lean 3-person deal team across 10+ live mandates spanning sourcing, valuation, due diligence, negotiations, and closing with deal values ranging from EUR 5M to EUR 50M across healthcare, tech, and life sciences",
+      "Conducted comprehensive industry research and identified strategic buyers for cross-border deals spanning Europe, US, and Asia, maintaining buyer universes and coordinating data room management across multiple concurrent mandates",
+      "Managed relationships with clients, advisors, and counterparties throughout transaction lifecycles, coordinating seamlessly with legal, tax, and accounting teams across Europe, US, and Asia to structure and close cross-border deals"
+    ],
+    "rc_bullet": "Conducted financial and operational due diligence on acquisition targets with revenues of EUR 10M-30M, analyzing market trends and competitive landscape while building financial models to assess synergies and post-acquisition value creation opportunities",
+    "europ_bullet": "Built automated financial dashboards in Excel and PowerBI tracking KPIs for the Swiss subsidiary (CHF 50M+ revenues), performed variance analysis on monthly P&L, and developed cost allocation models to improve profitability analysis by service line",
+    "leadership_bullets": [
+      "Led AIESEC financial recovery by sourcing corporate leads and negotiating partnerships, closing 3 key deals generating CHF 60K annual revenue and increasing volunteer placements by 40%",
+      "Manage a diversified investment portfolio using Cash Secured Puts and Covered Calls, generating +8% annualized returns through disciplined theta decay strategies with 45-day expiries",
+      "Finalist in 2024 McKinsey-sponsored case competition, presenting a data-driven model to forecast market events using order book data with potential CHF 200K annual revenue impact"
+    ],
+    "courses": "International Finance, Risk Management, Investment and Portfolio Management",
+    "skills": "Financial Modeling, Risk Management, Market Analysis | Python, Bloomberg, Excel/VBA"
+  },
+  "cover_letter": {
+    "recipient": "Hiring Manager",
+    "street": "XTS Commodities",
+    "postal": "Geneva, Switzerland",
+    "subject": "**Subject:** Application for Summer Internship - Commodities Trading",
+    "intro": "I'm drawn to physical commodities because I want to work where decisions have immediate, tangible consequences - not quarterly reports, but actual product moving across borders. XTS's focus on emerging markets and direct distribution to end buyers is exactly the kind of hands-on trading environment where I want to learn.",
+    "body": "My background is in M&A, but the skills transfer directly. I've executed 10+ cross-border transactions spanning Europe, US, and Asia, coordinating with counterparties under tight deadlines. I know how to manage multiple workstreams simultaneously and deliver when timing matters. I also actively trade options, which taught me risk monitoring and position management in real market conditions.\nWhat I don't have is commodity-specific knowledge - trade flows, logistics, pricing structures. That's what I'm applying to learn. I'm a quick study, I'm not afraid of long hours, and I want to be on a trading floor, not behind a model.",
+    "closing": "I'd welcome the chance to discuss how I can contribute to your trading desk this summer."
+  },
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - Summer Internship Commodities Trading - Adrian Turion",
+    "body": "Dear Hiring Team,\n\nPlease find attached my resume and cover letter for the 2026 Summer Internship in Commodities Trading at XTS Commodities.\n\nYour focus on addressing global trade disruptions and managing operational risks across emerging markets resonates with my experience executing cross-border transactions across Europe, US, and Asia. I am eager to apply my analytical skills and risk management background to support your trading, operations, and commercial teams.\n\nI would welcome the opportunity to discuss my application further.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96\nturionadrian@gmail.com"
+  }
+}

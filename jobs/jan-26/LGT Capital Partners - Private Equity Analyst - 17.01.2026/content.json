@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "company": "LGT Capital Partners",
+    "position": "Private Equity Analyst",
+    "position_exact": "Private Equity Analyst Program - Secondary Team",
+    "date_created": "2026-01-17",
+    "job_keywords": ["secondary transactions", "financial modeling", "private equity fund accounting", "valuation and analysis", "due diligence", "portfolio company analysis", "comparable company analysis", "project management", "entrepreneurial", "database management", "private markets", "LP portfolios", "fund solutions"],
+    "job_summary": "2-year analyst program on the Secondaries team at LGT Capital Partners, a pioneer in PE secondaries since 1998 with 450+ transactions. Focus on transaction due diligence, financial modeling of PE funds and portfolio companies, and investment monitoring. Opportunity to progress to Associate."
+  },
+  "research": {
+    "company_values": ["entrepreneurial spirit", "long-term perspective", "commitment", "sustainability"],
+    "company_mission": "Alternative investment specialist focused on private markets, owned by the Princely Family of Liechtenstein with USD 4B in family and employee co-investment",
+    "recent_news": "December 2025 strategic partnership with Invesco to bring private markets solutions to US retail investors; active in Asian secondaries with average 65% discount to NAV; ESG pioneer with 73% of PE managers assessed having robust ESG processes",
+    "used_in": ["cover_letter_intro", "resume_summary"]
+  },
+  "resume": {
+    "professional_summary": "Due diligence-focused MSc Finance candidate with hands-on experience building LBO, DCF, and comparable models across 10+ transactions. Strong foundation in valuation and portfolio analysis developed in a lean deal team environment. Entrepreneurial mindset demonstrated by founding an AI-powered tool now used by 3 advisory firms, reducing research time by 90%.",
+    "auraia_bullets": [
+      "End-to-end transaction exposure in a lean 3-person deal team, managing projects from initial due diligence through valuation, negotiations, and closing across 10+ live mandates spanning healthcare, tech, and life sciences sectors",
+      "Built detailed financial models (LBO, DCF, trading comps, precedent transactions) and prepared client presentations for Board meetings, developing expertise in valuation methodologies and fund accounting principles",
+      "Performed quality of earnings analysis and comparable company analysis using both public and private data to identify value drivers and support transaction pricing for deals ranging from EUR 5M to EUR 50M"
+    ],
+    "rc_bullet": "Conducted financial and operational due diligence on acquisition targets (EUR 10M-30M revenues) for a company under LBO with Crédit Mutuel Equity, analyzing synergies, market positioning, and post-acquisition integration opportunities across 3 potential targets",
+    "europ_bullet": "Built automated financial dashboards in Excel and PowerBI to monitor KPIs and performed monthly P&L variance analysis for Europ Assistance (CHF 50M+ revenues, Generali subsidiary), supporting quarterly forecasting and annual budget planning for 5 business units",
+    "leadership_bullets": [
+      "Presented predictive analytics model to McKinsey consultants and Keyrock management as Top 5 finalist, showcasing CHF 200K annual revenue potential through black swan event forecasting",
+      "Founded Screeny.ai, an AI tool identifying strategic acquirers for M&A boutiques, reducing buyer search from 10+ hours to 20 minutes; adopted by 3 advisory firms with 90% time savings",
+      "Manage diversified investment portfolio using options strategies (Cash Secured Puts, Covered Calls), achieving 8% annualized returns through disciplined risk management and theta decay"
+    ],
+    "courses": "Valuation, Corporate Governance and M&A, Quantitative Asset and Risk Management",
+    "skills": "Financial Modeling | Valuation | Due Diligence | M&A Analysis | Excel & PowerBI"
+  },
+  "cover_letter": {
+    "recipient": "Hiring Manager",
+    "street": "LGT Capital Partners AG",
+    "postal": "Pfäffikon, Switzerland",
+    "subject": "**Subject:** Application for Private Equity Analyst Program - Secondary Team",
+    "intro": "What draws me to LGT is the principal alignment - USD 4 billion in family and employee co-investment means you're not just managing other people's money. Combined with 450+ secondary transactions since 1998, it's clear this is a team that knows the space deeply and has skin in the game. That's the environment where I want to develop.",
+    "body": "I come from M&A advisory, where I ran end-to-end due diligence across 10+ transactions in a lean 3-person team. I built LBO, DCF, and comparable company models, conducted quality of earnings analyses, and coordinated with external advisors to close deals ranging from EUR 5M to EUR 50M. The analytical rigor and independent execution required in that environment translate directly to evaluating LP portfolios and fund solutions.\nI also built Screeny.ai, an AI tool that cut buyer research time by 90% and is now used by 3 advisory firms. I mention this because it reflects how I think - when I see a repetitive process, I look for ways to make it more efficient. That mindset should be useful for database management and deal screening.",
+    "closing": "I'd welcome the opportunity to discuss how my transaction experience can contribute to the Secondary team."
+  },
+  "email": {
+    "recipient": "Cassandra Fritschi",
+    "subject": "Application - Private Equity Analyst Program (Secondary Team) - Adrian Turion",
+    "body": "Dear Ms. Fritschi,\n\nPlease find attached my application for the Private Equity Analyst Program on the Secondary Team.\n\nLGT's 450+ secondary transactions and $4B in principal co-investment reflect a commitment to alignment that resonates with my experience in deal execution. Having managed end-to-end transactions at a boutique M&A firm, I am eager to apply my financial modeling and due diligence skills to evaluating LP portfolios and fund solutions.\n\nI would welcome the opportunity to discuss my application further.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96\nturionadrian@gmail.com"
+  }
+}

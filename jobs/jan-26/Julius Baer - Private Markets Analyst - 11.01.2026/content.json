@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "company": "Julius Baer",
+    "position": "Private Markets Analyst",
+    "position_exact": "GPS Associate Programme: Private Markets Analyst - Zurich 100%",
+    "date_created": "2026-01-11",
+    "job_keywords": ["private markets", "investment due diligence", "alternative funds", "performance data", "Excel models", "quarterly reporting", "client portfolios", "entrepreneurial spirit", "analytical thinking", "presentation skills", "service-oriented", "systematic", "wealth management", "GP relationships"],
+    "job_summary": "18-month structured development program in Julius Baer's GPS Alternative Funds team in Zurich. Combines rotational assignments, training, and mentorship. Primary responsibilities include supporting due diligence on private markets funds, monitoring investments, data collection/modeling in Excel, quarterly reporting, and marketing material production. Leads to permanent Private Markets Analyst role."
+  },
+  "research": {
+    "company_values": ["Care", "Passion", "Excellence", "entrepreneurial", "performance and ownership culture"],
+    "company_mission": "To create and preserve wealth for clients through passionate and personal advice, based on Swiss heritage and global reach",
+    "recent_news": "Julius Baer expanding private markets focus with new head of private markets investments; CHF 483B AUM as of June 2025; families now allocating 35%+ to private markets including private equity, venture capital, and infrastructure",
+    "used_in": ["cover_letter_intro", "resume_summary"]
+  },
+  "resume": {
+    "professional_summary": "Analytically rigorous MSc Finance candidate with due diligence experience across 10+ transactions and strong Excel modeling skills. Entrepreneurial initiative demonstrated by founding an AI tool now used by 3 advisory firms. Systematic approach to data collection and performance analysis developed managing concurrent mandates in a lean deal team environment.",
+    "auraia_bullets": [
+      "End-to-end execution exposure in a lean 3-person deal team, conducting due diligence, valuation analysis, and coordinating with legal and tax advisors to structure transactions worth EUR 5M to EUR 50M",
+      "Built detailed financial models (LBO, DCF, trading comps) and prepared client presentations for Board meetings, developing expertise in systematic data collection and performance analysis across multiple sectors",
+      "Led production of marketing materials and investor presentations, maintained buyer universes, and managed data rooms across concurrent mandates, ensuring precise documentation and timely delivery under tight deadlines"
+    ],
+    "rc_bullet": "Conducted financial and operational due diligence on acquisition targets (EUR 10M-30M revenue), prepared investment memos with market analysis and financial projections, and supported integration planning for the CEO of Healthcare and Retail divisions",
+    "europ_bullet": "Built automated financial dashboards in Excel and PowerBI to track KPIs, performed variance analysis on monthly P&L results, and supported annual budget planning and quarterly forecasting for 5 business units at the CHF 50M+ revenue insurance subsidiary",
+    "leadership_bullets": [
+      "Finalist in McKinsey-sponsored business case, presenting a data-driven predictive model for black swan market events to Keyrock management and McKinsey consultants",
+      "Founded Screeny.ai, an AI-powered tool for investment banks to identify strategic acquirers, now used by 3 M&A advisory firms, reducing research time by 90%",
+      "Manage a personal investment portfolio using systematic options strategies (Cash Secured Puts, Covered Calls), generating +8% annualized returns across positions"
+    ],
+    "courses": "Data Science for Finance, Investments, Quantitative Asset and Risk Management, Derivatives",
+    "skills": "Financial Modeling, Investment Analysis, Excel & VBA, PowerBI, Due Diligence"
+  },
+  "cover_letter": {
+    "recipient": "Hiring Manager",
+    "street": "Julius Baer",
+    "postal": "Zurich, Switzerland",
+    "subject": "**Subject:** Application for GPS Associate Programme: Private Markets Analyst Position",
+    "intro": "Julius Baer's strategic expansion in private markets, including the recent appointment of a dedicated Head of Private Markets Investments and the bank's vision that families now allocate over 35% of portfolios to alternatives, signals an exciting time to join the Alternative Funds team. I am drawn to the GPS Associate Programme's combination of hands-on due diligence work with structured mentorship, and I am eager to contribute my analytical rigor and entrepreneurial drive to support your investment selection process.",
+    "body_1": "**Investment Due Diligence Experience** - As the sole analyst in a 3-person M&A boutique, I have conducted end-to-end due diligence across 10+ transactions in healthcare, technology, and financial services. This includes coordinating data rooms, analyzing quality of earnings, and liaising with legal, tax, and accounting advisors. I am accustomed to processing complex information quickly and delivering precise work under tight deadlines.",
+    "body_2": "**Data Analysis and Modeling** - I built financial dashboards in Excel and PowerBI at Europ Assistance to track KPIs and perform variance analysis for a CHF 50M+ subsidiary. At Auraia Capital, I developed LBO, DCF, and trading comparable models for Board presentations. This experience directly aligns with the role's requirements for database maintenance, performance data collection, and quarterly reporting support.",
+    "body_3": "**Entrepreneurial Initiative** - I founded Screeny.ai, an AI-powered tool that reduces M&A buyer research time by 90%, now used by three advisory firms. Additionally, I manage a personal investment portfolio employing systematic options strategies. These initiatives reflect the proactive, self-motivated approach Julius Baer values, and my genuine interest in investment analysis and alternative asset classes.",
+    "additional": "",
+    "attraction": "",
+    "closing": "I am excited about the opportunity to develop my private markets expertise within the GPS framework while contributing to the Alternative Funds team's mission of delivering tailored investment solutions. I would welcome the chance to discuss how my background aligns with your needs and am available for an interview at your convenience."
+  },
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - GPS Associate Programme: Private Markets Analyst - Adrian Turion",
+    "body": "Dear Hiring Team,\n\nPlease find attached my resume and cover letter for the GPS Associate Programme: Private Markets Analyst position at Julius Baer.\n\nYour strategic expansion in private markets and the emphasis on entrepreneurial initiative resonate with my experience conducting investment due diligence across 10+ M&A transactions and founding Screeny.ai, an AI tool now used by three advisory firms. I am eager to bring this analytical rigor and ownership mindset to the Alternative Funds team.\n\nI would welcome the opportunity to discuss my application further.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96\nturionadrian@gmail.com"
+  }
+}

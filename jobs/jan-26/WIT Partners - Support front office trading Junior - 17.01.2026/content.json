@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "company": "WIT Partners",
+    "position": "Support front office trading Junior",
+    "position_exact": "Support front office trading Junior (H/F)",
+    "date_created": "2026-01-17",
+    "job_keywords": [
+      "Front Office",
+      "Middle Office",
+      "Business Analyst",
+      "Functional specifications",
+      "UAT",
+      "Derivatives",
+      "Fixed income",
+      "Equity",
+      "OTC",
+      "PnL",
+      "Risk management",
+      "Murex",
+      "Calypso",
+      "Process optimization",
+      "Trading systems"
+    ],
+    "job_summary": "Junior BA role at Swiss IT/Finance consulting firm supporting front office trading. Involves gathering requirements from FO/MO/Risk, writing functional specs, running UAT, coordinating IT-business teams, and ensuring FO/BO process coherence. Requires derivatives, fixed income, equity knowledge and trading systems experience."
+  },
+  "research": {
+    "company_values": [
+      "Work (aim for excellence)",
+      "Integrity (honesty and quality)",
+      "Transparency (mutual trust)"
+    ],
+    "company_mission": "Swiss consulting firm dedicated to human capital management in IT and Finance, supporting growth through personality-focused methods and collective synergies.",
+    "recent_news": "Active expansion in Geneva IT/Finance talent market with focus on banking, trading, and engineering roles.",
+    "used_in": [
+      "cover_letter_intro",
+      "resume_summary"
+    ]
+  },
+  "resume": {
+    "professional_summary": "Trading product-focused MSc Finance candidate with derivatives, fixed income, and equity knowledge from coursework and active options portfolio management. Strong coordination skills developed managing concurrent workstreams and cross-functional stakeholders. Process optimization mindset demonstrated through automated dashboards and data pipeline development.",
+    "auraia_bullets": [
+      "Staffed on 7 live mandates across healthcare, tech, and financial services with deal values from EUR 5M to EUR 50M, managing concurrent workstreams including valuations, due diligence, and process coordination with external advisors.",
+      "Built detailed financial models (DCF, trading comps, precedent transactions) and prepared client presentations for Board meetings, translating complex financial data into actionable insights for senior stakeholders.",
+      "Coordinated with legal, tax, and accounting advisors to structure transactions and negotiate deal terms, ensuring alignment between business requirements and technical execution across multiple parties."
+    ],
+    "rc_bullet": "Conducted financial and operational due diligence on targets with revenues of EUR 10M-30M, analyzing market trends, competitive positioning, and financial projections to identify key value drivers and support acquisition decisions for the CEO of Healthcare and Retail divisions.",
+    "europ_bullet": "Built automated financial dashboards in Excel and PowerBI to track KPIs and performed variance analysis on monthly P&L results for a CHF 50M+ subsidiary, supporting the CFO in identifying operational efficiency improvements and reporting anomalies.",
+    "leadership_bullets": [
+      "Founded Screeny.ai, an AI-driven software for investment banks to identify acquirers, reducing buyer search time from 10h+ to 20min and securing adoption by 3 advisory firms.",
+      "Finalist in McKinsey-sponsored case competition, developing a predictive model for black swan events using order book data with potential CHF 200K annual revenue impact.",
+      "Manage personal investment portfolio using options strategies (Cash Secured Puts, Covered Calls) on derivatives with 45-day expiries, achieving 8% annualized returns."
+    ],
+    "courses": "Derivatives, Fixed Income and Credit Risk, Quantitative Risk Management",
+    "skills": "Financial Modeling | Derivatives | Process Optimization | SQL & PowerBI"
+  },
+  "cover_letter": {
+    "recipient": "Hiring Manager",
+    "street": "Avenue Cardinal-Mermillod 36",
+    "postal": "1227 Carouge, Switzerland",
+    "subject": "**Subject:** Application for Support front office trading Junior Position",
+    "intro": "I'm looking for a role that bridges finance knowledge with technical coordination - translating what traders need into specifications that IT can implement. This position fits that exactly, and WIT Partners' focus on quality and transparency in consulting matches how I like to work.",
+    "body": "I have the product knowledge: my Master's covers derivatives, fixed income, and risk management, and I actively trade options myself, so I understand PnL tracking and position management from the user side. I also have the coordination experience: in M&A, I gathered requirements from clients and advisors, translated them into actionable workstreams, and coordinated execution across legal, tax, and technical teams. That's essentially what a BA does between Front Office and IT.\nOn the technical side, I built automated dashboards at Europ Assistance and developed data pipelines for Screeny.ai. I'm comfortable validating system changes and identifying anomalies - the kind of analytical rigor needed for UAT and production support.",
+    "closing": "I'd welcome the chance to discuss how my background fits your front office support needs."
+  },
+  "email": {
+    "recipient": "Hiring Team",
+    "subject": "Application - Support front office trading Junior - Adrian Turion",
+    "body": "Dear Hiring Team,\n\nPlease find attached my resume and cover letter for the Support front office trading Junior position at WIT Partners.\n\nYour commitment to integrity and transparency in IT/Finance consulting aligns with my experience coordinating complex financial transactions. My background in derivatives, fixed income, and cross-functional stakeholder management positions me well to support front office trading operations.\n\nI would welcome the opportunity to discuss my application further.\n\nBest regards,\nAdrian Turion\n+41 77 262 37 96\nturionadrian@gmail.com"
+  }
+}
